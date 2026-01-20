@@ -1,0 +1,257 @@
+{
+  "total_apis": 21,
+  "endpoints": [
+    {
+      "method_name": "login",
+      "url": "/api/login",
+      "http_method": "POST",
+      "parameters": [
+        {
+          "name": "user",
+          "type": "User",
+          "required": true,
+          "is_encrypted_target": false
+        }
+      ],
+      "return_type": "String",
+      "description": "",
+      "class_name": "EmpController",
+      "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmpController.java"
+    },
+    {
+      "method_name": "getUserInfo",
+      "url": "/api/getUserInfo",
+      "http_method": "POST",
+      "parameters": [
+        {
+          "name": "user",
+          "type": "User",
+          "required": true,
+          "is_encrypted_target": false
+        }
+      ],
+      "return_type": "String",
+      "description": "用户信息查询",
+      "class_name": "EmpController",
+      "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmpController.java"
+    },
+    {
+      "method_name": "getEmps",
+      "url": "/api/emps",
+      "http_method": "GET",
+      "parameters": [],
+      "return_type": "String",
+      "description": "",
+      "class_name": "EmpController",
+      "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmpController.java"
+    },
+    {
+      "method_name": "init",
+      "url": "/api/emps/init",
+      "http_method": "GET",
+      "parameters": [],
+      "return_type": "String",
+      "description": "",
+      "class_name": "EmpController",
+      "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmpController.java"
+    },
+    {
+      "method_name": "getLength",
+      "url": "/api/emps/getLength",
+      "http_method": "GET",
+      "parameters": [],
+      "return_type": "int",
+      "description": "",
+      "class_name": "EmpController",
+      "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmpController.java"
+    },
+    {
+      "method_name": "delEmpByBatch",
+      "url": "/api/emps/delEmpByBatch",
+      "http_method": "GET",
+      "parameters": [],
+      "return_type": "String",
+      "description": "",
+      "class_name": "EmpController",
+      "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmpController.java"
+    },
+    {
+      "method_name": "addEmpByGet",
+      "url": "/api/emps/addEmpByGet",
+      "http_method": "GET",
+      "parameters": [],
+      "return_type": "String",
+      "description": "",
+      "class_name": "EmpController",
+      "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmpController.java"
+    },
+    {
+      "method_name": "addEmpByPost",
+      "url": "/api/emps/addEmpByPost",
+      "http_method": "POST",
+      "parameters": [
+        {
+          "name": "emp",
+          "type": "Employee",
+          "required": true,
+          "is_encrypted_target": false
+        }
+      ],
+      "return_type": "String",
+      "description": "",
+      "class_name": "EmpController",
+      "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmpController.java"
+    },
+    {
+      "method_name": "editEmpByPost",
+      "url": "/api/emps/editEmpByPost",
+      "http_method": "POST",
+      "parameters": [
+        {
+          "name": "emp",
+          "type": "Employee",
+          "required": true,
+          "is_encrypted_target": false
+        }
+      ],
+      "return_type": "String",
+      "description": "@param emp",
+      "class_name": "EmpController",
+      "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmpController.java"
+    },
+    {
+      "method_name": "query",
+      "url": "/api/emps/query",
+      "http_method": "GET",
+      "parameters": [],
+      "return_type": "String",
+      "description": "",
+      "class_name": "EmpController",
+      "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmpController.java"
+    },
+    {
+      "method_name": "getDatas",
+      "url": "/api/emps/getDatas",
+      "http_method": "GET",
+      "parameters": [],
+      "return_type": "String",
+      "description": "@return",
+      "class_name": "EmpController",
+      "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmpController.java"
+    },
+    {
+      "method_name": "getEmps",
+      "url": "/emps",
+      "http_method": "GET",
+      "parameters": [],
+      "return_type": "String",
+      "description": "",
+      "class_name": "EmployeeController",
+      "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmployeeController.java"
+    },
+    {
+      "method_name": "getLength",
+      "url": "/emps/getLength",
+      "http_method": "GET",
+      "parameters": [],
+      "return_type": "int",
+      "description": "",
+      "class_name": "EmployeeController",
+      "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmployeeController.java"
+    },
+    {
+      "method_name": "delEmp",
+      "url": "/emp/delete",
+      "http_method": "GET",
+      "parameters": [],
+      "return_type": "int",
+      "description": "ajaxʵ��ɾ��",
+      "class_name": "EmployeeController",
+      "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmployeeController.java"
+    },
+    {
+      "method_name": "delEmpByBatch",
+      "url": "/emp/delEmpByBatch",
+      "http_method": "GET",
+      "parameters": [],
+      "return_type": "String",
+      "description": "ajaxʵ��ɾ��",
+      "class_name": "EmployeeController",
+      "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmployeeController.java"
+    },
+    {
+      "method_name": "query",
+      "url": "/emp/query",
+      "http_method": "GET",
+      "parameters": [],
+      "return_type": "String",
+      "description": "",
+      "class_name": "EmployeeController",
+      "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmployeeController.java"
+    },
+    {
+      "method_name": "addEmp",
+      "url": "/emp/addEmpByGet",
+      "http_method": "GET",
+      "parameters": [],
+      "return_type": "int",
+      "description": "ajax GET��ʽʵ�����",
+      "class_name": "EmployeeController",
+      "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmployeeController.java"
+    },
+    {
+      "method_name": "addEmp",
+      "url": "/emp/addEmpByPost",
+      "http_method": "POST",
+      "parameters": [
+        {
+          "name": "emoloyee",
+          "type": "Employee",
+          "required": true,
+          "is_encrypted_target": false
+        }
+      ],
+      "return_type": "int",
+      "description": "ajax POST��ʽʵ�����",
+      "class_name": "EmployeeController",
+      "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmployeeController.java"
+    },
+    {
+      "method_name": "edit",
+      "url": "/emp/editEmpByPost",
+      "http_method": "POST",
+      "parameters": [
+        {
+          "name": "emp",
+          "type": "Employee",
+          "required": true,
+          "is_encrypted_target": false
+        }
+      ],
+      "return_type": "int",
+      "description": "ajaxʵ���޸ģ�����",
+      "class_name": "EmployeeController",
+      "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmployeeController.java"
+    },
+    {
+      "method_name": "getData",
+      "url": "/data",
+      "http_method": "GET",
+      "parameters": [],
+      "return_type": "String",
+      "description": "",
+      "class_name": "EmployeeController",
+      "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmployeeController.java"
+    },
+    {
+      "method_name": "getChart",
+      "url": "/chart",
+      "http_method": "GET",
+      "parameters": [],
+      "return_type": "String",
+      "description": "",
+      "class_name": "EmployeeController",
+      "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmployeeController.java"
+    }
+  ]
+}

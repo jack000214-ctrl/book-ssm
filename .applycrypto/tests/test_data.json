@@ -1,0 +1,672 @@
+{
+  "generated_at": "2026-01-17T02:34:01.548589",
+  "total_apis": 21,
+  "test_cases": [
+    {
+      "api": {
+        "method_name": "login",
+        "url": "/api/login",
+        "http_method": "POST",
+        "class_name": "EmpController",
+        "description": ""
+      },
+      "test_scenarios": [
+        {
+          "name": "Success Test",
+          "description": "Test POST /api/login",
+          "request": {
+            "user": {
+              "name": "John Doe",
+              "ssn": "123-45-6789",
+              "dayOfBirth": "1990-05-15",
+              "juminNumber": "9005151234567",
+              "phone": "010-1234-5678",
+              "email": "john.doe@example.com"
+            }
+          },
+          "expected_status": 200,
+          "expected_contains": [
+            "code",
+            "status"
+          ],
+          "encrypted_fields": []
+        },
+        {
+          "name": "Invalid Input Test",
+          "description": "Test POST /api/login with invalid input",
+          "request": {
+            "user": {
+              "name": ""
+            }
+          },
+          "expected_status": 400
+        }
+      ]
+    },
+    {
+      "api": {
+        "method_name": "getUserInfo",
+        "url": "/api/getUserInfo",
+        "http_method": "POST",
+        "class_name": "EmpController",
+        "description": "用户信息查询"
+      },
+      "test_scenarios": [
+        {
+          "name": "Success Test",
+          "description": "Test POST /api/getUserInfo",
+          "request": {
+            "user": {
+              "name": "John Doe",
+              "ssn": "123-45-6789",
+              "dayOfBirth": "1990-05-15",
+              "juminNumber": "9005151234567",
+              "phone": "010-1234-5678",
+              "email": "john.doe@example.com"
+            }
+          },
+          "expected_status": 200,
+          "expected_contains": [
+            "code",
+            "status"
+          ],
+          "encrypted_fields": []
+        },
+        {
+          "name": "Invalid Input Test",
+          "description": "Test POST /api/getUserInfo with invalid input",
+          "request": {
+            "user": {
+              "name": ""
+            }
+          },
+          "expected_status": 400
+        }
+      ]
+    },
+    {
+      "api": {
+        "method_name": "getEmps",
+        "url": "/api/emps",
+        "http_method": "GET",
+        "class_name": "EmpController",
+        "description": ""
+      },
+      "test_scenarios": [
+        {
+          "name": "Success Test",
+          "description": "Test GET /api/emps",
+          "request": {},
+          "expected_status": 200,
+          "expected_contains": [
+            "code",
+            "status"
+          ],
+          "encrypted_fields": []
+        },
+        {
+          "name": "Invalid Input Test",
+          "description": "Test GET /api/emps with invalid input",
+          "request": {},
+          "expected_status": 400
+        }
+      ]
+    },
+    {
+      "api": {
+        "method_name": "init",
+        "url": "/api/emps/init",
+        "http_method": "GET",
+        "class_name": "EmpController",
+        "description": ""
+      },
+      "test_scenarios": [
+        {
+          "name": "Success Test",
+          "description": "Test GET /api/emps/init",
+          "request": {},
+          "expected_status": 200,
+          "expected_contains": [
+            "code",
+            "status"
+          ],
+          "encrypted_fields": []
+        },
+        {
+          "name": "Invalid Input Test",
+          "description": "Test GET /api/emps/init with invalid input",
+          "request": {},
+          "expected_status": 400
+        }
+      ]
+    },
+    {
+      "api": {
+        "method_name": "getLength",
+        "url": "/api/emps/getLength",
+        "http_method": "GET",
+        "class_name": "EmpController",
+        "description": ""
+      },
+      "test_scenarios": [
+        {
+          "name": "Success Test",
+          "description": "Test GET /api/emps/getLength",
+          "request": {},
+          "expected_status": 200,
+          "expected_contains": [
+            "code",
+            "status"
+          ],
+          "encrypted_fields": []
+        },
+        {
+          "name": "Invalid Input Test",
+          "description": "Test GET /api/emps/getLength with invalid input",
+          "request": {},
+          "expected_status": 400
+        }
+      ]
+    },
+    {
+      "api": {
+        "method_name": "delEmpByBatch",
+        "url": "/api/emps/delEmpByBatch",
+        "http_method": "GET",
+        "class_name": "EmpController",
+        "description": ""
+      },
+      "test_scenarios": [
+        {
+          "name": "Success Test",
+          "description": "Test GET /api/emps/delEmpByBatch",
+          "request": {},
+          "expected_status": 200,
+          "expected_contains": [
+            "code",
+            "status"
+          ],
+          "encrypted_fields": []
+        },
+        {
+          "name": "Invalid Input Test",
+          "description": "Test GET /api/emps/delEmpByBatch with invalid input",
+          "request": {},
+          "expected_status": 400
+        }
+      ]
+    },
+    {
+      "api": {
+        "method_name": "addEmpByGet",
+        "url": "/api/emps/addEmpByGet",
+        "http_method": "GET",
+        "class_name": "EmpController",
+        "description": ""
+      },
+      "test_scenarios": [
+        {
+          "name": "Success Test",
+          "description": "Test GET /api/emps/addEmpByGet",
+          "request": {},
+          "expected_status": 200,
+          "expected_contains": [
+            "code",
+            "status"
+          ],
+          "encrypted_fields": []
+        },
+        {
+          "name": "Invalid Input Test",
+          "description": "Test GET /api/emps/addEmpByGet with invalid input",
+          "request": {},
+          "expected_status": 400
+        }
+      ]
+    },
+    {
+      "api": {
+        "method_name": "addEmpByPost",
+        "url": "/api/emps/addEmpByPost",
+        "http_method": "POST",
+        "class_name": "EmpController",
+        "description": ""
+      },
+      "test_scenarios": [
+        {
+          "name": "Success Test",
+          "description": "Test POST /api/emps/addEmpByPost",
+          "request": {
+            "emp": {
+              "firstName": "Robert",
+              "lastName": "Johnson",
+              "dayOfBirth": "1988-03-10",
+              "juminNumber": "8803101234567",
+              "email": "robert.johnson@example.com",
+              "phone": "010-2222-3333"
+            }
+          },
+          "expected_status": 200,
+          "expected_contains": [
+            "code",
+            "status"
+          ],
+          "encrypted_fields": []
+        },
+        {
+          "name": "Invalid Input Test",
+          "description": "Test POST /api/emps/addEmpByPost with invalid input",
+          "request": {
+            "emp": {
+              "firstName": ""
+            }
+          },
+          "expected_status": 400
+        }
+      ]
+    },
+    {
+      "api": {
+        "method_name": "editEmpByPost",
+        "url": "/api/emps/editEmpByPost",
+        "http_method": "POST",
+        "class_name": "EmpController",
+        "description": "@param emp"
+      },
+      "test_scenarios": [
+        {
+          "name": "Success Test",
+          "description": "Test POST /api/emps/editEmpByPost",
+          "request": {
+            "emp": {
+              "firstName": "Robert",
+              "lastName": "Johnson",
+              "dayOfBirth": "1988-03-10",
+              "juminNumber": "8803101234567",
+              "email": "robert.johnson@example.com",
+              "phone": "010-2222-3333"
+            }
+          },
+          "expected_status": 200,
+          "expected_contains": [
+            "code",
+            "status"
+          ],
+          "encrypted_fields": []
+        },
+        {
+          "name": "Invalid Input Test",
+          "description": "Test POST /api/emps/editEmpByPost with invalid input",
+          "request": {
+            "emp": {
+              "firstName": ""
+            }
+          },
+          "expected_status": 400
+        }
+      ]
+    },
+    {
+      "api": {
+        "method_name": "query",
+        "url": "/api/emps/query",
+        "http_method": "GET",
+        "class_name": "EmpController",
+        "description": ""
+      },
+      "test_scenarios": [
+        {
+          "name": "Success Test",
+          "description": "Test GET /api/emps/query",
+          "request": {},
+          "expected_status": 200,
+          "expected_contains": [
+            "code",
+            "status"
+          ],
+          "encrypted_fields": []
+        },
+        {
+          "name": "Invalid Input Test",
+          "description": "Test GET /api/emps/query with invalid input",
+          "request": {},
+          "expected_status": 400
+        }
+      ]
+    },
+    {
+      "api": {
+        "method_name": "getDatas",
+        "url": "/api/emps/getDatas",
+        "http_method": "GET",
+        "class_name": "EmpController",
+        "description": "@return"
+      },
+      "test_scenarios": [
+        {
+          "name": "Success Test",
+          "description": "Test GET /api/emps/getDatas",
+          "request": {},
+          "expected_status": 200,
+          "expected_contains": [
+            "code",
+            "status"
+          ],
+          "encrypted_fields": []
+        },
+        {
+          "name": "Invalid Input Test",
+          "description": "Test GET /api/emps/getDatas with invalid input",
+          "request": {},
+          "expected_status": 400
+        }
+      ]
+    },
+    {
+      "api": {
+        "method_name": "getEmps",
+        "url": "/emps",
+        "http_method": "GET",
+        "class_name": "EmployeeController",
+        "description": ""
+      },
+      "test_scenarios": [
+        {
+          "name": "Success Test",
+          "description": "Test GET /emps",
+          "request": {},
+          "expected_status": 200,
+          "expected_contains": [
+            "code",
+            "status"
+          ],
+          "encrypted_fields": []
+        },
+        {
+          "name": "Invalid Input Test",
+          "description": "Test GET /emps with invalid input",
+          "request": {},
+          "expected_status": 400
+        }
+      ]
+    },
+    {
+      "api": {
+        "method_name": "getLength",
+        "url": "/emps/getLength",
+        "http_method": "GET",
+        "class_name": "EmployeeController",
+        "description": ""
+      },
+      "test_scenarios": [
+        {
+          "name": "Success Test",
+          "description": "Test GET /emps/getLength",
+          "request": {},
+          "expected_status": 200,
+          "expected_contains": [
+            "code",
+            "status"
+          ],
+          "encrypted_fields": []
+        },
+        {
+          "name": "Invalid Input Test",
+          "description": "Test GET /emps/getLength with invalid input",
+          "request": {},
+          "expected_status": 400
+        }
+      ]
+    },
+    {
+      "api": {
+        "method_name": "delEmp",
+        "url": "/emp/delete",
+        "http_method": "GET",
+        "class_name": "EmployeeController",
+        "description": "ajaxʵ��ɾ��"
+      },
+      "test_scenarios": [
+        {
+          "name": "Success Test",
+          "description": "Test GET /emp/delete",
+          "request": {},
+          "expected_status": 200,
+          "expected_contains": [
+            "code",
+            "status"
+          ],
+          "encrypted_fields": []
+        },
+        {
+          "name": "Invalid Input Test",
+          "description": "Test GET /emp/delete with invalid input",
+          "request": {},
+          "expected_status": 400
+        }
+      ]
+    },
+    {
+      "api": {
+        "method_name": "delEmpByBatch",
+        "url": "/emp/delEmpByBatch",
+        "http_method": "GET",
+        "class_name": "EmployeeController",
+        "description": "ajaxʵ��ɾ��"
+      },
+      "test_scenarios": [
+        {
+          "name": "Success Test",
+          "description": "Test GET /emp/delEmpByBatch",
+          "request": {},
+          "expected_status": 200,
+          "expected_contains": [
+            "code",
+            "status"
+          ],
+          "encrypted_fields": []
+        },
+        {
+          "name": "Invalid Input Test",
+          "description": "Test GET /emp/delEmpByBatch with invalid input",
+          "request": {},
+          "expected_status": 400
+        }
+      ]
+    },
+    {
+      "api": {
+        "method_name": "query",
+        "url": "/emp/query",
+        "http_method": "GET",
+        "class_name": "EmployeeController",
+        "description": ""
+      },
+      "test_scenarios": [
+        {
+          "name": "Success Test",
+          "description": "Test GET /emp/query",
+          "request": {},
+          "expected_status": 200,
+          "expected_contains": [
+            "code",
+            "status"
+          ],
+          "encrypted_fields": []
+        },
+        {
+          "name": "Invalid Input Test",
+          "description": "Test GET /emp/query with invalid input",
+          "request": {},
+          "expected_status": 400
+        }
+      ]
+    },
+    {
+      "api": {
+        "method_name": "addEmp",
+        "url": "/emp/addEmpByGet",
+        "http_method": "GET",
+        "class_name": "EmployeeController",
+        "description": "ajax GET��ʽʵ�����"
+      },
+      "test_scenarios": [
+        {
+          "name": "Success Test",
+          "description": "Test GET /emp/addEmpByGet",
+          "request": {},
+          "expected_status": 200,
+          "expected_contains": [
+            "code",
+            "status"
+          ],
+          "encrypted_fields": []
+        },
+        {
+          "name": "Invalid Input Test",
+          "description": "Test GET /emp/addEmpByGet with invalid input",
+          "request": {},
+          "expected_status": 400
+        }
+      ]
+    },
+    {
+      "api": {
+        "method_name": "addEmp",
+        "url": "/emp/addEmpByPost",
+        "http_method": "POST",
+        "class_name": "EmployeeController",
+        "description": "ajax POST��ʽʵ�����"
+      },
+      "test_scenarios": [
+        {
+          "name": "Success Test",
+          "description": "Test POST /emp/addEmpByPost",
+          "request": {
+            "emoloyee": {
+              "firstName": "Robert",
+              "lastName": "Johnson",
+              "dayOfBirth": "1988-03-10",
+              "juminNumber": "8803101234567",
+              "email": "robert.johnson@example.com",
+              "phone": "010-2222-3333"
+            }
+          },
+          "expected_status": 200,
+          "expected_contains": [
+            "code",
+            "status"
+          ],
+          "encrypted_fields": []
+        },
+        {
+          "name": "Invalid Input Test",
+          "description": "Test POST /emp/addEmpByPost with invalid input",
+          "request": {
+            "emoloyee": {
+              "firstName": ""
+            }
+          },
+          "expected_status": 400
+        }
+      ]
+    },
+    {
+      "api": {
+        "method_name": "edit",
+        "url": "/emp/editEmpByPost",
+        "http_method": "POST",
+        "class_name": "EmployeeController",
+        "description": "ajaxʵ���޸ģ�����"
+      },
+      "test_scenarios": [
+        {
+          "name": "Success Test",
+          "description": "Test POST /emp/editEmpByPost",
+          "request": {
+            "emp": {
+              "firstName": "Robert",
+              "lastName": "Johnson",
+              "dayOfBirth": "1988-03-10",
+              "juminNumber": "8803101234567",
+              "email": "robert.johnson@example.com",
+              "phone": "010-2222-3333"
+            }
+          },
+          "expected_status": 200,
+          "expected_contains": [
+            "code",
+            "status"
+          ],
+          "encrypted_fields": []
+        },
+        {
+          "name": "Invalid Input Test",
+          "description": "Test POST /emp/editEmpByPost with invalid input",
+          "request": {
+            "emp": {
+              "firstName": ""
+            }
+          },
+          "expected_status": 400
+        }
+      ]
+    },
+    {
+      "api": {
+        "method_name": "getData",
+        "url": "/data",
+        "http_method": "GET",
+        "class_name": "EmployeeController",
+        "description": ""
+      },
+      "test_scenarios": [
+        {
+          "name": "Success Test",
+          "description": "Test GET /data",
+          "request": {},
+          "expected_status": 200,
+          "expected_contains": [
+            "code",
+            "status"
+          ],
+          "encrypted_fields": []
+        },
+        {
+          "name": "Invalid Input Test",
+          "description": "Test GET /data with invalid input",
+          "request": {},
+          "expected_status": 400
+        }
+      ]
+    },
+    {
+      "api": {
+        "method_name": "getChart",
+        "url": "/chart",
+        "http_method": "GET",
+        "class_name": "EmployeeController",
+        "description": ""
+      },
+      "test_scenarios": [
+        {
+          "name": "Success Test",
+          "description": "Test GET /chart",
+          "request": {},
+          "expected_status": 200,
+          "expected_contains": [
+            "code",
+            "status"
+          ],
+          "encrypted_fields": []
+        },
+        {
+          "name": "Invalid Input Test",
+          "description": "Test GET /chart with invalid input",
+          "request": {},
+          "expected_status": 400
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Start Tomcat/Jetty/Server on port 8000",
+			"type": "shell",
+			"command": "mvn jetty:run -Djetty.http.port=8000",
+			"args": [],
+			"isBackground": true
+		}
+	]
+}

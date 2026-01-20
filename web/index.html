@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .info {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            border-radius: 4px;
+        }
+        .warning {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #fff3e0;
+            border-left: 4px solid #ff9800;
+            border-radius: 4px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            background-color: #2196F3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0b7dda;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 도서 관리 시스템</h1>
+        
+        <div class="info">
+            <h3>✅ 서버 상태: 정상 실행 중</h3>
+            <p><strong>포트:</strong> 8000</p>
+            <p><strong>서버:</strong> Jetty 9.4.48</p>
+            <p><strong>시간:</strong> <span id="time"></span></p>
+        </div>
+
+        <div class="warning">
+            <h3>⚠️ 참고사항</h3>
+            <p>현재 정적 페이지만 표시됩니다.</p>
+            <p>완전한 기능을 위해서는 Java 백엔드 컴파일이 필요합니다.</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="index.jsp" class="btn">JSP 페이지로 이동</a>
+            <a href="views/list.jsp" class="btn">도서 목록</a>
+        </div>
+    </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('time').textContent = now.toLocaleString('ko-KR');
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
