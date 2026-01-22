@@ -1,3 +1,0 @@
-/book-ssm-new/src/com/mybatis/controller/EmpController.java
-/book-ssm-new/src/com/mybatis/controller/EmployeeController.java
-/book-ssm-new/src/com/mybatis/service/EmployeeService.java
