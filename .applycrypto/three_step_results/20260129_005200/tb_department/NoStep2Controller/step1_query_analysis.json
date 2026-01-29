@@ -1,0 +1,18 @@
+{
+  "queries": [
+    {
+      "query_id": "deptList",
+      "sql_summary": "SELECT id, dept_name FROM department",
+      "output_mapping": {
+        "crypto_fields": [
+          {"column_name": "dept_name"}
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "file_paths": [
+      "src/main/java/com/example/department/DepartmentController.java"
+    ]
+  }
+}

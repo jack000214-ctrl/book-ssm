@@ -1,0 +1,1620 @@
+2026-01-20T01:14:31.139Z [INFO] ----------------------invoke validate_cves_for_java----------------------
+2026-01-20T01:14:31.140Z [INFO] [Tool.invoke]({name: validate_cves_for_java, input: {
+  "dependencies": [
+    "org.springframework:spring-core:5.3.39",
+    "org.springframework:spring-beans:5.3.39",
+    "org.springframework:spring-context:5.3.39",
+    "org.springframework:spring-jdbc:5.3.39",
+    "org.springframework:spring-tx:5.3.39",
+    "org.springframework:spring-web:5.3.39",
+    "org.springframework:spring-webmvc:5.3.39",
+    "org.springframework:spring-test:5.3.39",
+    "org.mybatis:mybatis:3.5.16",
+    "org.mybatis:mybatis-spring:2.1.2",
+    "com.mysql:mysql-connector-j:8.4.0",
+    "com.mchange:c3p0:0.10.0",
+    "javax.servlet:javax.servlet-api:3.1.0",
+    "javax.servlet.jsp:jsp-api:2.2",
+    "javax.servlet:jstl:1.2",
+    "com.fasterxml.jackson.core:jackson-databind:2.8.11.6",
+    "org.apache.logging.log4j:log4j-core:2.8.2",
+    "org.slf4j:slf4j-api:1.7.36",
+    "org.apache.logging.log4j:log4j-slf4j-impl:2.8.2",
+    "org.apache.commons:commons-lang3:3.18.0",
+    "commons-fileupload:commons-fileupload:1.5",
+    "commons-io:commons-io:2.6",
+    "org.apache.poi:poi:4.1.2",
+    "org.apache.poi:poi-ooxml:4.1.2"
+  ],
+  "projectPath": "c:\\Project\\SSLife\\book-ssm"
+}}).
+2026-01-20T01:14:31.140Z [INFO] [Task.start](): Starting task toolCall
+2026-01-20T01:14:31.141Z [INFO] [Task.start](): Started task toolCall
+2026-01-20T01:14:31.141Z [INFO] [Tool.invoke] validate GitHub Copilot license.
+2026-01-20T01:14:31.141Z [INFO] [Tool.invoke] do pre-invoke.
+2026-01-20T01:14:31.141Z [INFO] [Tool.invoke] do invoke.
+2026-01-20T01:14:31.142Z [INFO] Getting CVEs for dependencies: org.springframework:spring-core:5.3.39,org.springframework:spring-beans:5.3.39,org.springframework:spring-context:5.3.39,org.springframework:spring-jdbc:5.3.39,org.springframework:spring-tx:5.3.39,org.springframework:spring-web:5.3.39,org.springframework:spring-webmvc:5.3.39,org.springframework:spring-test:5.3.39,org.mybatis:mybatis:3.5.16,org.mybatis:mybatis-spring:2.1.2,com.mysql:mysql-connector-j:8.4.0,com.mchange:c3p0:0.10.0,javax.servlet:javax.servlet-api:3.1.0,javax.servlet.jsp:jsp-api:2.2,javax.servlet:jstl:1.2,com.fasterxml.jackson.core:jackson-databind:2.8.11.6,org.apache.logging.log4j:log4j-core:2.8.2,org.slf4j:slf4j-api:1.7.36,org.apache.logging.log4j:log4j-slf4j-impl:2.8.2,org.apache.commons:commons-lang3:3.18.0,commons-fileupload:commons-fileupload:1.5,commons-io:commons-io:2.6,org.apache.poi:poi:4.1.2,org.apache.poi:poi-ooxml:4.1.2
+2026-01-20T01:14:31.142Z [INFO] getting CVEs for dependencies:
+ - org.springframework:spring-core:5.3.39
+  - org.springframework:spring-beans:5.3.39
+  - org.springframework:spring-context:5.3.39
+  - org.springframework:spring-jdbc:5.3.39
+  - org.springframework:spring-tx:5.3.39
+  - org.springframework:spring-web:5.3.39
+  - org.springframework:spring-webmvc:5.3.39
+  - org.springframework:spring-test:5.3.39
+  - org.mybatis:mybatis:3.5.16
+  - org.mybatis:mybatis-spring:2.1.2
+  - com.mysql:mysql-connector-j:8.4.0
+  - com.mchange:c3p0:0.10.0
+  - javax.servlet:javax.servlet-api:3.1.0
+  - javax.servlet.jsp:jsp-api:2.2
+  - javax.servlet:jstl:1.2
+  - com.fasterxml.jackson.core:jackson-databind:2.8.11.6
+  - org.apache.logging.log4j:log4j-core:2.8.2
+  - org.slf4j:slf4j-api:1.7.36
+  - org.apache.logging.log4j:log4j-slf4j-impl:2.8.2
+  - org.apache.commons:commons-lang3:3.18.0
+  - commons-fileupload:commons-fileupload:1.5
+  - commons-io:commons-io:2.6
+  - org.apache.poi:poi:4.1.2
+  - org.apache.poi:poi-ooxml:4.1.2...
+2026-01-20T01:14:31.142Z [INFO] getting gitHub access token...
+2026-01-20T01:14:31.145Z [INFO] Processing batch 1/1, size: 24
+2026-01-20T01:14:31.146Z [INFO] listing CVEs from GitHub for dependencies [
+  "org.springframework:spring-core:5.3.39",
+  "org.springframework:spring-beans:5.3.39",
+  "org.springframework:spring-context:5.3.39",
+  "org.springframework:spring-jdbc:5.3.39",
+  "org.springframework:spring-tx:5.3.39",
+  "org.springframework:spring-web:5.3.39",
+  "org.springframework:spring-webmvc:5.3.39",
+  "org.springframework:spring-test:5.3.39",
+  "org.mybatis:mybatis:3.5.16",
+  "org.mybatis:mybatis-spring:2.1.2",
+  "com.mysql:mysql-connector-j:8.4.0",
+  "com.mchange:c3p0:0.10.0",
+  "javax.servlet:javax.servlet-api:3.1.0",
+  "javax.servlet.jsp:jsp-api:2.2",
+  "javax.servlet:jstl:1.2",
+  "com.fasterxml.jackson.core:jackson-databind:2.8.11.6",
+  "org.apache.logging.log4j:log4j-core:2.8.2",
+  "org.slf4j:slf4j-api:1.7.36",
+  "org.apache.logging.log4j:log4j-slf4j-impl:2.8.2",
+  "org.apache.commons:commons-lang3:3.18.0",
+  "commons-fileupload:commons-fileupload:1.5",
+  "commons-io:commons-io:2.6",
+  "org.apache.poi:poi:4.1.2",
+  "org.apache.poi:poi-ooxml:4.1.2"
+]
+2026-01-20T01:14:32.234Z [INFO] Fetched 41 total advisories across all pages
+2026-01-20T01:14:32.235Z [INFO] grouping CVEs and finding max patched version by dep...
+2026-01-20T01:14:32.235Z [INFO] done getting 9 CVEs for 24 dependencies
+2026-01-20T01:14:32.236Z [INFO] calculating patched version by dep...
+2026-01-20T01:14:32.236Z [WARN] CVE-2025-41249/org.springframework:spring-core:5.3.39: none/invalid patched version "null".
+2026-01-20T01:14:32.237Z [WARN] CVE-2024-38820/org.springframework:spring-context:5.3.39: none/invalid patched version "null".
+2026-01-20T01:14:32.237Z [WARN] CVE-2025-22233/org.springframework:spring-context:5.3.39: none/invalid patched version "null".
+2026-01-20T01:14:32.237Z [INFO] CVE CVE-2016-1000027 for org.springframework:spring-web:5.3.39: patched version 6.0.0
+2026-01-20T01:14:32.238Z [WARN] CVE-2024-38820/org.springframework:spring-web:5.3.39: none/invalid patched version "null".
+2026-01-20T01:14:32.238Z [WARN] CVE-2024-38816/org.springframework:spring-webmvc:5.3.39: none/invalid patched version "null".
+2026-01-20T01:14:32.238Z [INFO] CVE CVE-2024-38828 for org.springframework:spring-webmvc:5.3.39: patched version 5.3.42
+2026-01-20T01:14:32.239Z [WARN] CVE-2024-38819/org.springframework:spring-webmvc:5.3.39: none/invalid patched version "null".
+2026-01-20T01:14:32.239Z [WARN] CVE-2025-41242/org.springframework:spring-webmvc:5.3.39: none/invalid patched version "null".
+2026-01-20T01:14:32.239Z [INFO] CVE CVE-2020-10673 for com.fasterxml.jackson.core:jackson-databind:2.8.11.6: patched version 2.9.10.4
+2026-01-20T01:14:32.239Z [INFO] CVE CVE-2021-20190 for com.fasterxml.jackson.core:jackson-databind:2.8.11.6: patched version 2.9.10.7
+2026-01-20T01:14:32.240Z [INFO] CVE CVE-2020-25649 for com.fasterxml.jackson.core:jackson-databind:2.8.11.6: patched version 2.9.10.7
+2026-01-20T01:14:32.240Z [INFO] CVE CVE-2020-36186 for com.fasterxml.jackson.core:jackson-databind:2.8.11.6: patched version 2.9.10.8
+2026-01-20T01:14:32.240Z [INFO] CVE CVE-2020-24616 for com.fasterxml.jackson.core:jackson-databind:2.8.11.6: patched version 2.9.10.6
+2026-01-20T01:14:32.241Z [INFO] CVE CVE-2020-35490 for com.fasterxml.jackson.core:jackson-databind:2.8.11.6: patched version 2.9.10.8
+2026-01-20T01:14:32.241Z [INFO] CVE CVE-2020-35491 for com.fasterxml.jackson.core:jackson-databind:2.8.11.6: patched version 2.9.10.8
+2026-01-20T01:14:32.241Z [INFO] CVE CVE-2020-35728 for com.fasterxml.jackson.core:jackson-databind:2.8.11.6: patched version 2.9.10.8
+2026-01-20T01:14:32.242Z [INFO] CVE CVE-2020-24750 for com.fasterxml.jackson.core:jackson-databind:2.8.11.6: patched version 2.9.10.6
+2026-01-20T01:14:32.242Z [INFO] CVE CVE-2020-36182 for com.fasterxml.jackson.core:jackson-databind:2.8.11.6: patched version 2.9.10.8
+2026-01-20T01:14:32.242Z [INFO] CVE CVE-2020-36179 for com.fasterxml.jackson.core:jackson-databind:2.8.11.6: patched version 2.9.10.8
+2026-01-20T01:14:32.243Z [INFO] CVE CVE-2020-36185 for com.fasterxml.jackson.core:jackson-databind:2.8.11.6: patched version 2.9.10.8
+2026-01-20T01:14:32.243Z [INFO] CVE CVE-2020-36181 for com.fasterxml.jackson.core:jackson-databind:2.8.11.6: patched version 2.9.10.8
+2026-01-20T01:14:32.243Z [INFO] CVE CVE-2020-36180 for com.fasterxml.jackson.core:jackson-databind:2.8.11.6: patched version 2.9.10.8
+2026-01-20T01:14:32.243Z [INFO] CVE CVE-2020-36184 for com.fasterxml.jackson.core:jackson-databind:2.8.11.6: patched version 2.9.10.8
+2026-01-20T01:14:32.244Z [WARN] CVE-2020-36183/com.fasterxml.jackson.core:jackson-databind:2.8.11.6: none/invalid patched version "undefined".
+2026-01-20T01:14:32.244Z [INFO] CVE CVE-2020-36188 for com.fasterxml.jackson.core:jackson-databind:2.8.11.6: patched version 2.9.10.8
+2026-01-20T01:14:32.245Z [INFO] CVE CVE-2020-36187 for com.fasterxml.jackson.core:jackson-databind:2.8.11.6: patched version 2.9.10.8
+2026-01-20T01:14:32.245Z [INFO] CVE CVE-2020-36189 for com.fasterxml.jackson.core:jackson-databind:2.8.11.6: patched version 2.9.10.8
+2026-01-20T01:14:32.245Z [INFO] CVE CVE-2020-36518 for com.fasterxml.jackson.core:jackson-databind:2.8.11.6: patched version 2.12.6.1
+2026-01-20T01:14:32.245Z [INFO] CVE CVE-2020-10650 for com.fasterxml.jackson.core:jackson-databind:2.8.11.6: patched version 2.9.10.4
+2026-01-20T01:14:32.246Z [INFO] CVE CVE-2022-42004 for com.fasterxml.jackson.core:jackson-databind:2.8.11.6: patched version 2.12.7.1
+2026-01-20T01:14:32.246Z [INFO] CVE CVE-2022-42003 for com.fasterxml.jackson.core:jackson-databind:2.8.11.6: patched version 2.12.7.1
+2026-01-20T01:14:32.246Z [INFO] CVE CVE-2020-9488 for org.apache.logging.log4j:log4j-core:2.8.2: patched version 2.12.3
+2026-01-20T01:14:32.247Z [INFO] CVE CVE-2021-44228 for org.apache.logging.log4j:log4j-core:2.8.2: patched version 2.12.2
+2026-01-20T01:14:32.247Z [INFO] CVE CVE-2021-45046 for org.apache.logging.log4j:log4j-core:2.8.2: patched version 2.12.2
+2026-01-20T01:14:32.247Z [INFO] CVE CVE-2021-45105 for org.apache.logging.log4j:log4j-core:2.8.2: patched version 2.12.3
+2026-01-20T01:14:32.247Z [INFO] CVE CVE-2021-44832 for org.apache.logging.log4j:log4j-core:2.8.2: patched version 2.12.4
+2026-01-20T01:14:32.248Z [INFO] CVE CVE-2025-68161 for org.apache.logging.log4j:log4j-core:2.8.2: patched version 2.25.3
+2026-01-20T01:14:32.248Z [INFO] CVE CVE-2025-48976 for commons-fileupload:commons-fileupload:1.5: patched version 1.6.0
+2026-01-20T01:14:32.248Z [INFO] CVE CVE-2021-29425 for commons-io:commons-io:2.6: patched version 2.7
+2026-01-20T01:14:32.249Z [INFO] CVE CVE-2024-47554 for commons-io:commons-io:2.6: patched version 2.14.0
+2026-01-20T01:14:32.249Z [INFO] CVE CVE-2025-31672 for org.apache.poi:poi-ooxml:4.1.2: patched version 5.4.0
+2026-01-20T01:14:32.249Z [INFO] finished getting CVEs for dependencies.
+2026-01-20T01:14:32.250Z [INFO] Found 9 dependencies with known CVEs
+2026-01-20T01:14:32.252Z [INFO] [Tool.invoke]({result: {
+  "message": "The following dependencies have known CVEs that need to be fixed:\n- Dependency `org.springframework:spring-core:5.3.39` has **1** known CVEs need to be fixed:\n  - [CVE-2025-41249](https://github.com/advisories/GHSA-jmp9-x22r-554x): Spring Framework annotation detection mechanism may result in improper authorization\n    - **Severity**: **HIGH**\n    - **Details**: The Spring Framework annotation detection mechanism may not correctly resolve annotations on methods within type hierarchies with a parameterized super type with unbounded generics. This can be an issue if such annotations are used for authorization decisions.\n      \n      Your application may be affected by this if you are using Spring Security's @EnableMethodSecurity feature.\n      \n      You are not affected by this if you are not using @EnableMethodSecurity or if you do not use security annotations on methods in generic superclasses or generic interfaces.\n      \n      This CVE is published in conjunction with  CVE-2025-41248 https://spring.io/security/cve-2025-41248 .\n- Dependency `org.springframework:spring-context:5.3.39` has **2** known CVEs need to be fixed:\n  - [CVE-2024-38820](https://github.com/advisories/GHSA-4gc7-5j7h-4qph): Spring Framework DataBinder Case Sensitive Match Exception\n    - **Severity**: **MEDIUM**\n    - **Details**: The fix for CVE-2022-22968 made disallowedFields patterns in DataBinder case insensitive. However, String.toLowerCase() has some Locale dependent exceptions that could potentially result in fields not protected as expected.\n  - [CVE-2025-22233](https://github.com/advisories/GHSA-4wp7-92pw-q264): Spring Framework DataBinder Case Sensitive Match Exception\n    - **Severity**: **LOW**\n    - **Details**: CVE-2024-38820 ensured Locale-independent, lowercase conversion for both the configured disallowedFields patterns and for request parameter names. However, there are still cases where it is possible to bypass the disallowedFields checks.\n      \n      Affected Spring Products and Versions\n      \n      Spring Framework:\n        *  6.2.0 - 6.2.6\n      \n        *  6.1.0 - 6.1.19\n      \n        *  6.0.0 - 6.0.27\n      \n        *  5.3.0 - 5.3.42\n        *  Older, unsupported versions are also affected\n      \n      \n      \n      Mitigation\n      \n      Users of affected versions should upgrade to the corresponding fixed version.\n      \n      | Affected version(s) | Fix Version | Availability |\n      | - | - | - |\n      | 6.2.x |  6.2.7 | OSS |\n      | 6.1.x |  6.1.20 | OSS |\n      | 6.0.x |  6.0.28 |  Commercial https://enterprise.spring.io/ |\n      | 5.3.x |  5.3.43 | Commercial https://enterprise.spring.io/  |\n      \n      No further mitigation steps are necessary.\n      \n      \n      Generally, we recommend using a dedicated model object with properties only for data binding, or using constructor binding since constructor arguments explicitly declare what to bind together with turning off setter binding through the declarativeBinding flag. See the Model Design section in the reference documentation.\n      \n      For setting binding, prefer the use of allowedFields (an explicit list) over disallowedFields.\n      \n      Credit\n      \n      This issue was responsibly reported by the TERASOLUNA Framework Development Team from NTT DATA Group Corporation.\n- Dependency `org.springframework:spring-web:5.3.39` has **2** known CVEs need to be fixed:\n  - [CVE-2016-1000027](https://github.com/advisories/GHSA-4wrc-f8pq-fpqp): Pivotal Spring Framework contains unsafe Java deserialization methods\n    - **Severity**: **CRITICAL**\n    - **Details**: Pivotal Spring Framework before 6.0.0 suffers from a potential remote code execution (RCE) issue if used for Java deserialization of untrusted data. Depending on how the library is implemented within a product, this issue may or not occur, and authentication may be required.\n      \n      Maintainers recommend investigating alternative components or a potential mitigating control. Version 4.2.6 and 3.2.17 contain [enhanced documentation](https://github.com/spring-projects/spring-framework/commit/5cbe90b2cd91b866a5a9586e460f311860e11cfa) advising users to take precautions against unsafe Java deserialization, version 5.3.0 [deprecate the impacted classes](https://github.com/spring-projects/spring-framework/issues/25379) and version 6.0.0 [removed it entirely](https://github.com/spring-projects/spring-framework/issues/27422).\n  - [CVE-2024-38820](https://github.com/advisories/GHSA-4gc7-5j7h-4qph): Spring Framework DataBinder Case Sensitive Match Exception\n    - **Severity**: **MEDIUM**\n    - **Details**: The fix for CVE-2022-22968 made disallowedFields patterns in DataBinder case insensitive. However, String.toLowerCase() has some Locale dependent exceptions that could potentially result in fields not protected as expected.\n- Dependency `org.springframework:spring-webmvc:5.3.39` has **4** known CVEs need to be fixed:\n  - [CVE-2024-38816](https://github.com/advisories/GHSA-cx7f-g6mp-7hqm): Path traversal vulnerability in functional web frameworks\n    - **Severity**: **HIGH**\n    - **Details**: Applications serving static resources through the functional web frameworks WebMvc.fn or WebFlux.fn are vulnerable to path traversal attacks. An attacker can craft malicious HTTP requests and obtain any file on the file system that is also accessible to the process in which the Spring application is running.\n      \n      Specifically, an application is vulnerable when both of the following are true:\n      \n        *  the web application uses RouterFunctions to serve static resources\n        *  resource handling is explicitly configured with a FileSystemResource location\n      \n      \n      However, malicious requests are blocked and rejected when any of the following is true:\n      \n        *  the  Spring Security HTTP Firewall https://docs.spring.io/spring-security/reference/servlet/exploits/firewall.html  is in use\n        *  the application runs on Tomcat or Jetty\n  - [CVE-2024-38828](https://github.com/advisories/GHSA-w3c8-7r8f-9jp8): Spring MVC controller vulnerable to a DoS attack\n    - **Severity**: **MEDIUM**\n    - **Details**: Spring MVC controller methods with an @RequestBody byte[] method parameter are vulnerable to a DoS attack.\n  - [CVE-2024-38819](https://github.com/advisories/GHSA-g5vr-rgqm-vf78): Spring Framework Path Traversal vulnerability\n    - **Severity**: **HIGH**\n    - **Details**: Applications serving static resources through the functional web frameworks WebMvc.fn or WebFlux.fn are vulnerable to path traversal attacks. An attacker can craft malicious HTTP requests and obtain any file on the file system that is also accessible to the process in which the Spring application is running.\n  - [CVE-2025-41242](https://github.com/advisories/GHSA-r936-gwx5-v52f): Spring Framework MVC Applications Path Traversal Vulnerability\n    - **Severity**: **MEDIUM**\n    - **Details**: Spring Framework MVC applications can be vulnerable to a “Path Traversal Vulnerability” when deployed on a non-compliant Servlet container.\n      \n      An application can be vulnerable when all the following are true:\n      \n        *  the application is deployed as a WAR or with an embedded Servlet container\n        *  the Servlet container  does not reject suspicious sequences https://jakarta.ee/specifications/servlet/6.1/jakarta-servlet-spec-6.1.html#uri-path-canonicalization \n        *  the application  serves static resources https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-config/static-resources.html#page-title  with Spring resource handling\n      \n      \n      We have verified that applications deployed on Apache Tomcat or Eclipse Jetty are not vulnerable, as long as default security features are not disabled in the configuration. Because we cannot check exploits against all Servlet containers and configuration variants, we strongly recommend upgrading your application.\n- Dependency `com.fasterxml.jackson.core:jackson-databind:2.8.11.6` has **23** known CVEs need to be fixed:\n  - [CVE-2020-10673](https://github.com/advisories/GHSA-fqwf-pjwf-7vqv): jackson-databind mishandles the interaction between serialization gadgets and typing\n    - **Severity**: **HIGH**\n    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.4 and 2.6.7.4 mishandles the interaction between serialization gadgets and typing, related to com.caucho.config.types.ResourceRef (aka caucho-quercus).\n  - [CVE-2021-20190](https://github.com/advisories/GHSA-5949-rw7g-wx7w): Deserialization of untrusted data in jackson-databind\n    - **Severity**: **HIGH**\n    - **Details**: A flaw was found in jackson-databind before 2.9.10.7 and 2.6.7.5. FasterXML mishandles the interaction between serialization gadgets and typing. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n  - [CVE-2020-25649](https://github.com/advisories/GHSA-288c-cq4h-88gq): XML External Entity (XXE) Injection in Jackson Databind\n    - **Severity**: **HIGH**\n    - **Details**: A flaw was found in FasterXML Jackson Databind, where it did not have entity expansion secured properly. This flaw allows vulnerability to XML external entity (XXE) attacks. The highest threat from this vulnerability is data integrity.\n  - [CVE-2020-36186](https://github.com/advisories/GHSA-v585-23hc-c647): Unsafe Deserialization in jackson-databind\n    - **Severity**: **HIGH**\n    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to `org.apache.tomcat.dbcp.dbcp.datasources.PerUserPoolDataSource`.\n  - [CVE-2020-24616](https://github.com/advisories/GHSA-h3cw-g4mq-c5x2): Code Injection in jackson-databind\n    - **Severity**: **HIGH**\n    - **Details**: This project contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor. FasterXML jackson-databind 2.x before 2.9.10.6 mishandles the interaction between serialization gadgets and typing, related to br.com.anteros.dbcp.AnterosDBCPDataSource (aka Anteros-DBCP).\n  - [CVE-2020-35490](https://github.com/advisories/GHSA-wh8g-3j2c-rqj5): Serialization gadgets exploit in jackson-databind\n    - **Severity**: **HIGH**\n    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to org.apache.commons.dbcp2.datasources.PerUserPoolDataSource.\n  - [CVE-2020-35491](https://github.com/advisories/GHSA-r3gr-cxrf-hg25): Serialization gadgets exploit in jackson-databind\n    - **Severity**: **HIGH**\n    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to org.apache.commons.dbcp2.datasources.SharedPoolDataSource.\n  - [CVE-2020-35728](https://github.com/advisories/GHSA-5r5r-6hpj-8gg9): Serialization gadget exploit in jackson-databind\n    - **Severity**: **HIGH**\n    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to com.oracle.wls.shaded.org.apache.xalan.lib.sql.JNDIConnectionPool (aka embedded Xalan in org.glassfish.web/javax.servlet.jsp.jstl).\n  - [CVE-2020-24750](https://github.com/advisories/GHSA-qjw2-hr98-qgfh): Unsafe Deserialization in jackson-databind\n    - **Severity**: **HIGH**\n    - **Details**: FasterXML jackson-databind 2.x before 2.6.7.5 and from 2.7.x before 2.9.10.6 mishandles the interaction between serialization gadgets and typing, related to com.pastdev.httpcomponents.configuration.JndiConfiguration.\n  - [CVE-2020-36182](https://github.com/advisories/GHSA-89qr-369f-5m5x): Unsafe Deserialization in jackson-databind\n    - **Severity**: **HIGH**\n    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 and 2.6.7.5 mishandles the interaction between serialization gadgets and typing, related to org.apache.tomcat.dbcp.dbcp2.cpdsadapter.DriverAdapterCPDS.\n  - [CVE-2020-36179](https://github.com/advisories/GHSA-9gph-22xh-8x98): Unsafe Deserialization in jackson-databind\n    - **Severity**: **HIGH**\n    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 and 2.6.7.5 mishandles the interaction between serialization gadgets and typing, related to `oadd.org.apache.commons.dbcp.cpdsadapter.DriverAdapterCPDS`.\n  - [CVE-2020-36185](https://github.com/advisories/GHSA-8w26-6f25-cm9x): Unsafe Deserialization in jackson-databind\n    - **Severity**: **HIGH**\n    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to `org.apache.tomcat.dbcp.dbcp2.datasources.SharedPoolDataSource`.\n  - [CVE-2020-36181](https://github.com/advisories/GHSA-cvm9-fjm9-3572): Unsafe Deserialization in jackson-databind\n    - **Severity**: **HIGH**\n    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 and 2.6.7.5 mishandles the interaction between serialization gadgets and typing, related to `org.apache.tomcat.dbcp.dbcp.cpdsadapter.DriverAdapterCPDS`.\n  - [CVE-2020-36180](https://github.com/advisories/GHSA-8c4j-34r4-xr8g): Unsafe Deserialization in jackson-databind\n    - **Severity**: **HIGH**\n    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 and 2.6.7.5 mishandles the interaction between serialization gadgets and typing, related to org.apache.commons.dbcp2.cpdsadapter.DriverAdapterCPDS.\n  - [CVE-2020-36184](https://github.com/advisories/GHSA-m6x4-97wx-4q27): Unsafe Deserialization in jackson-databind\n    - **Severity**: **HIGH**\n    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to org.apache.tomcat.dbcp.dbcp2.datasources.PerUserPoolDataSource.\n  - [CVE-2020-36183](https://github.com/advisories/GHSA-9m6f-7xcq-8vf8): Unsafe Deserialization in jackson-databind\n    - **Severity**: **HIGH**\n    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 and 2.6.7.5 mishandles the interaction between serialization gadgets and typing, related to org.docx4j.org.apache.xalan.lib.sql.JNDIConnectionPool.\n  - [CVE-2020-36188](https://github.com/advisories/GHSA-f9xh-2qgp-cq57): Unsafe Deserialization in jackson-databind\n    - **Severity**: **HIGH**\n    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 and 2.6.7.5 mishandles the interaction between serialization gadgets and typing, related to `com.newrelic.agent.deps.ch.qos.logback.core.db.JNDIConnectionSource`.\n  - [CVE-2020-36187](https://github.com/advisories/GHSA-r695-7vr9-jgc2): Unsafe Deserialization in jackson-databind\n    - **Severity**: **HIGH**\n    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to org.apache.tomcat.dbcp.dbcp.datasources.SharedPoolDataSource.\n  - [CVE-2020-36189](https://github.com/advisories/GHSA-vfqx-33qm-g869): Unsafe Deserialization in jackson-databind\n    - **Severity**: **HIGH**\n    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 an 2.6.7.5 mishandles the interaction between serialization gadgets and typing, related to com.newrelic.agent.deps.ch.qos.logback.core.db.DriverManagerConnectionSource.\n  - [CVE-2020-36518](https://github.com/advisories/GHSA-57j2-w4cx-62h2): Deeply nested json in jackson-databind\n    - **Severity**: **HIGH**\n    - **Details**: jackson-databind is a data-binding package for the Jackson Data Processor. jackson-databind allows a Java stack overflow exception and denial of service via a large depth of nested objects.\n  - [CVE-2020-10650](https://github.com/advisories/GHSA-rpr3-cw39-3pxh): jackson-databind vulnerable to unsafe deserialization\n    - **Severity**: **HIGH**\n    - **Details**: The com.fasterxml.jackson.core:jackson-databind library before version 2.9.10.4 is vulnerable to an Unsafe Deserialization vulnerability when handling interactions related to the class `ignite-jta`.\n  - [CVE-2022-42004](https://github.com/advisories/GHSA-rgv9-q543-rqg4): Uncontrolled Resource Consumption in FasterXML jackson-databind\n    - **Severity**: **HIGH**\n    - **Details**: In FasterXML jackson-databind before 2.12.7.1 and in 2.13.x before 2.13.4, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays. This issue can only happen when the `UNWRAP_SINGLE_VALUE_ARRAYS` feature is explicitly enabled.\n  - [CVE-2022-42003](https://github.com/advisories/GHSA-jjjh-jjxp-wpff): Uncontrolled Resource Consumption in Jackson-databind\n    - **Severity**: **HIGH**\n    - **Details**: In FasterXML jackson-databind 2.4.0-rc1 until 2.12.7.1 and in 2.13.x before 2.13.4.2 resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled. This was patched in 2.12.7.1, 2.13.4.2, and 2.14.0.\n      \n      Commits that introduced vulnerable code are \n      https://github.com/FasterXML/jackson-databind/commit/d499f2e7bbc5ebd63af11e1f5cf1989fa323aa45, https://github.com/FasterXML/jackson-databind/commit/0e37a39502439ecbaa1a5b5188387c01bf7f7fa1, and https://github.com/FasterXML/jackson-databind/commit/7ba9ac5b87a9d6ac0d2815158ecbeb315ad4dcdc.\n      \n      Fix commits are https://github.com/FasterXML/jackson-databind/commit/cd090979b7ea78c75e4de8a4aed04f7e9fa8deea and https://github.com/FasterXML/jackson-databind/commit/d78d00ee7b5245b93103fef3187f70543d67ca33.\n      \n      The `2.13.4.1` release does fix this issue, however it also references a non-existent jackson-bom which causes build failures for gradle users. See https://github.com/FasterXML/jackson-databind/issues/3627#issuecomment-1277957548 for details. This is fixed in `2.13.4.2` which is listed in the advisory metadata so that users are not subjected to unnecessary build failures\n- Dependency `org.apache.logging.log4j:log4j-core:2.8.2` has **6** known CVEs need to be fixed:\n  - [CVE-2020-9488](https://github.com/advisories/GHSA-vwqq-5vrc-xw9h): Improper validation of certificate with host mismatch in Apache Log4j SMTP appender\n    - **Severity**: **LOW**\n    - **Details**: Improper validation of certificate with host mismatch in Apache Log4j SMTP appender prior to version 2.13.2. This could allow an SMTPS connection to be intercepted by a man-in-the-middle attack which could leak any log messages sent through that appender.\n  - [CVE-2021-44228](https://github.com/advisories/GHSA-jfh8-c2jp-5v3q): Remote code injection in Log4j\n    - **Severity**: **CRITICAL**\n    - **Details**: # Summary\n      \n      Log4j versions prior to 2.16.0 are subject to a remote code execution vulnerability via the ldap JNDI parser.\n      As per [Apache's Log4j security guide](https://logging.apache.org/log4j/2.x/security.html): Apache Log4j2 <=2.14.1 JNDI features used in configuration, log messages, and parameters do not protect against attacker controlled LDAP and other JNDI related endpoints. An attacker who can control log messages or log message parameters can execute arbitrary code loaded from LDAP servers when message lookup substitution is enabled. From log4j 2.16.0, this behavior has been disabled by default.\n      \n      Log4j version 2.15.0 contained an earlier fix for the vulnerability, but that patch did not disable attacker-controlled JNDI lookups in all situations. For more information, see the `Updated advice for version 2.16.0` section of this advisory.\n      \n      # Impact\n      \n      Logging untrusted or user controlled data with a vulnerable version of Log4J may result in Remote Code Execution (RCE) against your application. This includes untrusted data included in logged errors such as exception traces, authentication failures, and other unexpected vectors of user controlled input. \n      \n      # Affected versions\n      \n      Any Log4J version prior to v2.15.0 is affected to this specific issue.\n      \n      The v1 branch of Log4J which is considered End Of Life (EOL) is vulnerable to other RCE vectors so the recommendation is to still update to 2.16.0 where possible.\n      \n      ## Security releases\n      Additional backports of this fix have been made available in versions 2.3.1, 2.12.2, and 2.12.3\n      \n      ## Affected packages\n      Only the `org.apache.logging.log4j:log4j-core` package is directly affected by this vulnerability. The `org.apache.logging.log4j:log4j-api` should be kept at the same version as the `org.apache.logging.log4j:log4j-core` package to ensure compatability if in use.\n      \n      # Remediation Advice\n      \n      ## Updated advice for version 2.16.0\n      \n      The Apache Logging Services team provided updated mitigation advice upon the release of version 2.16.0, which [disables JNDI by default and completely removes support for message lookups](https://logging.apache.org/log4j/2.x/changes-report.html#a2.16.0).\n      Even in version 2.15.0, lookups used in layouts to provide specific pieces of context information will still recursively resolve, possibly triggering JNDI lookups. This problem is being tracked as [CVE-2021-45046](https://nvd.nist.gov/vuln/detail/CVE-2021-45046). More information is available on the [GitHub Security Advisory for CVE-2021-45046](https://github.com/advisories/GHSA-7rjr-3q55-vv33).\n      \n      Users who want to avoid attacker-controlled JNDI lookups but cannot upgrade to 2.16.0 must [ensure that no such lookups resolve to attacker-provided data and ensure that the the JndiLookup class is not loaded](https://issues.apache.org/jira/browse/LOG4J2-3221).\n      \n      Please note that Log4J v1 is End Of Life (EOL) and will not receive patches for this issue. Log4J v1 is also vulnerable to other RCE vectors and we recommend you migrate to Log4J 2.16.0 where possible.\n  - [CVE-2021-45046](https://github.com/advisories/GHSA-7rjr-3q55-vv33): Incomplete fix for Apache Log4j vulnerability\n    - **Severity**: **CRITICAL**\n    - **Details**: # Impact\n      \n      The fix to address [CVE-2021-44228](https://nvd.nist.gov/vuln/detail/CVE-2021-44228) in Apache Log4j 2.15.0 was incomplete in certain non-default configurations. This could allow attackers with control over Thread Context Map (MDC) input data when the logging configuration uses a non-default Pattern Layout with either a Context Lookup (for example, $${ctx:loginId}) or a Thread Context Map pattern (%X, %mdc, or %MDC) to craft malicious input data using a JNDI Lookup pattern resulting in a remote code execution (RCE) attack. \n      \n      ## Affected packages\n      Only the `org.apache.logging.log4j:log4j-core` package is directly affected by this vulnerability. The `org.apache.logging.log4j:log4j-api` should be kept at the same version as the `org.apache.logging.log4j:log4j-core` package to ensure compatability if in use.\n      \n      # Mitigation\n      \n      Log4j 2.16.0 fixes this issue by removing support for message lookup patterns and disabling JNDI functionality by default. This issue can be mitigated in prior releases (< 2.16.0) by removing the JndiLookup class from the classpath (example: zip -q -d log4j-core-*.jar org/apache/logging/log4j/core/lookup/JndiLookup.class).\n      \n      Log4j 2.15.0 restricts JNDI LDAP lookups to localhost by default. Note that previous mitigations involving configuration such as to set the system property `log4j2.formatMsgNoLookups` to `true` do NOT mitigate this specific vulnerability.\n  - [CVE-2021-45105](https://github.com/advisories/GHSA-p6xc-xr62-6r2g): Apache Log4j2 vulnerable to Improper Input Validation and Uncontrolled Recursion\n    - **Severity**: **HIGH**\n    - **Details**: Apache Log4j2 versions 2.0-alpha1 through 2.16.0 (excluding 2.12.3) did not protect from uncontrolled recursion from self-referential lookups. This allows an attacker with control over Thread Context Map data to cause a denial of service when a crafted string is interpreted. This issue was fixed in Log4j 2.17.0 and 2.12.3.\n      \n      \n      # Affected packages\n      Only the `org.apache.logging.log4j:log4j-core` package is directly affected by this vulnerability. The `org.apache.logging.log4j:log4j-api` should be kept at the same version as the `org.apache.logging.log4j:log4j-core` package to ensure compatability if in use.\n  - [CVE-2021-44832](https://github.com/advisories/GHSA-8489-44mv-ggj8): Improper Input Validation and Injection in Apache Log4j2\n    - **Severity**: **MEDIUM**\n    - **Details**: Apache Log4j2 versions 2.0-beta7 through 2.17.0 (excluding security fix releases 2.3.2 and 2.12.4) are vulnerable to an attack where an attacker with permission to modify the logging configuration file can construct a malicious configuration using a JDBC Appender with a data source referencing a JNDI URI which can execute remote code. This issue is fixed by limiting JNDI data source names to the java protocol in Log4j2 versions 2.17.1, 2.12.4, and 2.3.2.\n      \n      \n      # Affected packages\n      Only the `org.apache.logging.log4j:log4j-core` package is directly affected by this vulnerability. The `org.apache.logging.log4j:log4j-api` should be kept at the same version as the `org.apache.logging.log4j:log4j-core` package to ensure compatability if in use.\n      \n      This issue does not impact default configurations of Log4j2 and requires an attacker to have control over the Log4j2 configuration, which reduces the likelihood of being exploited.\n  - [CVE-2025-68161](https://github.com/advisories/GHSA-vc5p-v9hr-52mj): Apache Log4j does not verify the TLS hostname in its Socket Appender\n    - **Severity**: **MEDIUM**\n    - **Details**: The Socket Appender in Apache Log4j Core versions 2.0-beta9 through 2.25.2 does not perform TLS hostname verification of the peer certificate, even when the  [verifyHostName](https://logging.apache.org/log4j/2.x/manual/appenders/network.html#SslConfiguration-attr-verifyHostName)  configuration attribute or the  [log4j2.sslVerifyHostName](https://logging.apache.org/log4j/2.x/manual/systemproperties.html#log4j2.sslVerifyHostName) system property is set to true.\n      \n      This issue may allow a man-in-the-middle attacker to intercept or redirect log traffic under the following conditions:\n      \n        *  The attacker is able to intercept or redirect network traffic between the client and the log receiver.\n        *  The attacker can present a server certificate issued by a certification authority trusted by the Socket Appender’s configured trust store (or by the default Java trust store if no custom trust store is configured).\n      \n      \n      Users are advised to upgrade to Apache Log4j Core version 2.25.3, which addresses this issue.\n      \n      As an alternative mitigation, the Socket Appender may be configured to use a private or restricted trust root to limit the set of trusted certificates.\n- Dependency `commons-fileupload:commons-fileupload:1.5` has **1** known CVEs need to be fixed:\n  - [CVE-2025-48976](https://github.com/advisories/GHSA-vv7r-c36w-3prj): Apache Commons FileUpload, Apache Commons FileUpload: FileUpload DoS via part headers\n    - **Severity**: **HIGH**\n    - **Details**: Allocation of resources for multipart headers with insufficient limits enabled a DoS vulnerability in Apache Commons FileUpload.\n      \n      This issue affects Apache Commons FileUpload: from 1.0 before 1.6; from 2.0.0-M1 before 2.0.0-M4.\n      \n      Users are recommended to upgrade to versions 1.6 or 2.0.0-M4, which fix the issue.\n- Dependency `commons-io:commons-io:2.6` has **2** known CVEs need to be fixed:\n  - [CVE-2021-29425](https://github.com/advisories/GHSA-gwrp-pvrq-jmwv): Path Traversal and Improper Input Validation in Apache Commons IO\n    - **Severity**: **MEDIUM**\n    - **Details**: In Apache Commons IO before 2.7, When invoking the method FileNameUtils.normalize with an improper input string, like \"//../foo\", or \"\\\\..\\foo\", the result would be the same value, thus possibly providing access to files in the parent directory, but not further above (thus \"limited\" path traversal), if the calling code would use the result to construct a path value.\n  - [CVE-2024-47554](https://github.com/advisories/GHSA-78wr-2p64-hpwj): Apache Commons IO: Possible denial of service attack on untrusted input to XmlStreamReader\n    - **Severity**: **HIGH**\n    - **Details**: Uncontrolled Resource Consumption vulnerability in Apache Commons IO.\n      \n      The `org.apache.commons.io.input.XmlStreamReader` class may excessively consume CPU resources when processing maliciously crafted input.\n      \n      \n      This issue affects Apache Commons IO: from 2.0 before 2.14.0.\n      \n      Users are recommended to upgrade to version 2.14.0 or later, which fixes the issue.\n- Dependency `org.apache.poi:poi-ooxml:4.1.2` has **1** known CVEs need to be fixed:\n  - [CVE-2025-31672](https://github.com/advisories/GHSA-gmg8-593g-7mv3): Apache POI OOXML Vulnerable to Improper Input Validation in OOXML File Parsing\n    - **Severity**: **MEDIUM**\n    - **Details**: Improper Input Validation vulnerability in Apache POI. The issue affects the parsing of OOXML format files like xlsx, docx and pptx. These file formats are basically zip files and it is possible for malicious users to add zip entries with duplicate names (including the path) in the zip. In this case, products reading the affected file could read different data because 1 of the zip entries with the duplicate name is selected over another but different products may choose a different zip entry.\n      This issue affects Apache POI poi-ooxml before 5.4.0. poi-ooxml 5.4.0 has a check that throws an exception if zip entries with duplicate file names are found in the input file.\n      Users are recommended to upgrade to version poi-ooxml 5.4.0, which fixes the issue. Please read  https://poi.apache.org/security.html  for recommendations about how to use the POI libraries securely.",
+  "result": [
+    {
+      "cves": [
+        {
+          "id": "CVE-2025-41249",
+          "ghsa_id": "GHSA-jmp9-x22r-554x",
+          "severity": "high",
+          "summary": "Spring Framework annotation detection mechanism may result in improper authorization",
+          "description": "The Spring Framework annotation detection mechanism may not correctly resolve annotations on methods within type hierarchies with a parameterized super type with unbounded generics. This can be an issue if such annotations are used for authorization decisions.\n\nYour application may be affected by this if you are using Spring Security's @EnableMethodSecurity feature.\n\nYou are not affected by this if you are not using @EnableMethodSecurity or if you do not use security annotations on methods in generic superclasses or generic interfaces.\n\nThis CVE is published in conjunction with  CVE-2025-41248 https://spring.io/security/cve-2025-41248 .",
+          "html_url": "https://github.com/advisories/GHSA-jmp9-x22r-554x",
+          "affectedDeps": [
+            {
+              "name": "org.springframework:spring-core",
+              "vulVersions": ">= 5.3.0, <= 5.3.44",
+              "patchedVersion": null
+            },
+            {
+              "name": "org.springframework:spring-core",
+              "vulVersions": ">= 6.0.0, <= 6.1.22",
+              "patchedVersion": null
+            },
+            {
+              "name": "org.springframework:spring-core",
+              "vulVersions": ">= 6.2.0, <= 6.2.10",
+              "patchedVersion": "6.2.11"
+            }
+          ]
+        }
+      ],
+      "dep": "org.springframework:spring-core:5.3.39",
+      "name": "org.springframework:spring-core",
+      "version": "5.3.39",
+      "semver": "5.3.39",
+      "unfixableCves": [
+        "CVE-2025-41249"
+      ]
+    },
+    {
+      "cves": [
+        {
+          "id": "CVE-2024-38820",
+          "ghsa_id": "GHSA-4gc7-5j7h-4qph",
+          "severity": "medium",
+          "summary": "Spring Framework DataBinder Case Sensitive Match Exception",
+          "description": "The fix for CVE-2022-22968 made disallowedFields patterns in DataBinder case insensitive. However, String.toLowerCase() has some Locale dependent exceptions that could potentially result in fields not protected as expected.",
+          "html_url": "https://github.com/advisories/GHSA-4gc7-5j7h-4qph",
+          "affectedDeps": [
+            {
+              "name": "org.springframework:spring-context",
+              "vulVersions": ">= 6.1.0, < 6.1.14",
+              "patchedVersion": "6.1.14"
+            },
+            {
+              "name": "org.springframework:spring-web",
+              "vulVersions": ">= 6.1.0, < 6.1.14",
+              "patchedVersion": "6.1.14"
+            },
+            {
+              "name": "org.springframework:spring-web",
+              "vulVersions": ">= 6.0.0, <= 6.0.24",
+              "patchedVersion": null
+            },
+            {
+              "name": "org.springframework:spring-context",
+              "vulVersions": ">= 6.0.0, <= 6.0.24",
+              "patchedVersion": null
+            },
+            {
+              "name": "org.springframework:spring-context",
+              "vulVersions": "<= 5.3.40",
+              "patchedVersion": null
+            },
+            {
+              "name": "org.springframework:spring-web",
+              "vulVersions": "<= 5.3.40",
+              "patchedVersion": null
+            }
+          ]
+        },
+        {
+          "id": "CVE-2025-22233",
+          "ghsa_id": "GHSA-4wp7-92pw-q264",
+          "severity": "low",
+          "summary": "Spring Framework DataBinder Case Sensitive Match Exception",
+          "description": "CVE-2024-38820 ensured Locale-independent, lowercase conversion for both the configured disallowedFields patterns and for request parameter names. However, there are still cases where it is possible to bypass the disallowedFields checks.\n\nAffected Spring Products and Versions\n\nSpring Framework:\n  *  6.2.0 - 6.2.6\n\n  *  6.1.0 - 6.1.19\n\n  *  6.0.0 - 6.0.27\n\n  *  5.3.0 - 5.3.42\n  *  Older, unsupported versions are also affected\n\n\n\nMitigation\n\nUsers of affected versions should upgrade to the corresponding fixed version.\n\n| Affected version(s) | Fix Version | Availability |\n| - | - | - |\n| 6.2.x |  6.2.7 | OSS |\n| 6.1.x |  6.1.20 | OSS |\n| 6.0.x |  6.0.28 |  Commercial https://enterprise.spring.io/ |\n| 5.3.x |  5.3.43 | Commercial https://enterprise.spring.io/  |\n\nNo further mitigation steps are necessary.\n\n\nGenerally, we recommend using a dedicated model object with properties only for data binding, or using constructor binding since constructor arguments explicitly declare what to bind together with turning off setter binding through the declarativeBinding flag. See the Model Design section in the reference documentation.\n\nFor setting binding, prefer the use of allowedFields (an explicit list) over disallowedFields.\n\nCredit\n\nThis issue was responsibly reported by the TERASOLUNA Framework Development Team from NTT DATA Group Corporation.",
+          "html_url": "https://github.com/advisories/GHSA-4wp7-92pw-q264",
+          "affectedDeps": [
+            {
+              "name": "org.springframework:spring-context",
+              "vulVersions": ">= 6.2.0, <= 6.2.6",
+              "patchedVersion": "6.2.7"
+            },
+            {
+              "name": "org.springframework:spring-context",
+              "vulVersions": ">= 6.1.0, <= 6.1.19",
+              "patchedVersion": "6.1.20"
+            },
+            {
+              "name": "org.springframework:spring-context",
+              "vulVersions": ">= 6.0.0, <= 6.0.23",
+              "patchedVersion": null
+            },
+            {
+              "name": "org.springframework:spring-context",
+              "vulVersions": "<= 5.3.39",
+              "patchedVersion": null
+            }
+          ]
+        }
+      ],
+      "dep": "org.springframework:spring-context:5.3.39",
+      "name": "org.springframework:spring-context",
+      "version": "5.3.39",
+      "semver": "5.3.39",
+      "unfixableCves": [
+        "CVE-2024-38820",
+        "CVE-2025-22233"
+      ]
+    },
+    {
+      "cves": [
+        {
+          "id": "CVE-2016-1000027",
+          "ghsa_id": "GHSA-4wrc-f8pq-fpqp",
+          "severity": "critical",
+          "summary": "Pivotal Spring Framework contains unsafe Java deserialization methods",
+          "description": "Pivotal Spring Framework before 6.0.0 suffers from a potential remote code execution (RCE) issue if used for Java deserialization of untrusted data. Depending on how the library is implemented within a product, this issue may or not occur, and authentication may be required.\n\nMaintainers recommend investigating alternative components or a potential mitigating control. Version 4.2.6 and 3.2.17 contain [enhanced documentation](https://github.com/spring-projects/spring-framework/commit/5cbe90b2cd91b866a5a9586e460f311860e11cfa) advising users to take precautions against unsafe Java deserialization, version 5.3.0 [deprecate the impacted classes](https://github.com/spring-projects/spring-framework/issues/25379) and version 6.0.0 [removed it entirely](https://github.com/spring-projects/spring-framework/issues/27422).",
+          "html_url": "https://github.com/advisories/GHSA-4wrc-f8pq-fpqp",
+          "affectedDeps": [
+            {
+              "name": "org.springframework:spring-web",
+              "vulVersions": "< 6.0.0",
+              "patchedVersion": "6.0.0"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2024-38820",
+          "ghsa_id": "GHSA-4gc7-5j7h-4qph",
+          "severity": "medium",
+          "summary": "Spring Framework DataBinder Case Sensitive Match Exception",
+          "description": "The fix for CVE-2022-22968 made disallowedFields patterns in DataBinder case insensitive. However, String.toLowerCase() has some Locale dependent exceptions that could potentially result in fields not protected as expected.",
+          "html_url": "https://github.com/advisories/GHSA-4gc7-5j7h-4qph",
+          "affectedDeps": [
+            {
+              "name": "org.springframework:spring-context",
+              "vulVersions": ">= 6.1.0, < 6.1.14",
+              "patchedVersion": "6.1.14"
+            },
+            {
+              "name": "org.springframework:spring-web",
+              "vulVersions": ">= 6.1.0, < 6.1.14",
+              "patchedVersion": "6.1.14"
+            },
+            {
+              "name": "org.springframework:spring-web",
+              "vulVersions": ">= 6.0.0, <= 6.0.24",
+              "patchedVersion": null
+            },
+            {
+              "name": "org.springframework:spring-context",
+              "vulVersions": ">= 6.0.0, <= 6.0.24",
+              "patchedVersion": null
+            },
+            {
+              "name": "org.springframework:spring-context",
+              "vulVersions": "<= 5.3.40",
+              "patchedVersion": null
+            },
+            {
+              "name": "org.springframework:spring-web",
+              "vulVersions": "<= 5.3.40",
+              "patchedVersion": null
+            }
+          ]
+        }
+      ],
+      "dep": "org.springframework:spring-web:5.3.39",
+      "name": "org.springframework:spring-web",
+      "version": "5.3.39",
+      "semver": "5.3.39",
+      "unfixableCves": [
+        "CVE-2024-38820"
+      ],
+      "patchedVersion": "6.0.0"
+    },
+    {
+      "cves": [
+        {
+          "id": "CVE-2024-38816",
+          "ghsa_id": "GHSA-cx7f-g6mp-7hqm",
+          "severity": "high",
+          "summary": "Path traversal vulnerability in functional web frameworks",
+          "description": "Applications serving static resources through the functional web frameworks WebMvc.fn or WebFlux.fn are vulnerable to path traversal attacks. An attacker can craft malicious HTTP requests and obtain any file on the file system that is also accessible to the process in which the Spring application is running.\n\nSpecifically, an application is vulnerable when both of the following are true:\n\n  *  the web application uses RouterFunctions to serve static resources\n  *  resource handling is explicitly configured with a FileSystemResource location\n\n\nHowever, malicious requests are blocked and rejected when any of the following is true:\n\n  *  the  Spring Security HTTP Firewall https://docs.spring.io/spring-security/reference/servlet/exploits/firewall.html  is in use\n  *  the application runs on Tomcat or Jetty",
+          "html_url": "https://github.com/advisories/GHSA-cx7f-g6mp-7hqm",
+          "affectedDeps": [
+            {
+              "name": "org.springframework:spring-webmvc",
+              "vulVersions": ">= 6.1.0, < 6.1.13",
+              "patchedVersion": "6.1.13"
+            },
+            {
+              "name": "org.springframework:spring-webflux",
+              "vulVersions": ">= 6.1.0, < 6.1.13",
+              "patchedVersion": "6.1.13"
+            },
+            {
+              "name": "org.springframework:spring-webmvc",
+              "vulVersions": ">= 6.0.0, <= 6.0.23",
+              "patchedVersion": null
+            },
+            {
+              "name": "org.springframework:spring-webflux",
+              "vulVersions": ">= 6.0.0, <= 6.0.23",
+              "patchedVersion": null
+            },
+            {
+              "name": "org.springframework:spring-webmvc",
+              "vulVersions": ">= 5.3.0, <= 5.3.39",
+              "patchedVersion": null
+            },
+            {
+              "name": "org.springframework:spring-webflux",
+              "vulVersions": ">= 5.3.0, <= 5.3.39",
+              "patchedVersion": null
+            }
+          ]
+        },
+        {
+          "id": "CVE-2024-38828",
+          "ghsa_id": "GHSA-w3c8-7r8f-9jp8",
+          "severity": "medium",
+          "summary": "Spring MVC controller vulnerable to a DoS attack",
+          "description": "Spring MVC controller methods with an @RequestBody byte[] method parameter are vulnerable to a DoS attack.",
+          "html_url": "https://github.com/advisories/GHSA-w3c8-7r8f-9jp8",
+          "affectedDeps": [
+            {
+              "name": "org.springframework:spring-webmvc",
+              "vulVersions": ">= 5.3.0, < 5.3.42",
+              "patchedVersion": "5.3.42"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2024-38819",
+          "ghsa_id": "GHSA-g5vr-rgqm-vf78",
+          "severity": "high",
+          "summary": "Spring Framework Path Traversal vulnerability",
+          "description": "Applications serving static resources through the functional web frameworks WebMvc.fn or WebFlux.fn are vulnerable to path traversal attacks. An attacker can craft malicious HTTP requests and obtain any file on the file system that is also accessible to the process in which the Spring application is running.",
+          "html_url": "https://github.com/advisories/GHSA-g5vr-rgqm-vf78",
+          "affectedDeps": [
+            {
+              "name": "org.springframework:spring-webflux",
+              "vulVersions": ">= 6.1.0, < 6.1.14",
+              "patchedVersion": "6.1.14"
+            },
+            {
+              "name": "org.springframework:spring-webmvc",
+              "vulVersions": ">= 6.1.0, < 6.1.14",
+              "patchedVersion": "6.1.14"
+            },
+            {
+              "name": "org.springframework:spring-webflux",
+              "vulVersions": "<= 5.3.39",
+              "patchedVersion": null
+            },
+            {
+              "name": "org.springframework:spring-webmvc",
+              "vulVersions": "<= 5.3.39",
+              "patchedVersion": null
+            },
+            {
+              "name": "org.springframework:spring-webflux",
+              "vulVersions": ">= 6.0.0, <= 6.0.23",
+              "patchedVersion": null
+            },
+            {
+              "name": "org.springframework:spring-webmvc",
+              "vulVersions": ">= 6.0.0, <= 6.0.23",
+              "patchedVersion": null
+            }
+          ]
+        },
+        {
+          "id": "CVE-2025-41242",
+          "ghsa_id": "GHSA-r936-gwx5-v52f",
+          "severity": "medium",
+          "summary": "Spring Framework MVC Applications Path Traversal Vulnerability",
+          "description": "Spring Framework MVC applications can be vulnerable to a “Path Traversal Vulnerability” when deployed on a non-compliant Servlet container.\n\nAn application can be vulnerable when all the following are true:\n\n  *  the application is deployed as a WAR or with an embedded Servlet container\n  *  the Servlet container  does not reject suspicious sequences https://jakarta.ee/specifications/servlet/6.1/jakarta-servlet-spec-6.1.html#uri-path-canonicalization \n  *  the application  serves static resources https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-config/static-resources.html#page-title  with Spring resource handling\n\n\nWe have verified that applications deployed on Apache Tomcat or Eclipse Jetty are not vulnerable, as long as default security features are not disabled in the configuration. Because we cannot check exploits against all Servlet containers and configuration variants, we strongly recommend upgrading your application.",
+          "html_url": "https://github.com/advisories/GHSA-r936-gwx5-v52f",
+          "affectedDeps": [
+            {
+              "name": "org.springframework:spring-webmvc",
+              "vulVersions": ">= 6.2.0, < 6.2.10",
+              "patchedVersion": "6.2.10"
+            },
+            {
+              "name": "org.springframework:spring-webmvc",
+              "vulVersions": ">= 6.1.0, <= 6.1.21",
+              "patchedVersion": null
+            },
+            {
+              "name": "org.springframework:spring-webmvc",
+              "vulVersions": ">= 6.0.0, <= 6.0.29",
+              "patchedVersion": null
+            },
+            {
+              "name": "org.springframework:spring-webmvc",
+              "vulVersions": ">= 5.3.0, <= 5.3.43",
+              "patchedVersion": null
+            }
+          ]
+        }
+      ],
+      "dep": "org.springframework:spring-webmvc:5.3.39",
+      "name": "org.springframework:spring-webmvc",
+      "version": "5.3.39",
+      "semver": "5.3.39",
+      "unfixableCves": [
+        "CVE-2024-38816",
+        "CVE-2024-38819",
+        "CVE-2025-41242"
+      ],
+      "patchedVersion": "5.3.42"
+    },
+    {
+      "cves": [
+        {
+          "id": "CVE-2020-10673",
+          "ghsa_id": "GHSA-fqwf-pjwf-7vqv",
+          "severity": "high",
+          "summary": "jackson-databind mishandles the interaction between serialization gadgets and typing",
+          "description": "FasterXML jackson-databind 2.x before 2.9.10.4 and 2.6.7.4 mishandles the interaction between serialization gadgets and typing, related to com.caucho.config.types.ResourceRef (aka caucho-quercus).",
+          "html_url": "https://github.com/advisories/GHSA-fqwf-pjwf-7vqv",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.7.0, < 2.9.10.4",
+              "patchedVersion": "2.9.10.4"
+            },
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.0.0, < 2.6.7.4",
+              "patchedVersion": "2.6.7.4"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2021-20190",
+          "ghsa_id": "GHSA-5949-rw7g-wx7w",
+          "severity": "high",
+          "summary": "Deserialization of untrusted data in jackson-databind",
+          "description": "A flaw was found in jackson-databind before 2.9.10.7 and 2.6.7.5. FasterXML mishandles the interaction between serialization gadgets and typing. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.",
+          "html_url": "https://github.com/advisories/GHSA-5949-rw7g-wx7w",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.7.0, < 2.9.10.7",
+              "patchedVersion": "2.9.10.7"
+            },
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": "< 2.6.7.5",
+              "patchedVersion": "2.6.7.5"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2020-25649",
+          "ghsa_id": "GHSA-288c-cq4h-88gq",
+          "severity": "high",
+          "summary": "XML External Entity (XXE) Injection in Jackson Databind",
+          "description": "A flaw was found in FasterXML Jackson Databind, where it did not have entity expansion secured properly. This flaw allows vulnerability to XML external entity (XXE) attacks. The highest threat from this vulnerability is data integrity.",
+          "html_url": "https://github.com/advisories/GHSA-288c-cq4h-88gq",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.7.0.0, <= 2.9.10.6",
+              "patchedVersion": "2.9.10.7"
+            },
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.10.0.0, <= 2.10.5.0",
+              "patchedVersion": "2.10.5.1"
+            },
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.6.0, <= 2.6.7.3",
+              "patchedVersion": "2.6.7.4"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2020-36186",
+          "ghsa_id": "GHSA-v585-23hc-c647",
+          "severity": "high",
+          "summary": "Unsafe Deserialization in jackson-databind",
+          "description": "FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to `org.apache.tomcat.dbcp.dbcp.datasources.PerUserPoolDataSource`.",
+          "html_url": "https://github.com/advisories/GHSA-v585-23hc-c647",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.0.0, < 2.9.10.8",
+              "patchedVersion": "2.9.10.8"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2020-24616",
+          "ghsa_id": "GHSA-h3cw-g4mq-c5x2",
+          "severity": "high",
+          "summary": "Code Injection in jackson-databind",
+          "description": "This project contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor. FasterXML jackson-databind 2.x before 2.9.10.6 mishandles the interaction between serialization gadgets and typing, related to br.com.anteros.dbcp.AnterosDBCPDataSource (aka Anteros-DBCP).",
+          "html_url": "https://github.com/advisories/GHSA-h3cw-g4mq-c5x2",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.0.0, <= 2.9.10.5",
+              "patchedVersion": "2.9.10.6"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2020-35490",
+          "ghsa_id": "GHSA-wh8g-3j2c-rqj5",
+          "severity": "high",
+          "summary": "Serialization gadgets exploit in jackson-databind",
+          "description": "FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to org.apache.commons.dbcp2.datasources.PerUserPoolDataSource.",
+          "html_url": "https://github.com/advisories/GHSA-wh8g-3j2c-rqj5",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.0.0, <= 2.9.10.7",
+              "patchedVersion": "2.9.10.8"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2020-35491",
+          "ghsa_id": "GHSA-r3gr-cxrf-hg25",
+          "severity": "high",
+          "summary": "Serialization gadgets exploit in jackson-databind",
+          "description": "FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to org.apache.commons.dbcp2.datasources.SharedPoolDataSource.",
+          "html_url": "https://github.com/advisories/GHSA-r3gr-cxrf-hg25",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.0.0, <= 2.9.10.7",
+              "patchedVersion": "2.9.10.8"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2020-35728",
+          "ghsa_id": "GHSA-5r5r-6hpj-8gg9",
+          "severity": "high",
+          "summary": "Serialization gadget exploit in jackson-databind",
+          "description": "FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to com.oracle.wls.shaded.org.apache.xalan.lib.sql.JNDIConnectionPool (aka embedded Xalan in org.glassfish.web/javax.servlet.jsp.jstl).",
+          "html_url": "https://github.com/advisories/GHSA-5r5r-6hpj-8gg9",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.0.0, <= 2.9.10.7",
+              "patchedVersion": "2.9.10.8"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2020-24750",
+          "ghsa_id": "GHSA-qjw2-hr98-qgfh",
+          "severity": "high",
+          "summary": "Unsafe Deserialization in jackson-databind",
+          "description": "FasterXML jackson-databind 2.x before 2.6.7.5 and from 2.7.x before 2.9.10.6 mishandles the interaction between serialization gadgets and typing, related to com.pastdev.httpcomponents.configuration.JndiConfiguration.",
+          "html_url": "https://github.com/advisories/GHSA-qjw2-hr98-qgfh",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.0, <= 2.6.7.4",
+              "patchedVersion": "2.6.7.5"
+            },
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.7.0, <= 2.9.10.5",
+              "patchedVersion": "2.9.10.6"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2020-36182",
+          "ghsa_id": "GHSA-89qr-369f-5m5x",
+          "severity": "high",
+          "summary": "Unsafe Deserialization in jackson-databind",
+          "description": "FasterXML jackson-databind 2.x before 2.9.10.8 and 2.6.7.5 mishandles the interaction between serialization gadgets and typing, related to org.apache.tomcat.dbcp.dbcp2.cpdsadapter.DriverAdapterCPDS.",
+          "html_url": "https://github.com/advisories/GHSA-89qr-369f-5m5x",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.7.0, < 2.9.10.8",
+              "patchedVersion": "2.9.10.8"
+            },
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.0.0, < 2.6.7.5",
+              "patchedVersion": "2.6.7.5"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2020-36179",
+          "ghsa_id": "GHSA-9gph-22xh-8x98",
+          "severity": "high",
+          "summary": "Unsafe Deserialization in jackson-databind",
+          "description": "FasterXML jackson-databind 2.x before 2.9.10.8 and 2.6.7.5 mishandles the interaction between serialization gadgets and typing, related to `oadd.org.apache.commons.dbcp.cpdsadapter.DriverAdapterCPDS`.",
+          "html_url": "https://github.com/advisories/GHSA-9gph-22xh-8x98",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.7.0, < 2.9.10.8",
+              "patchedVersion": "2.9.10.8"
+            },
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.0.0, < 2.6.7.5",
+              "patchedVersion": "2.6.7.5"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2020-36185",
+          "ghsa_id": "GHSA-8w26-6f25-cm9x",
+          "severity": "high",
+          "summary": "Unsafe Deserialization in jackson-databind",
+          "description": "FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to `org.apache.tomcat.dbcp.dbcp2.datasources.SharedPoolDataSource`.",
+          "html_url": "https://github.com/advisories/GHSA-8w26-6f25-cm9x",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.0.0, < 2.9.10.8",
+              "patchedVersion": "2.9.10.8"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2020-36181",
+          "ghsa_id": "GHSA-cvm9-fjm9-3572",
+          "severity": "high",
+          "summary": "Unsafe Deserialization in jackson-databind",
+          "description": "FasterXML jackson-databind 2.x before 2.9.10.8 and 2.6.7.5 mishandles the interaction between serialization gadgets and typing, related to `org.apache.tomcat.dbcp.dbcp.cpdsadapter.DriverAdapterCPDS`.",
+          "html_url": "https://github.com/advisories/GHSA-cvm9-fjm9-3572",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.7.0, < 2.9.10.8",
+              "patchedVersion": "2.9.10.8"
+            },
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.0.0, < 2.6.7.5",
+              "patchedVersion": "2.6.7.5"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2020-36180",
+          "ghsa_id": "GHSA-8c4j-34r4-xr8g",
+          "severity": "high",
+          "summary": "Unsafe Deserialization in jackson-databind",
+          "description": "FasterXML jackson-databind 2.x before 2.9.10.8 and 2.6.7.5 mishandles the interaction between serialization gadgets and typing, related to org.apache.commons.dbcp2.cpdsadapter.DriverAdapterCPDS.",
+          "html_url": "https://github.com/advisories/GHSA-8c4j-34r4-xr8g",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.7.0, < 2.9.10.8",
+              "patchedVersion": "2.9.10.8"
+            },
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.0.0, < 2.6.7.5",
+              "patchedVersion": "2.6.7.5"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2020-36184",
+          "ghsa_id": "GHSA-m6x4-97wx-4q27",
+          "severity": "high",
+          "summary": "Unsafe Deserialization in jackson-databind",
+          "description": "FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to org.apache.tomcat.dbcp.dbcp2.datasources.PerUserPoolDataSource.",
+          "html_url": "https://github.com/advisories/GHSA-m6x4-97wx-4q27",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.0.0, < 2.9.10.8",
+              "patchedVersion": "2.9.10.8"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2020-36183",
+          "ghsa_id": "GHSA-9m6f-7xcq-8vf8",
+          "severity": "high",
+          "summary": "Unsafe Deserialization in jackson-databind",
+          "description": "FasterXML jackson-databind 2.x before 2.9.10.8 and 2.6.7.5 mishandles the interaction between serialization gadgets and typing, related to org.docx4j.org.apache.xalan.lib.sql.JNDIConnectionPool.",
+          "html_url": "https://github.com/advisories/GHSA-9m6f-7xcq-8vf8",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.7.00, < 2.9.10.8",
+              "patchedVersion": "2.9.10.8"
+            },
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.0.0, < 2.6.7.5",
+              "patchedVersion": "2.6.7.5"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2020-36188",
+          "ghsa_id": "GHSA-f9xh-2qgp-cq57",
+          "severity": "high",
+          "summary": "Unsafe Deserialization in jackson-databind",
+          "description": "FasterXML jackson-databind 2.x before 2.9.10.8 and 2.6.7.5 mishandles the interaction between serialization gadgets and typing, related to `com.newrelic.agent.deps.ch.qos.logback.core.db.JNDIConnectionSource`.",
+          "html_url": "https://github.com/advisories/GHSA-f9xh-2qgp-cq57",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.7.0, < 2.9.10.8",
+              "patchedVersion": "2.9.10.8"
+            },
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.0.0, < 2.6.7.5",
+              "patchedVersion": "2.6.7.5"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2020-36187",
+          "ghsa_id": "GHSA-r695-7vr9-jgc2",
+          "severity": "high",
+          "summary": "Unsafe Deserialization in jackson-databind",
+          "description": "FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to org.apache.tomcat.dbcp.dbcp.datasources.SharedPoolDataSource.",
+          "html_url": "https://github.com/advisories/GHSA-r695-7vr9-jgc2",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.0.0, < 2.9.10.8",
+              "patchedVersion": "2.9.10.8"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2020-36189",
+          "ghsa_id": "GHSA-vfqx-33qm-g869",
+          "severity": "high",
+          "summary": "Unsafe Deserialization in jackson-databind",
+          "description": "FasterXML jackson-databind 2.x before 2.9.10.8 an 2.6.7.5 mishandles the interaction between serialization gadgets and typing, related to com.newrelic.agent.deps.ch.qos.logback.core.db.DriverManagerConnectionSource.",
+          "html_url": "https://github.com/advisories/GHSA-vfqx-33qm-g869",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.7.0, < 2.9.10.8",
+              "patchedVersion": "2.9.10.8"
+            },
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": "< 2.6.7.5",
+              "patchedVersion": "2.6.7.5"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2020-36518",
+          "ghsa_id": "GHSA-57j2-w4cx-62h2",
+          "severity": "high",
+          "summary": "Deeply nested json in jackson-databind",
+          "description": "jackson-databind is a data-binding package for the Jackson Data Processor. jackson-databind allows a Java stack overflow exception and denial of service via a large depth of nested objects.",
+          "html_url": "https://github.com/advisories/GHSA-57j2-w4cx-62h2",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.13.0, <= 2.13.2.0",
+              "patchedVersion": "2.13.2.1"
+            },
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": "<= 2.12.6.0",
+              "patchedVersion": "2.12.6.1"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2020-10650",
+          "ghsa_id": "GHSA-rpr3-cw39-3pxh",
+          "severity": "high",
+          "summary": "jackson-databind vulnerable to unsafe deserialization",
+          "description": "The com.fasterxml.jackson.core:jackson-databind library before version 2.9.10.4 is vulnerable to an Unsafe Deserialization vulnerability when handling interactions related to the class `ignite-jta`.",
+          "html_url": "https://github.com/advisories/GHSA-rpr3-cw39-3pxh",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": "<= 2.9.10.3",
+              "patchedVersion": "2.9.10.4"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2022-42004",
+          "ghsa_id": "GHSA-rgv9-q543-rqg4",
+          "severity": "high",
+          "summary": "Uncontrolled Resource Consumption in FasterXML jackson-databind",
+          "description": "In FasterXML jackson-databind before 2.12.7.1 and in 2.13.x before 2.13.4, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays. This issue can only happen when the `UNWRAP_SINGLE_VALUE_ARRAYS` feature is explicitly enabled.",
+          "html_url": "https://github.com/advisories/GHSA-rgv9-q543-rqg4",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": "< 2.12.7.1",
+              "patchedVersion": "2.12.7.1"
+            },
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.13.0, < 2.13.4",
+              "patchedVersion": "2.13.4"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2022-42003",
+          "ghsa_id": "GHSA-jjjh-jjxp-wpff",
+          "severity": "high",
+          "summary": "Uncontrolled Resource Consumption in Jackson-databind",
+          "description": "In FasterXML jackson-databind 2.4.0-rc1 until 2.12.7.1 and in 2.13.x before 2.13.4.2 resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled. This was patched in 2.12.7.1, 2.13.4.2, and 2.14.0.\n\nCommits that introduced vulnerable code are \nhttps://github.com/FasterXML/jackson-databind/commit/d499f2e7bbc5ebd63af11e1f5cf1989fa323aa45, https://github.com/FasterXML/jackson-databind/commit/0e37a39502439ecbaa1a5b5188387c01bf7f7fa1, and https://github.com/FasterXML/jackson-databind/commit/7ba9ac5b87a9d6ac0d2815158ecbeb315ad4dcdc.\n\nFix commits are https://github.com/FasterXML/jackson-databind/commit/cd090979b7ea78c75e4de8a4aed04f7e9fa8deea and https://github.com/FasterXML/jackson-databind/commit/d78d00ee7b5245b93103fef3187f70543d67ca33.\n\nThe `2.13.4.1` release does fix this issue, however it also references a non-existent jackson-bom which causes build failures for gradle users. See https://github.com/FasterXML/jackson-databind/issues/3627#issuecomment-1277957548 for details. This is fixed in `2.13.4.2` which is listed in the advisory metadata so that users are not subjected to unnecessary build failures",
+          "html_url": "https://github.com/advisories/GHSA-jjjh-jjxp-wpff",
+          "affectedDeps": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.4.0-rc1, < 2.12.7.1",
+              "patchedVersion": "2.12.7.1"
+            },
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "vulVersions": ">= 2.13.0, < 2.13.4.2",
+              "patchedVersion": "2.13.4.2"
+            }
+          ]
+        }
+      ],
+      "dep": "com.fasterxml.jackson.core:jackson-databind:2.8.11.6",
+      "name": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.8.11.6",
+      "semver": "2.8.11",
+      "unfixableCves": [
+        "CVE-2020-36183"
+      ],
+      "patchedVersion": "2.12.7.1"
+    },
+    {
+      "cves": [
+        {
+          "id": "CVE-2020-9488",
+          "ghsa_id": "GHSA-vwqq-5vrc-xw9h",
+          "severity": "low",
+          "summary": "Improper validation of certificate with host mismatch in Apache Log4j SMTP appender",
+          "description": "Improper validation of certificate with host mismatch in Apache Log4j SMTP appender prior to version 2.13.2. This could allow an SMTPS connection to be intercepted by a man-in-the-middle attack which could leak any log messages sent through that appender.",
+          "html_url": "https://github.com/advisories/GHSA-vwqq-5vrc-xw9h",
+          "affectedDeps": [
+            {
+              "name": "org.apache.logging.log4j:log4j",
+              "vulVersions": ">= 2.13.0, < 2.13.2",
+              "patchedVersion": "2.13.2"
+            },
+            {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "vulVersions": ">= 2.13.0, < 2.13.2",
+              "patchedVersion": "2.13.2"
+            },
+            {
+              "name": "org.apache.logging.log4j:log4j",
+              "vulVersions": ">= 2.4.0, < 2.12.3",
+              "patchedVersion": "2.12.3"
+            },
+            {
+              "name": "org.apache.logging.log4j:log4j",
+              "vulVersions": "< 2.3.2",
+              "patchedVersion": "2.3.2"
+            },
+            {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "vulVersions": ">= 2.4.0, < 2.12.3",
+              "patchedVersion": "2.12.3"
+            },
+            {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "vulVersions": "< 2.3.2",
+              "patchedVersion": "2.3.2"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2021-44228",
+          "ghsa_id": "GHSA-jfh8-c2jp-5v3q",
+          "severity": "critical",
+          "summary": "Remote code injection in Log4j",
+          "description": "# Summary\n\nLog4j versions prior to 2.16.0 are subject to a remote code execution vulnerability via the ldap JNDI parser.\nAs per [Apache's Log4j security guide](https://logging.apache.org/log4j/2.x/security.html): Apache Log4j2 <=2.14.1 JNDI features used in configuration, log messages, and parameters do not protect against attacker controlled LDAP and other JNDI related endpoints. An attacker who can control log messages or log message parameters can execute arbitrary code loaded from LDAP servers when message lookup substitution is enabled. From log4j 2.16.0, this behavior has been disabled by default.\n\nLog4j version 2.15.0 contained an earlier fix for the vulnerability, but that patch did not disable attacker-controlled JNDI lookups in all situations. For more information, see the `Updated advice for version 2.16.0` section of this advisory.\n\n# Impact\n\nLogging untrusted or user controlled data with a vulnerable version of Log4J may result in Remote Code Execution (RCE) against your application. This includes untrusted data included in logged errors such as exception traces, authentication failures, and other unexpected vectors of user controlled input. \n\n# Affected versions\n\nAny Log4J version prior to v2.15.0 is affected to this specific issue.\n\nThe v1 branch of Log4J which is considered End Of Life (EOL) is vulnerable to other RCE vectors so the recommendation is to still update to 2.16.0 where possible.\n\n## Security releases\nAdditional backports of this fix have been made available in versions 2.3.1, 2.12.2, and 2.12.3\n\n## Affected packages\nOnly the `org.apache.logging.log4j:log4j-core` package is directly affected by this vulnerability. The `org.apache.logging.log4j:log4j-api` should be kept at the same version as the `org.apache.logging.log4j:log4j-core` package to ensure compatability if in use.\n\n# Remediation Advice\n\n## Updated advice for version 2.16.0\n\nThe Apache Logging Services team provided updated mitigation advice upon the release of version 2.16.0, which [disables JNDI by default and completely removes support for message lookups](https://logging.apache.org/log4j/2.x/changes-report.html#a2.16.0).\nEven in version 2.15.0, lookups used in layouts to provide specific pieces of context information will still recursively resolve, possibly triggering JNDI lookups. This problem is being tracked as [CVE-2021-45046](https://nvd.nist.gov/vuln/detail/CVE-2021-45046). More information is available on the [GitHub Security Advisory for CVE-2021-45046](https://github.com/advisories/GHSA-7rjr-3q55-vv33).\n\nUsers who want to avoid attacker-controlled JNDI lookups but cannot upgrade to 2.16.0 must [ensure that no such lookups resolve to attacker-provided data and ensure that the the JndiLookup class is not loaded](https://issues.apache.org/jira/browse/LOG4J2-3221).\n\nPlease note that Log4J v1 is End Of Life (EOL) and will not receive patches for this issue. Log4J v1 is also vulnerable to other RCE vectors and we recommend you migrate to Log4J 2.16.0 where possible.",
+          "html_url": "https://github.com/advisories/GHSA-jfh8-c2jp-5v3q",
+          "affectedDeps": [
+            {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "vulVersions": ">= 2.13.0, < 2.15.0",
+              "patchedVersion": "2.15.0"
+            },
+            {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "vulVersions": ">= 2.4, < 2.12.2",
+              "patchedVersion": "2.12.2"
+            },
+            {
+              "name": "com.guicedee.services:log4j-core",
+              "vulVersions": "<= 1.2.1.2-jre17",
+              "patchedVersion": null
+            },
+            {
+              "name": "org.xbib.elasticsearch:log4j",
+              "vulVersions": "= 6.3.2.1",
+              "patchedVersion": null
+            },
+            {
+              "name": "uk.co.nichesolutions.logging.log4j:log4j-core",
+              "vulVersions": "= 2.6.3-CUSTOM",
+              "patchedVersion": null
+            },
+            {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "vulVersions": ">= 2.0-beta9, < 2.3.1",
+              "patchedVersion": "2.3.1"
+            },
+            {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "vulVersions": ">= 1.8.0, < 1.9.2",
+              "patchedVersion": "1.9.2"
+            },
+            {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "vulVersions": ">= 1.10.0, < 1.10.8",
+              "patchedVersion": "1.10.8"
+            },
+            {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "vulVersions": ">= 1.11.0, < 1.11.10",
+              "patchedVersion": "1.11.10"
+            },
+            {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "vulVersions": ">= 2.0.0, < 2.0.11",
+              "patchedVersion": "2.0.11"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2021-45046",
+          "ghsa_id": "GHSA-7rjr-3q55-vv33",
+          "severity": "critical",
+          "summary": "Incomplete fix for Apache Log4j vulnerability",
+          "description": "# Impact\n\nThe fix to address [CVE-2021-44228](https://nvd.nist.gov/vuln/detail/CVE-2021-44228) in Apache Log4j 2.15.0 was incomplete in certain non-default configurations. This could allow attackers with control over Thread Context Map (MDC) input data when the logging configuration uses a non-default Pattern Layout with either a Context Lookup (for example, $${ctx:loginId}) or a Thread Context Map pattern (%X, %mdc, or %MDC) to craft malicious input data using a JNDI Lookup pattern resulting in a remote code execution (RCE) attack. \n\n## Affected packages\nOnly the `org.apache.logging.log4j:log4j-core` package is directly affected by this vulnerability. The `org.apache.logging.log4j:log4j-api` should be kept at the same version as the `org.apache.logging.log4j:log4j-core` package to ensure compatability if in use.\n\n# Mitigation\n\nLog4j 2.16.0 fixes this issue by removing support for message lookup patterns and disabling JNDI functionality by default. This issue can be mitigated in prior releases (< 2.16.0) by removing the JndiLookup class from the classpath (example: zip -q -d log4j-core-*.jar org/apache/logging/log4j/core/lookup/JndiLookup.class).\n\nLog4j 2.15.0 restricts JNDI LDAP lookups to localhost by default. Note that previous mitigations involving configuration such as to set the system property `log4j2.formatMsgNoLookups` to `true` do NOT mitigate this specific vulnerability.",
+          "html_url": "https://github.com/advisories/GHSA-7rjr-3q55-vv33",
+          "affectedDeps": [
+            {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "vulVersions": ">= 2.13.0, < 2.16.0",
+              "patchedVersion": "2.16.0"
+            },
+            {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "vulVersions": "< 2.12.2",
+              "patchedVersion": "2.12.2"
+            },
+            {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "vulVersions": ">= 1.8.0, < 1.9.2",
+              "patchedVersion": "1.9.2"
+            },
+            {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "vulVersions": ">= 1.10.0, < 1.10.8",
+              "patchedVersion": "1.10.8"
+            },
+            {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "vulVersions": ">= 1.11.0, < 1.11.11",
+              "patchedVersion": "1.11.11"
+            },
+            {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "vulVersions": ">= 2.0.0, < 2.0.12",
+              "patchedVersion": "2.0.12"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2021-45105",
+          "ghsa_id": "GHSA-p6xc-xr62-6r2g",
+          "severity": "high",
+          "summary": "Apache Log4j2 vulnerable to Improper Input Validation and Uncontrolled Recursion",
+          "description": "Apache Log4j2 versions 2.0-alpha1 through 2.16.0 (excluding 2.12.3) did not protect from uncontrolled recursion from self-referential lookups. This allows an attacker with control over Thread Context Map data to cause a denial of service when a crafted string is interpreted. This issue was fixed in Log4j 2.17.0 and 2.12.3.\n\n\n# Affected packages\nOnly the `org.apache.logging.log4j:log4j-core` package is directly affected by this vulnerability. The `org.apache.logging.log4j:log4j-api` should be kept at the same version as the `org.apache.logging.log4j:log4j-core` package to ensure compatability if in use.",
+          "html_url": "https://github.com/advisories/GHSA-p6xc-xr62-6r2g",
+          "affectedDeps": [
+            {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "vulVersions": ">= 2.4.0, < 2.12.3",
+              "patchedVersion": "2.12.3"
+            },
+            {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "vulVersions": ">= 2.13.0, < 2.17.0",
+              "patchedVersion": "2.17.0"
+            },
+            {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "vulVersions": "< 2.3.1",
+              "patchedVersion": "2.3.1"
+            },
+            {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "vulVersions": ">= 1.8.0, < 1.9.2",
+              "patchedVersion": "1.9.2"
+            },
+            {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "vulVersions": ">= 1.10.0, < 1.10.9",
+              "patchedVersion": "1.10.9"
+            },
+            {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "vulVersions": ">= 1.11.0, < 1.11.12",
+              "patchedVersion": "1.11.12"
+            },
+            {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "vulVersions": ">= 2.0.0, < 2.0.13",
+              "patchedVersion": "2.0.13"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2021-44832",
+          "ghsa_id": "GHSA-8489-44mv-ggj8",
+          "severity": "medium",
+          "summary": "Improper Input Validation and Injection in Apache Log4j2",
+          "description": "Apache Log4j2 versions 2.0-beta7 through 2.17.0 (excluding security fix releases 2.3.2 and 2.12.4) are vulnerable to an attack where an attacker with permission to modify the logging configuration file can construct a malicious configuration using a JDBC Appender with a data source referencing a JNDI URI which can execute remote code. This issue is fixed by limiting JNDI data source names to the java protocol in Log4j2 versions 2.17.1, 2.12.4, and 2.3.2.\n\n\n# Affected packages\nOnly the `org.apache.logging.log4j:log4j-core` package is directly affected by this vulnerability. The `org.apache.logging.log4j:log4j-api` should be kept at the same version as the `org.apache.logging.log4j:log4j-core` package to ensure compatability if in use.\n\nThis issue does not impact default configurations of Log4j2 and requires an attacker to have control over the Log4j2 configuration, which reduces the likelihood of being exploited.",
+          "html_url": "https://github.com/advisories/GHSA-8489-44mv-ggj8",
+          "affectedDeps": [
+            {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "vulVersions": ">= 2.0-beta7, < 2.3.2",
+              "patchedVersion": "2.3.2"
+            },
+            {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "vulVersions": ">= 2.4, < 2.12.4",
+              "patchedVersion": "2.12.4"
+            },
+            {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "vulVersions": ">= 2.13.0, < 2.17.1",
+              "patchedVersion": "2.17.1"
+            },
+            {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "vulVersions": ">= 1.8.0, < 1.9.2",
+              "patchedVersion": "1.9.2"
+            },
+            {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "vulVersions": ">= 1.10.0, < 1.10.9",
+              "patchedVersion": "1.10.9"
+            },
+            {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "vulVersions": ">= 1.11.0, < 1.11.13",
+              "patchedVersion": "1.11.13"
+            },
+            {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "vulVersions": ">= 2.0.0, < 2.0.14",
+              "patchedVersion": "2.0.14"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2025-68161",
+          "ghsa_id": "GHSA-vc5p-v9hr-52mj",
+          "severity": "medium",
+          "summary": "Apache Log4j does not verify the TLS hostname in its Socket Appender",
+          "description": "The Socket Appender in Apache Log4j Core versions 2.0-beta9 through 2.25.2 does not perform TLS hostname verification of the peer certificate, even when the  [verifyHostName](https://logging.apache.org/log4j/2.x/manual/appenders/network.html#SslConfiguration-attr-verifyHostName)  configuration attribute or the  [log4j2.sslVerifyHostName](https://logging.apache.org/log4j/2.x/manual/systemproperties.html#log4j2.sslVerifyHostName) system property is set to true.\n\nThis issue may allow a man-in-the-middle attacker to intercept or redirect log traffic under the following conditions:\n\n  *  The attacker is able to intercept or redirect network traffic between the client and the log receiver.\n  *  The attacker can present a server certificate issued by a certification authority trusted by the Socket Appender’s configured trust store (or by the default Java trust store if no custom trust store is configured).\n\n\nUsers are advised to upgrade to Apache Log4j Core version 2.25.3, which addresses this issue.\n\nAs an alternative mitigation, the Socket Appender may be configured to use a private or restricted trust root to limit the set of trusted certificates.",
+          "html_url": "https://github.com/advisories/GHSA-vc5p-v9hr-52mj",
+          "affectedDeps": [
+            {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "vulVersions": ">= 2.0-beta9, < 2.25.3",
+              "patchedVersion": "2.25.3"
+            }
+          ]
+        }
+      ],
+      "dep": "org.apache.logging.log4j:log4j-core:2.8.2",
+      "name": "org.apache.logging.log4j:log4j-core",
+      "version": "2.8.2",
+      "semver": "2.8.2",
+      "unfixableCves": [],
+      "patchedVersion": "2.25.3"
+    },
+    {
+      "cves": [
+        {
+          "id": "CVE-2025-48976",
+          "ghsa_id": "GHSA-vv7r-c36w-3prj",
+          "severity": "high",
+          "summary": "Apache Commons FileUpload, Apache Commons FileUpload: FileUpload DoS via part headers",
+          "description": "Allocation of resources for multipart headers with insufficient limits enabled a DoS vulnerability in Apache Commons FileUpload.\n\nThis issue affects Apache Commons FileUpload: from 1.0 before 1.6; from 2.0.0-M1 before 2.0.0-M4.\n\nUsers are recommended to upgrade to versions 1.6 or 2.0.0-M4, which fix the issue.",
+          "html_url": "https://github.com/advisories/GHSA-vv7r-c36w-3prj",
+          "affectedDeps": [
+            {
+              "name": "org.apache.commons:commons-fileupload2-core",
+              "vulVersions": ">= 2.0.0-M1, < 2.0.0-M4",
+              "patchedVersion": "2.0.0-M4"
+            },
+            {
+              "name": "commons-fileupload:commons-fileupload",
+              "vulVersions": ">= 1.0, < 1.6.0",
+              "patchedVersion": "1.6.0"
+            }
+          ]
+        }
+      ],
+      "dep": "commons-fileupload:commons-fileupload:1.5",
+      "name": "commons-fileupload:commons-fileupload",
+      "version": "1.5",
+      "semver": "1.5.0",
+      "unfixableCves": [],
+      "patchedVersion": "1.6.0"
+    },
+    {
+      "cves": [
+        {
+          "id": "CVE-2021-29425",
+          "ghsa_id": "GHSA-gwrp-pvrq-jmwv",
+          "severity": "medium",
+          "summary": "Path Traversal and Improper Input Validation in Apache Commons IO",
+          "description": "In Apache Commons IO before 2.7, When invoking the method FileNameUtils.normalize with an improper input string, like \"//../foo\", or \"\\\\..\\foo\", the result would be the same value, thus possibly providing access to files in the parent directory, but not further above (thus \"limited\" path traversal), if the calling code would use the result to construct a path value.",
+          "html_url": "https://github.com/advisories/GHSA-gwrp-pvrq-jmwv",
+          "affectedDeps": [
+            {
+              "name": "commons-io:commons-io",
+              "vulVersions": "< 2.7",
+              "patchedVersion": "2.7"
+            },
+            {
+              "name": "com.cosium.vet:vet",
+              "vulVersions": ">= 1.0, <= 3.22",
+              "patchedVersion": null
+            },
+            {
+              "name": "com.diamondq.common:common-thirdparty.jcasbin",
+              "vulVersions": "= 1.4.0",
+              "patchedVersion": null
+            },
+            {
+              "name": "com.liferay:com.liferay.sass.compiler.jsass",
+              "vulVersions": "= 1.0.1",
+              "patchedVersion": null
+            },
+            {
+              "name": "com.virjar:ratel-api",
+              "vulVersions": ">= 1.0.0, <= 1.3.6",
+              "patchedVersion": null
+            },
+            {
+              "name": "net.hasor:cobble-lang",
+              "vulVersions": ">= 4.4.1, <= 4.6.2",
+              "patchedVersion": null
+            },
+            {
+              "name": "org.apache.commons:commons-io",
+              "vulVersions": "= 1.3.2",
+              "patchedVersion": null
+            },
+            {
+              "name": "org.apache.servicemix.bundles:org.apache.servicemix.bundles.commons-io",
+              "vulVersions": ">= 1.4, <= 1.5",
+              "patchedVersion": null
+            },
+            {
+              "name": "org.checkerframework.annotatedlib:commons-io",
+              "vulVersions": ">= 2.6, < 2.7",
+              "patchedVersion": "2.7"
+            },
+            {
+              "name": "org.smartboot.servlet:servlet-core",
+              "vulVersions": ">= 0.1.9, <= 0.6",
+              "patchedVersion": null
+            }
+          ]
+        },
+        {
+          "id": "CVE-2024-47554",
+          "ghsa_id": "GHSA-78wr-2p64-hpwj",
+          "severity": "high",
+          "summary": "Apache Commons IO: Possible denial of service attack on untrusted input to XmlStreamReader",
+          "description": "Uncontrolled Resource Consumption vulnerability in Apache Commons IO.\n\nThe `org.apache.commons.io.input.XmlStreamReader` class may excessively consume CPU resources when processing maliciously crafted input.\n\n\nThis issue affects Apache Commons IO: from 2.0 before 2.14.0.\n\nUsers are recommended to upgrade to version 2.14.0 or later, which fixes the issue.",
+          "html_url": "https://github.com/advisories/GHSA-78wr-2p64-hpwj",
+          "affectedDeps": [
+            {
+              "name": "commons-io:commons-io",
+              "vulVersions": ">= 2.0, < 2.14.0",
+              "patchedVersion": "2.14.0"
+            }
+          ]
+        }
+      ],
+      "dep": "commons-io:commons-io:2.6",
+      "name": "commons-io:commons-io",
+      "version": "2.6",
+      "semver": "2.6.0",
+      "unfixableCves": [],
+      "patchedVersion": "2.14.0"
+    },
+    {
+      "cves": [
+        {
+          "id": "CVE-2025-31672",
+          "ghsa_id": "GHSA-gmg8-593g-7mv3",
+          "severity": "medium",
+          "summary": "Apache POI OOXML Vulnerable to Improper Input Validation in OOXML File Parsing",
+          "description": "Improper Input Validation vulnerability in Apache POI. The issue affects the parsing of OOXML format files like xlsx, docx and pptx. These file formats are basically zip files and it is possible for malicious users to add zip entries with duplicate names (including the path) in the zip. In this case, products reading the affected file could read different data because 1 of the zip entries with the duplicate name is selected over another but different products may choose a different zip entry.\nThis issue affects Apache POI poi-ooxml before 5.4.0. poi-ooxml 5.4.0 has a check that throws an exception if zip entries with duplicate file names are found in the input file.\nUsers are recommended to upgrade to version poi-ooxml 5.4.0, which fixes the issue. Please read  https://poi.apache.org/security.html  for recommendations about how to use the POI libraries securely.",
+          "html_url": "https://github.com/advisories/GHSA-gmg8-593g-7mv3",
+          "affectedDeps": [
+            {
+              "name": "org.apache.poi:poi-ooxml",
+              "vulVersions": "< 5.4.0",
+              "patchedVersion": "5.4.0"
+            }
+          ]
+        }
+      ],
+      "dep": "org.apache.poi:poi-ooxml:4.1.2",
+      "name": "org.apache.poi:poi-ooxml",
+      "version": "4.1.2",
+      "semver": "4.1.2",
+      "unfixableCves": [],
+      "patchedVersion": "5.4.0"
+    }
+  ],
+  "telemetry": {
+    "cve.high": 29,
+    "cve.medium": 8,
+    "cve.low": 2,
+    "cve.critical": 3,
+    "cves": "{\"CVE-2025-41249\":1,\"CVE-2024-38820\":2,\"CVE-2025-22233\":1,\"CVE-2016-1000027\":1,\"CVE-2024-38816\":1,\"CVE-2024-38828\":1,\"CVE-2024-38819\":1,\"CVE-2025-41242\":1,\"CVE-2020-10673\":1,\"CVE-2021-20190\":1,\"CVE-2020-25649\":1,\"CVE-2020-36186\":1,\"CVE-2020-24616\":1,\"CVE-2020-35490\":1,\"CVE-2020-35491\":1,\"CVE-2020-35728\":1,\"CVE-2020-24750\":1,\"CVE-2020-36182\":1,\"CVE-2020-36179\":1,\"CVE-2020-36185\":1,\"CVE-2020-36181\":1,\"CVE-2020-36180\":1,\"CVE-2020-36184\":1,\"CVE-2020-36183\":1,\"CVE-2020-36188\":1,\"CVE-2020-36187\":1,\"CVE-2020-36189\":1,\"CVE-2020-36518\":1,\"CVE-2020-10650\":1,\"CVE-2022-42004\":1,\"CVE-2022-42003\":1,\"CVE-2020-9488\":1,\"CVE-2021-44228\":1,\"CVE-2021-45046\":1,\"CVE-2021-45105\":1,\"CVE-2021-44832\":1,\"CVE-2025-68161\":1,\"CVE-2025-48976\":1,\"CVE-2021-29425\":1,\"CVE-2024-47554\":1,\"CVE-2025-31672\":1}"
+  }
+}}).
+2026-01-20T01:14:32.253Z [INFO] [Task.complete](): Completing task toolCall
+2026-01-20T01:14:32.253Z [INFO] [Task.complete](): Completed task toolCall
+2026-01-20T01:14:32.253Z [INFO] [Tool.invoke]({message: The following dependencies have known CVEs that need to be fixed:
+- Dependency `org.springframework:spring-core:5.3.39` has **1** known CVEs need to be fixed:
+  - [CVE-2025-41249](https://github.com/advisories/GHSA-jmp9-x22r-554x): Spring Framework annotation detection mechanism may result in improper authorization
+    - **Severity**: **HIGH**
+    - **Details**: The Spring Framework annotation detection mechanism may not correctly resolve annotations on methods within type hierarchies with a parameterized super type with unbounded generics. This can be an issue if such annotations are used for authorization decisions.
+      
+      Your application may be affected by this if you are using Spring Security's @EnableMethodSecurity feature.
+      
+      You are not affected by this if you are not using @EnableMethodSecurity or if you do not use security annotations on methods in generic superclasses or generic interfaces.
+      
+      This CVE is published in conjunction with  CVE-2025-41248 https://spring.io/security/cve-2025-41248 .
+- Dependency `org.springframework:spring-context:5.3.39` has **2** known CVEs need to be fixed:
+  - [CVE-2024-38820](https://github.com/advisories/GHSA-4gc7-5j7h-4qph): Spring Framework DataBinder Case Sensitive Match Exception
+    - **Severity**: **MEDIUM**
+    - **Details**: The fix for CVE-2022-22968 made disallowedFields patterns in DataBinder case insensitive. However, String.toLowerCase() has some Locale dependent exceptions that could potentially result in fields not protected as expected.
+  - [CVE-2025-22233](https://github.com/advisories/GHSA-4wp7-92pw-q264): Spring Framework DataBinder Case Sensitive Match Exception
+    - **Severity**: **LOW**
+    - **Details**: CVE-2024-38820 ensured Locale-independent, lowercase conversion for both the configured disallowedFields patterns and for request parameter names. However, there are still cases where it is possible to bypass the disallowedFields checks.
+      
+      Affected Spring Products and Versions
+      
+      Spring Framework:
+        *  6.2.0 - 6.2.6
+      
+        *  6.1.0 - 6.1.19
+      
+        *  6.0.0 - 6.0.27
+      
+        *  5.3.0 - 5.3.42
+        *  Older, unsupported versions are also affected
+      
+      
+      
+      Mitigation
+      
+      Users of affected versions should upgrade to the corresponding fixed version.
+      
+      | Affected version(s) | Fix Version | Availability |
+      | - | - | - |
+      | 6.2.x |  6.2.7 | OSS |
+      | 6.1.x |  6.1.20 | OSS |
+      | 6.0.x |  6.0.28 |  Commercial https://enterprise.spring.io/ |
+      | 5.3.x |  5.3.43 | Commercial https://enterprise.spring.io/  |
+      
+      No further mitigation steps are necessary.
+      
+      
+      Generally, we recommend using a dedicated model object with properties only for data binding, or using constructor binding since constructor arguments explicitly declare what to bind together with turning off setter binding through the declarativeBinding flag. See the Model Design section in the reference documentation.
+      
+      For setting binding, prefer the use of allowedFields (an explicit list) over disallowedFields.
+      
+      Credit
+      
+      This issue was responsibly reported by the TERASOLUNA Framework Development Team from NTT DATA Group Corporation.
+- Dependency `org.springframework:spring-web:5.3.39` has **2** known CVEs need to be fixed:
+  - [CVE-2016-1000027](https://github.com/advisories/GHSA-4wrc-f8pq-fpqp): Pivotal Spring Framework contains unsafe Java deserialization methods
+    - **Severity**: **CRITICAL**
+    - **Details**: Pivotal Spring Framework before 6.0.0 suffers from a potential remote code execution (RCE) issue if used for Java deserialization of untrusted data. Depending on how the library is implemented within a product, this issue may or not occur, and authentication may be required.
+      
+      Maintainers recommend investigating alternative components or a potential mitigating control. Version 4.2.6 and 3.2.17 contain [enhanced documentation](https://github.com/spring-projects/spring-framework/commit/5cbe90b2cd91b866a5a9586e460f311860e11cfa) advising users to take precautions against unsafe Java deserialization, version 5.3.0 [deprecate the impacted classes](https://github.com/spring-projects/spring-framework/issues/25379) and version 6.0.0 [removed it entirely](https://github.com/spring-projects/spring-framework/issues/27422).
+  - [CVE-2024-38820](https://github.com/advisories/GHSA-4gc7-5j7h-4qph): Spring Framework DataBinder Case Sensitive Match Exception
+    - **Severity**: **MEDIUM**
+    - **Details**: The fix for CVE-2022-22968 made disallowedFields patterns in DataBinder case insensitive. However, String.toLowerCase() has some Locale dependent exceptions that could potentially result in fields not protected as expected.
+- Dependency `org.springframework:spring-webmvc:5.3.39` has **4** known CVEs need to be fixed:
+  - [CVE-2024-38816](https://github.com/advisories/GHSA-cx7f-g6mp-7hqm): Path traversal vulnerability in functional web frameworks
+    - **Severity**: **HIGH**
+    - **Details**: Applications serving static resources through the functional web frameworks WebMvc.fn or WebFlux.fn are vulnerable to path traversal attacks. An attacker can craft malicious HTTP requests and obtain any file on the file system that is also accessible to the process in which the Spring application is running.
+      
+      Specifically, an application is vulnerable when both of the following are true:
+      
+        *  the web application uses RouterFunctions to serve static resources
+        *  resource handling is explicitly configured with a FileSystemResource location
+      
+      
+      However, malicious requests are blocked and rejected when any of the following is true:
+      
+        *  the  Spring Security HTTP Firewall https://docs.spring.io/spring-security/reference/servlet/exploits/firewall.html  is in use
+        *  the application runs on Tomcat or Jetty
+  - [CVE-2024-38828](https://github.com/advisories/GHSA-w3c8-7r8f-9jp8): Spring MVC controller vulnerable to a DoS attack
+    - **Severity**: **MEDIUM**
+    - **Details**: Spring MVC controller methods with an @RequestBody byte[] method parameter are vulnerable to a DoS attack.
+  - [CVE-2024-38819](https://github.com/advisories/GHSA-g5vr-rgqm-vf78): Spring Framework Path Traversal vulnerability
+    - **Severity**: **HIGH**
+    - **Details**: Applications serving static resources through the functional web frameworks WebMvc.fn or WebFlux.fn are vulnerable to path traversal attacks. An attacker can craft malicious HTTP requests and obtain any file on the file system that is also accessible to the process in which the Spring application is running.
+  - [CVE-2025-41242](https://github.com/advisories/GHSA-r936-gwx5-v52f): Spring Framework MVC Applications Path Traversal Vulnerability
+    - **Severity**: **MEDIUM**
+    - **Details**: Spring Framework MVC applications can be vulnerable to a “Path Traversal Vulnerability” when deployed on a non-compliant Servlet container.
+      
+      An application can be vulnerable when all the following are true:
+      
+        *  the application is deployed as a WAR or with an embedded Servlet container
+        *  the Servlet container  does not reject suspicious sequences https://jakarta.ee/specifications/servlet/6.1/jakarta-servlet-spec-6.1.html#uri-path-canonicalization 
+        *  the application  serves static resources https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-config/static-resources.html#page-title  with Spring resource handling
+      
+      
+      We have verified that applications deployed on Apache Tomcat or Eclipse Jetty are not vulnerable, as long as default security features are not disabled in the configuration. Because we cannot check exploits against all Servlet containers and configuration variants, we strongly recommend upgrading your application.
+- Dependency `com.fasterxml.jackson.core:jackson-databind:2.8.11.6` has **23** known CVEs need to be fixed:
+  - [CVE-2020-10673](https://github.com/advisories/GHSA-fqwf-pjwf-7vqv): jackson-databind mishandles the interaction between serialization gadgets and typing
+    - **Severity**: **HIGH**
+    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.4 and 2.6.7.4 mishandles the interaction between serialization gadgets and typing, related to com.caucho.config.types.ResourceRef (aka caucho-quercus).
+  - [CVE-2021-20190](https://github.com/advisories/GHSA-5949-rw7g-wx7w): Deserialization of untrusted data in jackson-databind
+    - **Severity**: **HIGH**
+    - **Details**: A flaw was found in jackson-databind before 2.9.10.7 and 2.6.7.5. FasterXML mishandles the interaction between serialization gadgets and typing. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.
+  - [CVE-2020-25649](https://github.com/advisories/GHSA-288c-cq4h-88gq): XML External Entity (XXE) Injection in Jackson Databind
+    - **Severity**: **HIGH**
+    - **Details**: A flaw was found in FasterXML Jackson Databind, where it did not have entity expansion secured properly. This flaw allows vulnerability to XML external entity (XXE) attacks. The highest threat from this vulnerability is data integrity.
+  - [CVE-2020-36186](https://github.com/advisories/GHSA-v585-23hc-c647): Unsafe Deserialization in jackson-databind
+    - **Severity**: **HIGH**
+    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to `org.apache.tomcat.dbcp.dbcp.datasources.PerUserPoolDataSource`.
+  - [CVE-2020-24616](https://github.com/advisories/GHSA-h3cw-g4mq-c5x2): Code Injection in jackson-databind
+    - **Severity**: **HIGH**
+    - **Details**: This project contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor. FasterXML jackson-databind 2.x before 2.9.10.6 mishandles the interaction between serialization gadgets and typing, related to br.com.anteros.dbcp.AnterosDBCPDataSource (aka Anteros-DBCP).
+  - [CVE-2020-35490](https://github.com/advisories/GHSA-wh8g-3j2c-rqj5): Serialization gadgets exploit in jackson-databind
+    - **Severity**: **HIGH**
+    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to org.apache.commons.dbcp2.datasources.PerUserPoolDataSource.
+  - [CVE-2020-35491](https://github.com/advisories/GHSA-r3gr-cxrf-hg25): Serialization gadgets exploit in jackson-databind
+    - **Severity**: **HIGH**
+    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to org.apache.commons.dbcp2.datasources.SharedPoolDataSource.
+  - [CVE-2020-35728](https://github.com/advisories/GHSA-5r5r-6hpj-8gg9): Serialization gadget exploit in jackson-databind
+    - **Severity**: **HIGH**
+    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to com.oracle.wls.shaded.org.apache.xalan.lib.sql.JNDIConnectionPool (aka embedded Xalan in org.glassfish.web/javax.servlet.jsp.jstl).
+  - [CVE-2020-24750](https://github.com/advisories/GHSA-qjw2-hr98-qgfh): Unsafe Deserialization in jackson-databind
+    - **Severity**: **HIGH**
+    - **Details**: FasterXML jackson-databind 2.x before 2.6.7.5 and from 2.7.x before 2.9.10.6 mishandles the interaction between serialization gadgets and typing, related to com.pastdev.httpcomponents.configuration.JndiConfiguration.
+  - [CVE-2020-36182](https://github.com/advisories/GHSA-89qr-369f-5m5x): Unsafe Deserialization in jackson-databind
+    - **Severity**: **HIGH**
+    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 and 2.6.7.5 mishandles the interaction between serialization gadgets and typing, related to org.apache.tomcat.dbcp.dbcp2.cpdsadapter.DriverAdapterCPDS.
+  - [CVE-2020-36179](https://github.com/advisories/GHSA-9gph-22xh-8x98): Unsafe Deserialization in jackson-databind
+    - **Severity**: **HIGH**
+    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 and 2.6.7.5 mishandles the interaction between serialization gadgets and typing, related to `oadd.org.apache.commons.dbcp.cpdsadapter.DriverAdapterCPDS`.
+  - [CVE-2020-36185](https://github.com/advisories/GHSA-8w26-6f25-cm9x): Unsafe Deserialization in jackson-databind
+    - **Severity**: **HIGH**
+    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to `org.apache.tomcat.dbcp.dbcp2.datasources.SharedPoolDataSource`.
+  - [CVE-2020-36181](https://github.com/advisories/GHSA-cvm9-fjm9-3572): Unsafe Deserialization in jackson-databind
+    - **Severity**: **HIGH**
+    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 and 2.6.7.5 mishandles the interaction between serialization gadgets and typing, related to `org.apache.tomcat.dbcp.dbcp.cpdsadapter.DriverAdapterCPDS`.
+  - [CVE-2020-36180](https://github.com/advisories/GHSA-8c4j-34r4-xr8g): Unsafe Deserialization in jackson-databind
+    - **Severity**: **HIGH**
+    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 and 2.6.7.5 mishandles the interaction between serialization gadgets and typing, related to org.apache.commons.dbcp2.cpdsadapter.DriverAdapterCPDS.
+  - [CVE-2020-36184](https://github.com/advisories/GHSA-m6x4-97wx-4q27): Unsafe Deserialization in jackson-databind
+    - **Severity**: **HIGH**
+    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to org.apache.tomcat.dbcp.dbcp2.datasources.PerUserPoolDataSource.
+  - [CVE-2020-36183](https://github.com/advisories/GHSA-9m6f-7xcq-8vf8): Unsafe Deserialization in jackson-databind
+    - **Severity**: **HIGH**
+    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 and 2.6.7.5 mishandles the interaction between serialization gadgets and typing, related to org.docx4j.org.apache.xalan.lib.sql.JNDIConnectionPool.
+  - [CVE-2020-36188](https://github.com/advisories/GHSA-f9xh-2qgp-cq57): Unsafe Deserialization in jackson-databind
+    - **Severity**: **HIGH**
+    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 and 2.6.7.5 mishandles the interaction between serialization gadgets and typing, related to `com.newrelic.agent.deps.ch.qos.logback.core.db.JNDIConnectionSource`.
+  - [CVE-2020-36187](https://github.com/advisories/GHSA-r695-7vr9-jgc2): Unsafe Deserialization in jackson-databind
+    - **Severity**: **HIGH**
+    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to org.apache.tomcat.dbcp.dbcp.datasources.SharedPoolDataSource.
+  - [CVE-2020-36189](https://github.com/advisories/GHSA-vfqx-33qm-g869): Unsafe Deserialization in jackson-databind
+    - **Severity**: **HIGH**
+    - **Details**: FasterXML jackson-databind 2.x before 2.9.10.8 an 2.6.7.5 mishandles the interaction between serialization gadgets and typing, related to com.newrelic.agent.deps.ch.qos.logback.core.db.DriverManagerConnectionSource.
+  - [CVE-2020-36518](https://github.com/advisories/GHSA-57j2-w4cx-62h2): Deeply nested json in jackson-databind
+    - **Severity**: **HIGH**
+    - **Details**: jackson-databind is a data-binding package for the Jackson Data Processor. jackson-databind allows a Java stack overflow exception and denial of service via a large depth of nested objects.
+  - [CVE-2020-10650](https://github.com/advisories/GHSA-rpr3-cw39-3pxh): jackson-databind vulnerable to unsafe deserialization
+    - **Severity**: **HIGH**
+    - **Details**: The com.fasterxml.jackson.core:jackson-databind library before version 2.9.10.4 is vulnerable to an Unsafe Deserialization vulnerability when handling interactions related to the class `ignite-jta`.
+  - [CVE-2022-42004](https://github.com/advisories/GHSA-rgv9-q543-rqg4): Uncontrolled Resource Consumption in FasterXML jackson-databind
+    - **Severity**: **HIGH**
+    - **Details**: In FasterXML jackson-databind before 2.12.7.1 and in 2.13.x before 2.13.4, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays. This issue can only happen when the `UNWRAP_SINGLE_VALUE_ARRAYS` feature is explicitly enabled.
+  - [CVE-2022-42003](https://github.com/advisories/GHSA-jjjh-jjxp-wpff): Uncontrolled Resource Consumption in Jackson-databind
+    - **Severity**: **HIGH**
+    - **Details**: In FasterXML jackson-databind 2.4.0-rc1 until 2.12.7.1 and in 2.13.x before 2.13.4.2 resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled. This was patched in 2.12.7.1, 2.13.4.2, and 2.14.0.
+      
+      Commits that introduced vulnerable code are 
+      https://github.com/FasterXML/jackson-databind/commit/d499f2e7bbc5ebd63af11e1f5cf1989fa323aa45, https://github.com/FasterXML/jackson-databind/commit/0e37a39502439ecbaa1a5b5188387c01bf7f7fa1, and https://github.com/FasterXML/jackson-databind/commit/7ba9ac5b87a9d6ac0d2815158ecbeb315ad4dcdc.
+      
+      Fix commits are https://github.com/FasterXML/jackson-databind/commit/cd090979b7ea78c75e4de8a4aed04f7e9fa8deea and https://github.com/FasterXML/jackson-databind/commit/d78d00ee7b5245b93103fef3187f70543d67ca33.
+      
+      The `2.13.4.1` release does fix this issue, however it also references a non-existent jackson-bom which causes build failures for gradle users. See https://github.com/FasterXML/jackson-databind/issues/3627#issuecomment-1277957548 for details. This is fixed in `2.13.4.2` which is listed in the advisory metadata so that users are not subjected to unnecessary build failures
+- Dependency `org.apache.logging.log4j:log4j-core:2.8.2` has **6** known CVEs need to be fixed:
+  - [CVE-2020-9488](https://github.com/advisories/GHSA-vwqq-5vrc-xw9h): Improper validation of certificate with host mismatch in Apache Log4j SMTP appender
+    - **Severity**: **LOW**
+    - **Details**: Improper validation of certificate with host mismatch in Apache Log4j SMTP appender prior to version 2.13.2. This could allow an SMTPS connection to be intercepted by a man-in-the-middle attack which could leak any log messages sent through that appender.
+  - [CVE-2021-44228](https://github.com/advisories/GHSA-jfh8-c2jp-5v3q): Remote code injection in Log4j
+    - **Severity**: **CRITICAL**
+    - **Details**: # Summary
+      
+      Log4j versions prior to 2.16.0 are subject to a remote code execution vulnerability via the ldap JNDI parser.
+      As per [Apache's Log4j security guide](https://logging.apache.org/log4j/2.x/security.html): Apache Log4j2 <=2.14.1 JNDI features used in configuration, log messages, and parameters do not protect against attacker controlled LDAP and other JNDI related endpoints. An attacker who can control log messages or log message parameters can execute arbitrary code loaded from LDAP servers when message lookup substitution is enabled. From log4j 2.16.0, this behavior has been disabled by default.
+      
+      Log4j version 2.15.0 contained an earlier fix for the vulnerability, but that patch did not disable attacker-controlled JNDI lookups in all situations. For more information, see the `Updated advice for version 2.16.0` section of this advisory.
+      
+      # Impact
+      
+      Logging untrusted or user controlled data with a vulnerable version of Log4J may result in Remote Code Execution (RCE) against your application. This includes untrusted data included in logged errors such as exception traces, authentication failures, and other unexpected vectors of user controlled input. 
+      
+      # Affected versions
+      
+      Any Log4J version prior to v2.15.0 is affected to this specific issue.
+      
+      The v1 branch of Log4J which is considered End Of Life (EOL) is vulnerable to other RCE vectors so the recommendation is to still update to 2.16.0 where possible.
+      
+      ## Security releases
+      Additional backports of this fix have been made available in versions 2.3.1, 2.12.2, and 2.12.3
+      
+      ## Affected packages
+      Only the `org.apache.logging.log4j:log4j-core` package is directly affected by this vulnerability. The `org.apache.logging.log4j:log4j-api` should be kept at the same version as the `org.apache.logging.log4j:log4j-core` package to ensure compatability if in use.
+      
+      # Remediation Advice
+      
+      ## Updated advice for version 2.16.0
+      
+      The Apache Logging Services team provided updated mitigation advice upon the release of version 2.16.0, which [disables JNDI by default and completely removes support for message lookups](https://logging.apache.org/log4j/2.x/changes-report.html#a2.16.0).
+      Even in version 2.15.0, lookups used in layouts to provide specific pieces of context information will still recursively resolve, possibly triggering JNDI lookups. This problem is being tracked as [CVE-2021-45046](https://nvd.nist.gov/vuln/detail/CVE-2021-45046). More information is available on the [GitHub Security Advisory for CVE-2021-45046](https://github.com/advisories/GHSA-7rjr-3q55-vv33).
+      
+      Users who want to avoid attacker-controlled JNDI lookups but cannot upgrade to 2.16.0 must [ensure that no such lookups resolve to attacker-provided data and ensure that the the JndiLookup class is not loaded](https://issues.apache.org/jira/browse/LOG4J2-3221).
+      
+      Please note that Log4J v1 is End Of Life (EOL) and will not receive patches for this issue. Log4J v1 is also vulnerable to other RCE vectors and we recommend you migrate to Log4J 2.16.0 where possible.
+  - [CVE-2021-45046](https://github.com/advisories/GHSA-7rjr-3q55-vv33): Incomplete fix for Apache Log4j vulnerability
+    - **Severity**: **CRITICAL**
+    - **Details**: # Impact
+      
+      The fix to address [CVE-2021-44228](https://nvd.nist.gov/vuln/detail/CVE-2021-44228) in Apache Log4j 2.15.0 was incomplete in certain non-default configurations. This could allow attackers with control over Thread Context Map (MDC) input data when the logging configuration uses a non-default Pattern Layout with either a Context Lookup (for example, $${ctx:loginId}) or a Thread Context Map pattern (%X, %mdc, or %MDC) to craft malicious input data using a JNDI Lookup pattern resulting in a remote code execution (RCE) attack. 
+      
+      ## Affected packages
+      Only the `org.apache.logging.log4j:log4j-core` package is directly affected by this vulnerability. The `org.apache.logging.log4j:log4j-api` should be kept at the same version as the `org.apache.logging.log4j:log4j-core` package to ensure compatability if in use.
+      
+      # Mitigation
+      
+      Log4j 2.16.0 fixes this issue by removing support for message lookup patterns and disabling JNDI functionality by default. This issue can be mitigated in prior releases (< 2.16.0) by removing the JndiLookup class from the classpath (example: zip -q -d log4j-core-*.jar org/apache/logging/log4j/core/lookup/JndiLookup.class).
+      
+      Log4j 2.15.0 restricts JNDI LDAP lookups to localhost by default. Note that previous mitigations involving configuration such as to set the system property `log4j2.formatMsgNoLookups` to `true` do NOT mitigate this specific vulnerability.
+  - [CVE-2021-45105](https://github.com/advisories/GHSA-p6xc-xr62-6r2g): Apache Log4j2 vulnerable to Improper Input Validation and Uncontrolled Recursion
+    - **Severity**: **HIGH**
+    - **Details**: Apache Log4j2 versions 2.0-alpha1 through 2.16.0 (excluding 2.12.3) did not protect from uncontrolled recursion from self-referential lookups. This allows an attacker with control over Thread Context Map data to cause a denial of service when a crafted string is interpreted. This issue was fixed in Log4j 2.17.0 and 2.12.3.
+      
+      
+      # Affected packages
+      Only the `org.apache.logging.log4j:log4j-core` package is directly affected by this vulnerability. The `org.apache.logging.log4j:log4j-api` should be kept at the same version as the `org.apache.logging.log4j:log4j-core` package to ensure compatability if in use.
+  - [CVE-2021-44832](https://github.com/advisories/GHSA-8489-44mv-ggj8): Improper Input Validation and Injection in Apache Log4j2
+    - **Severity**: **MEDIUM**
+    - **Details**: Apache Log4j2 versions 2.0-beta7 through 2.17.0 (excluding security fix releases 2.3.2 and 2.12.4) are vulnerable to an attack where an attacker with permission to modify the logging configuration file can construct a malicious configuration using a JDBC Appender with a data source referencing a JNDI URI which can execute remote code. This issue is fixed by limiting JNDI data source names to the java protocol in Log4j2 versions 2.17.1, 2.12.4, and 2.3.2.
+      
+      
+      # Affected packages
+      Only the `org.apache.logging.log4j:log4j-core` package is directly affected by this vulnerability. The `org.apache.logging.log4j:log4j-api` should be kept at the same version as the `org.apache.logging.log4j:log4j-core` package to ensure compatability if in use.
+      
+      This issue does not impact default configurations of Log4j2 and requires an attacker to have control over the Log4j2 configuration, which reduces the likelihood of being exploited.
+  - [CVE-2025-68161](https://github.com/advisories/GHSA-vc5p-v9hr-52mj): Apache Log4j does not verify the TLS hostname in its Socket Appender
+    - **Severity**: **MEDIUM**
+    - **Details**: The Socket Appender in Apache Log4j Core versions 2.0-beta9 through 2.25.2 does not perform TLS hostname verification of the peer certificate, even when the  [verifyHostName](https://logging.apache.org/log4j/2.x/manual/appenders/network.html#SslConfiguration-attr-verifyHostName)  configuration attribute or the  [log4j2.sslVerifyHostName](https://logging.apache.org/log4j/2.x/manual/systemproperties.html#log4j2.sslVerifyHostName) system property is set to true.
+      
+      This issue may allow a man-in-the-middle attacker to intercept or redirect log traffic under the following conditions:
+      
+        *  The attacker is able to intercept or redirect network traffic between the client and the log receiver.
+        *  The attacker can present a server certificate issued by a certification authority trusted by the Socket Appender’s configured trust store (or by the default Java trust store if no custom trust store is configured).
+      
+      
+      Users are advised to upgrade to Apache Log4j Core version 2.25.3, which addresses this issue.
+      
+      As an alternative mitigation, the Socket Appender may be configured to use a private or restricted trust root to limit the set of trusted certificates.
+- Dependency `commons-fileupload:commons-fileupload:1.5` has **1** known CVEs need to be fixed:
+  - [CVE-2025-48976](https://github.com/advisories/GHSA-vv7r-c36w-3prj): Apache Commons FileUpload, Apache Commons FileUpload: FileUpload DoS via part headers
+    - **Severity**: **HIGH**
+    - **Details**: Allocation of resources for multipart headers with insufficient limits enabled a DoS vulnerability in Apache Commons FileUpload.
+      
+      This issue affects Apache Commons FileUpload: from 1.0 before 1.6; from 2.0.0-M1 before 2.0.0-M4.
+      
+      Users are recommended to upgrade to versions 1.6 or 2.0.0-M4, which fix the issue.
+- Dependency `commons-io:commons-io:2.6` has **2** known CVEs need to be fixed:
+  - [CVE-2021-29425](https://github.com/advisories/GHSA-gwrp-pvrq-jmwv): Path Traversal and Improper Input Validation in Apache Commons IO
+    - **Severity**: **MEDIUM**
+    - **Details**: In Apache Commons IO before 2.7, When invoking the method FileNameUtils.normalize with an improper input string, like "//../foo", or "\\..\foo", the result would be the same value, thus possibly providing access to files in the parent directory, but not further above (thus "limited" path traversal), if the calling code would use the result to construct a path value.
+  - [CVE-2024-47554](https://github.com/advisories/GHSA-78wr-2p64-hpwj): Apache Commons IO: Possible denial of service attack on untrusted input to XmlStreamReader
+    - **Severity**: **HIGH**
+    - **Details**: Uncontrolled Resource Consumption vulnerability in Apache Commons IO.
+      
+      The `org.apache.commons.io.input.XmlStreamReader` class may excessively consume CPU resources when processing maliciously crafted input.
+      
+      
+      This issue affects Apache Commons IO: from 2.0 before 2.14.0.
+      
+      Users are recommended to upgrade to version 2.14.0 or later, which fixes the issue.
+- Dependency `org.apache.poi:poi-ooxml:4.1.2` has **1** known CVEs need to be fixed:
+  - [CVE-2025-31672](https://github.com/advisories/GHSA-gmg8-593g-7mv3): Apache POI OOXML Vulnerable to Improper Input Validation in OOXML File Parsing
+    - **Severity**: **MEDIUM**
+    - **Details**: Improper Input Validation vulnerability in Apache POI. The issue affects the parsing of OOXML format files like xlsx, docx and pptx. These file formats are basically zip files and it is possible for malicious users to add zip entries with duplicate names (including the path) in the zip. In this case, products reading the affected file could read different data because 1 of the zip entries with the duplicate name is selected over another but different products may choose a different zip entry.
+      This issue affects Apache POI poi-ooxml before 5.4.0. poi-ooxml 5.4.0 has a check that throws an exception if zip entries with duplicate file names are found in the input file.
+      Users are recommended to upgrade to version poi-ooxml 5.4.0, which fixes the issue. Please read  https://poi.apache.org/security.html  for recommendations about how to use the POI libraries securely.}).
+2026-01-20T01:14:32.254Z [INFO] ----------------------invoked validate_cves_for_java----------------------
+2026-01-20T01:15:37.437Z [INFO] ---------------------prepare validate_cves_for_java----------------------
+2026-01-20T01:15:37.437Z [INFO] [Tool.prepareInvocation]({name: validate_cves_for_java, input: {
+  "dependencies": [
+    "org.springframework:spring-core:5.3.43",
+    "org.springframework:spring-beans:5.3.43",
+    "org.springframework:spring-context:5.3.43",
+    "org.springframework:spring-jdbc:5.3.43",
+    "org.springframework:spring-tx:5.3.43",
+    "org.springframework:spring-web:5.3.43",
+    "org.springframework:spring-webmvc:5.3.43",
+    "org.springframework:spring-test:5.3.43",
+    "org.mybatis:mybatis:3.5.16",
+    "org.mybatis:mybatis-spring:2.1.2",
+    "com.mysql:mysql-connector-j:8.4.0",
+    "com.mchange:c3p0:0.10.0",
+    "javax.servlet:javax.servlet-api:3.1.0",
+    "javax.servlet.jsp:jsp-api:2.2",
+    "javax.servlet:jstl:1.2",
+    "com.fasterxml.jackson.core:jackson-databind:2.13.4.2",
+    "org.apache.logging.log4j:log4j-core:2.25.3",
+    "org.slf4j:slf4j-api:1.7.36",
+    "org.apache.logging.log4j:log4j-slf4j-impl:2.25.3",
+    "org.apache.commons:commons-lang3:3.18.0",
+    "commons-fileupload:commons-fileupload:1.6",
+    "commons-io:commons-io:2.14.0",
+    "org.apache.poi:poi:4.1.2",
+    "org.apache.poi:poi-ooxml:4.1.2"
+  ]
+}}).
+2026-01-20T01:15:37.438Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-01-20T01:15:37.439Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Validate CVEs"
+}}).
+2026-01-20T01:15:37.439Z [INFO] ----------------------prepared validate_cves_for_java----------------------

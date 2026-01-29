@@ -1,0 +1,51 @@
+{
+  "result": {
+    "queries": [
+      {
+        "query_id": "selectUserByEmail",
+        "sql_summary": "이메일로 사용자 조회",
+        "input_mapping": {
+          "type_category": "PRIMITIVE",
+          "class_name": "String"
+        },
+        "output_mapping": {
+          "type_category": "VO",
+          "class_name": "UserVO",
+          "crypto_fields": [
+            {
+              "column_name": "password"
+            },
+            {
+              "column_name": "phone_number"
+            }
+          ]
+        }
+      },
+      {
+        "query_id": "insertUser",
+        "sql_summary": "사용자 등록",
+        "input_mapping": {
+          "type_category": "VO",
+          "class_name": "UserVO",
+          "crypto_fields": [
+            {
+              "column_name": "password"
+            },
+            {
+              "column_name": "phone_number"
+            }
+          ]
+        },
+        "output_mapping": {
+          "type_category": "PRIMITIVE",
+          "class_name": "int"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "file_paths": [
+      "src/main/java/com/example/UserController.java"
+    ]
+  }
+}

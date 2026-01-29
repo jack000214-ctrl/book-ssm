@@ -1,0 +1,26 @@
+{
+  "result": {
+    "data_flow_analysis": {
+      "flows": [
+        {
+          "sql_query_id": "multiClassQueryA1",
+          "handler_class": "MultiControllerA",
+          "handler_file": "MultiControllerA.java",
+          "model": "MultiAClass",
+          "type_category": "VO"
+        }
+      ]
+    },
+    "modification_instructions": [
+      {
+        "query_id": "multiClassQueryA1",
+        "file_name": "MultiControllerA.java",
+        "target_method": "processA",
+        "action": "inspect",
+        "reason": "test augmentation: provide file reference for MultiClass A",
+        "insertion_point": "afterCall",
+        "code_pattern_hint": "vo mapping"
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "result": {
+    "data_flow_analysis": {
+      "flows": [
+        {
+          "flow_id": "flow_cust_001",
+          "sql_query_id": "selectCustomerList",
+          "data_flow": "Controller -> Service -> Mapper"
+        },
+        {
+          "flow_id": "flow_cust_002",
+          "sql_query_id": "com.example.mapper.CustomerMapper.findByPhone",
+          "data_flow": "Controller -> Service -> Mapper"
+        }
+      ]
+    },
+    "modification_instructions": [
+      {
+        "flow_id": "flow_cust_001",
+        "file_name": "CustomerController.java",
+        "target_method": "selectCustomerList",
+        "action": "ADD_DECRYPTION",
+        "reason": "주민번호 및 카드번호 복호화 필요",
+        "insertion_point": "AFTER_QUERY",
+        "code_pattern_hint": "Use CryptoUtil.decryptResident() and CryptoUtil.decryptCard()"
+      },
+      {
+        "flow_id": "flow_cust_002",
+        "file_name": "CustomerController.java",
+        "target_method": "findCustomerByPhone",
+        "action": "ADD_DECRYPTION",
+        "reason": "주민번호 복호화 필요",
+        "insertion_point": "AFTER_QUERY",
+        "code_pattern_hint": "Use CryptoUtil.decryptResident()"
+      }
+    ]
+  }
+}

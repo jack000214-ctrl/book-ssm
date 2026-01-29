@@ -1,0 +1,23 @@
+{
+  "result": {
+    "data_flow_analysis": {
+      "flows": [
+        {
+          "flow_id": "FLOW_MV_001",
+          "sql_query_id": "mapVoQuery",
+          "path": "com.example.mapvo.MapVoController.getData"
+        }
+      ]
+    },
+    "modification_instructions": [
+      {
+        "flow_id": "FLOW_MV_001",
+        "file_name": "MapVoController.java",
+        "target_method": "getData",
+        "action": "modify",
+        "insertion_point": "after_call",
+        "code_pattern_hint": "process map and vo"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "result": {
+    "queries": [
+      {
+        "query_id": "multiClassQueryB1",
+        "sql": "SELECT id, description FROM tb_multi_class",
+        "table": "tb_multi_class",
+        "output_mapping": {
+          "crypto_fields": [
+            { "column_name": "description", "type_category": "MAP", "class_name": "MultiBClass" }
+          ],
+          "type_category": "MAP",
+          "class_name": "MultiBClass"
+        }
+      }
+    ]
+  }
+}

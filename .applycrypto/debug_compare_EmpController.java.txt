@@ -1,0 +1,8 @@
+original_apis: {('GET', '/api/emps/getLength'), ('POST', '/api/emps/editEmpByPost'), ('POST', '/api/emps/addEmpByPost'), ('GET', '/api/emps/editEmpByGet'), ('POST', '/api/getUserInfo'), ('GET', '/api/emps/query'), ('GET', '/api/emps'), ('GET', '/api/emps/getByPage'), ('GET', '/api/emps/addEmpByGet'), ('GET', '/api/emps/init'), ('GET', '/api/emps/delEmpByBatch'), ('POST', '/api/login'), ('GET', '/api/emps/delEmpByGet'), ('GET', '/api/emps/search')}
+modified_apis: {('GET', '/api/emps/getLength'), ('POST', '/api/emps/editEmpByPost'), ('POST', '/api/emps/addEmpByPost'), ('GET', '/api/emps/editEmpByGet'), ('POST', '/api/getUserInfo'), ('GET', '/api/emps/query'), ('GET', '/api/emps'), ('GET', '/api/emps/getByPage'), ('GET', '/api/emps/addEmpByGet'), ('GET', '/api/emps/init'), ('GET', '/api/emps/delEmpByBatch'), ('POST', '/api/login'), ('GET', '/api/emps/delEmpByGet'), ('GET', '/api/emps/search'), ('GET', '/api/emps/getDatas')}
+added_apis: {('GET', '/api/emps/getDatas')}
+removed_apis: set()
+content_changed: True
+changed_apis: set()
+result: (신규)
+  GET /api/emps/getDatas

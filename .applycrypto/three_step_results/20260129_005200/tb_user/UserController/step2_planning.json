@@ -1,0 +1,38 @@
+{
+  "result": {
+    "data_flow_analysis": {
+      "flows": [
+        {
+          "flow_id": "flow_user_001",
+          "sql_query_id": "selectUserByEmail",
+          "data_flow": "Controller -> Service -> Mapper"
+        },
+        {
+          "flow_id": "flow_user_002",
+          "sql_query_id": "insertUser",
+          "data_flow": "Controller -> Service -> Mapper"
+        }
+      ]
+    },
+    "modification_instructions": [
+      {
+        "flow_id": "flow_user_001",
+        "file_name": "UserController.java",
+        "target_method": "findUserByEmail",
+        "action": "ADD_DECRYPTION",
+        "reason": "비밀번호 및 전화번호 복호화 필요",
+        "insertion_point": "AFTER_QUERY",
+        "code_pattern_hint": "Use CryptoUtil.decryptPassword() and CryptoUtil.decryptPhone()"
+      },
+      {
+        "flow_id": "flow_user_002",
+        "file_name": "UserController.java",
+        "target_method": "createUser",
+        "action": "ADD_ENCRYPTION",
+        "reason": "비밀번호 및 전화번호 암호화 필요",
+        "insertion_point": "BEFORE_INSERT",
+        "code_pattern_hint": "Use CryptoUtil.encryptPassword() and CryptoUtil.encryptPhone()"
+      }
+    ]
+  }
+}

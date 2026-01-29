@@ -1,0 +1,23 @@
+{
+  "result": {
+    "data_flow_analysis": {
+      "flows": [
+        {
+          "flow_id": "FLOW_EMP_001",
+          "sql_query_id": "getEmployees",
+          "path": "com.example.controller.EmpController.getEmployees"
+        }
+      ]
+    },
+    "modification_instructions": [
+      {
+        "flow_id": "FLOW_EMP_001",
+        "file_name": "EmpController.java",
+        "target_method": "getEmployees",
+        "action": "modify",
+        "insertion_point": "before_return",
+        "code_pattern_hint": "insert encryption call"
+      }
+    ]
+  }
+}

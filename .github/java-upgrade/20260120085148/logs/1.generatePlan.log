@@ -1,0 +1,911 @@
+2026-01-20T08:51:48.080Z [INFO] Initializing project configuration...
+2026-01-20T08:51:48.081Z [INFO] Project c:\Project\SSLife\book-ssm is a maven project, try to get java version from pom.xml
+2026-01-20T08:51:48.085Z [INFO] Project java version: 8
+2026-01-20T08:51:48.086Z [INFO] Maven project detected.
+2026-01-20T08:51:48.086Z [INFO] Build tool type: mvn
+2026-01-20T08:51:50.982Z [INFO] [Environment] Running command (Java 8): java -version
+openjdk version "1.8.0_472"
+OpenJDK Runtime Environment (Temurin)(build 1.8.0_472-b08)
+OpenJDK 64-Bit Server VM (Temurin)(build 25.472-b08, mixed mode)
+2026-01-20T08:51:51.467Z [INFO] [JdkEnvironment] Got real Java version: 1.8.0_472
+2026-01-20T08:51:51.468Z [INFO] JDK: {
+  "name": "java",
+  "path": "C:\\Users\\DOC\\.jdk\\jdk-8\\bin",
+  "version": "8"
+}
+2026-01-20T08:51:51.489Z [INFO] [Environment] Running command (Java 8): mvn --version
+Apache Maven 3.9.6 (bc0240f3c744dd6b6ec2920b3cd08dcc295161ae)
+Maven home: C:\Users\DOC\Maven\apache-maven-3.9.6
+Java version: 1.8.0_472, vendor: Temurin, runtime: C:\Users\DOC\.jdk\jdk-8\jre
+Default locale: ko_KR, platform encoding: MS949
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+2026-01-20T08:51:55.299Z [INFO] Real build tool version: 3.9.6
+2026-01-20T08:51:55.299Z [INFO] Build tool: {
+  "name": "mvn",
+  "path": "C:\\Users\\DOC\\Maven\\apache-maven-3.9.6\\bin",
+  "version": "3.9.6"
+}
+2026-01-20T08:51:55.300Z [INFO] Project config: {
+  "buildTool": {
+    "path": "C:\\Users\\DOC\\Maven\\apache-maven-3.9.6\\bin",
+    "name": "mvn",
+    "version": "3.9.6"
+  },
+  "jdk": {
+    "path": "C:\\Users\\DOC\\.jdk\\jdk-8\\bin",
+    "version": "8",
+    "name": "java"
+  },
+  "name": "book-ssm",
+  "dir": "c:\\Project\\SSLife\\book-ssm"
+}
+2026-01-20T08:51:55.300Z [INFO] Project configuration initialized: {
+  "buildTool": {
+    "path": "C:\\Users\\DOC\\Maven\\apache-maven-3.9.6\\bin",
+    "name": "mvn",
+    "version": "3.9.6"
+  },
+  "jdk": {
+    "path": "C:\\Users\\DOC\\.jdk\\jdk-8\\bin",
+    "version": "8",
+    "name": "java"
+  },
+  "name": "book-ssm",
+  "dir": "c:\\Project\\SSLife\\book-ssm"
+}
+2026-01-20T08:51:55.301Z [INFO] Initializing upgrade goals...
+2026-01-20T08:51:55.306Z [INFO] [Environment] Running command (Java 8): mvn dependency:tree -B
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.mybatis:bookims-ssm >-----------------------
+[INFO] Building bookims-ssm 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[WARNING] The POM for org.springframework:spring-core:jar:5.3.43 is missing, no dependency information available
+[WARNING] The POM for org.springframework:spring-beans:jar:5.3.43 is missing, no dependency information available
+[WARNING] The POM for org.springframework:spring-context:jar:5.3.43 is missing, no dependency information available
+[WARNING] The POM for org.springframework:spring-jdbc:jar:5.3.43 is missing, no dependency information available
+[WARNING] The POM for org.springframework:spring-tx:jar:5.3.43 is missing, no dependency information available
+[WARNING] The POM for org.springframework:spring-web:jar:5.3.43 is missing, no dependency information available
+[WARNING] The POM for org.springframework:spring-webmvc:jar:5.3.43 is missing, no dependency information available
+[WARNING] The POM for org.springframework:spring-test:jar:5.3.43 is missing, no dependency information available
+[WARNING] The POM for commons-fileupload:commons-fileupload:jar:1.6 is missing, no dependency information available
+[INFO] 
+[INFO] --- dependency:3.6.1:tree (default-cli) @ bookims-ssm ---
+[INFO] com.mybatis:bookims-ssm:war:1.0-SNAPSHOT
+[INFO] +- org.springframework:spring-core:jar:5.3.43:compile
+[INFO] +- org.springframework:spring-beans:jar:5.3.43:compile
+[INFO] +- org.springframework:spring-context:jar:5.3.43:compile
+[INFO] +- org.springframework:spring-jdbc:jar:5.3.43:compile
+[INFO] +- org.springframework:spring-tx:jar:5.3.43:compile
+[INFO] +- org.springframework:spring-web:jar:5.3.43:compile
+[INFO] +- org.springframework:spring-webmvc:jar:5.3.43:compile
+[INFO] +- org.springframework:spring-test:jar:5.3.43:compile
+[INFO] +- org.mybatis:mybatis:jar:3.5.16:compile
+[INFO] +- org.mybatis:mybatis-spring:jar:2.1.2:compile
+[INFO] +- com.mysql:mysql-connector-j:jar:8.4.0:compile
+[INFO] |  \- com.google.protobuf:protobuf-java:jar:3.25.1:compile
+[INFO] +- com.mchange:c3p0:jar:0.10.0:compile
+[INFO] |  \- com.mchange:mchange-commons-java:jar:0.3.0:compile
+[INFO] +- javax.servlet:javax.servlet-api:jar:3.1.0:provided
+[INFO] +- javax.servlet.jsp:jsp-api:jar:2.2:provided
+[INFO] +- javax.servlet:jstl:jar:1.2:compile
+[INFO] +- com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile
+[INFO] |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile
+[INFO] |  \- com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile
+[INFO] +- org.apache.logging.log4j:log4j-core:jar:2.25.3:compile
+[INFO] |  \- org.apache.logging.log4j:log4j-api:jar:2.25.3:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.36:compile
+[INFO] +- org.apache.logging.log4j:log4j-slf4j-impl:jar:2.25.3:compile
+[INFO] +- org.apache.commons:commons-lang3:jar:3.18.0:compile
+[INFO] +- commons-fileupload:commons-fileupload:jar:1.6:compile
+[INFO] +- commons-io:commons-io:jar:2.14.0:compile
+[INFO] +- org.apache.poi:poi:jar:4.1.2:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.13:compile
+[INFO] |  +- org.apache.commons:commons-collections4:jar:4.4:compile
+[INFO] |  +- org.apache.commons:commons-math3:jar:3.6.1:compile
+[INFO] |  \- com.zaxxer:SparseBitSet:jar:1.2:compile
+[INFO] \- org.apache.poi:poi-ooxml:jar:4.1.2:compile
+[INFO]    +- org.apache.poi:poi-ooxml-schemas:jar:4.1.2:compile
+[INFO]    |  \- org.apache.xmlbeans:xmlbeans:jar:3.1.0:compile
+[INFO]    +- org.apache.commons:commons-compress:jar:1.19:compile
+[INFO]    \- com.github.virtuald:curvesapi:jar:1.06:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.540 s
+[INFO] Finished at: 2026-01-20T17:52:09+09:00
+[INFO] ------------------------------------------------------------------------
+2026-01-20T08:52:09.320Z [INFO] [MavenBuildTool] Successfully got dependency tree of c:\Project\SSLife\book-ssm
+2026-01-20T08:52:09.321Z [INFO] [MavenBuildTool] Getting Java version of c:\Project\SSLife\book-ssm from pom.xml
+2026-01-20T08:52:09.321Z [INFO] [MavenBuildTool] Searching for pom.xml files in c:\Project\SSLife\book-ssm
+2026-01-20T08:52:09.322Z [INFO] [MavenBuildTool] Getting all module coordinates of c:\Project\SSLife\book-ssm
+2026-01-20T08:52:09.322Z [INFO] [MavenBuildTool] Getting effective POMs of c:\Project\SSLife\book-ssm
+2026-01-20T08:52:09.323Z [INFO] [Environment] Running command (Java 8): mvn help:effective-pom -Doutput=effective-pom-79927a3f-896b-43cb-ae03-80dc756249ce.log
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.mybatis:bookims-ssm >-----------------------
+[INFO] Building bookims-ssm 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- help:3.5.1:effective-pom (default-cli) @ bookims-ssm ---
+[INFO] Effective-POM written to: c:\Project\SSLife\book-ssm\effective-pom-79927a3f-896b-43cb-ae03-80dc756249ce.log
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.916 s
+[INFO] Finished at: 2026-01-20T17:52:11+09:00
+[INFO] ------------------------------------------------------------------------
+2026-01-20T08:52:11.595Z [INFO] [MavenBuildTool] Found pom.xml files: c:\Project\SSLife\book-ssm\pom.xml
+2026-01-20T08:52:11.596Z [INFO] [MavenBuildTool] Java version found in c:\Project\SSLife\book-ssm\pom.xml: 8
+2026-01-20T08:52:11.597Z [INFO] Source Java version: 8
+2026-01-20T08:52:11.597Z [INFO] validateAndUpdateTargets, targets: [object Object]
+2026-01-20T08:52:11.598Z [WARN] No source dependencies found for Spring Boot. Skipping target dependency validation
+2026-01-20T08:52:11.598Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Spring Boot
+2026-01-20T08:52:11.599Z [INFO] No target dependencies found for Spring Framework. Skipping target dependency validation
+2026-01-20T08:52:11.599Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Spring Framework
+2026-01-20T08:52:11.599Z [WARN] No source dependencies found for Spring Security. Skipping target dependency validation
+2026-01-20T08:52:11.599Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Spring Security
+2026-01-20T08:52:11.600Z [WARN] No source dependencies found for Jakarta EE. Skipping target dependency validation
+2026-01-20T08:52:11.600Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Jakarta EE
+2026-01-20T08:52:11.600Z [WARN] No source dependencies found for JUnit. Skipping target dependency validation
+2026-01-20T08:52:11.601Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:JUnit
+2026-01-20T08:52:11.601Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Java
+2026-01-20T08:52:11.602Z [INFO] validateAndUpdateTargets, userTargets: [object Object],[object Object]
+2026-01-20T08:52:11.603Z [INFO] initUpgradeGoal, targetDeps: [object Object],[object Object]
+2026-01-20T08:52:11.603Z [INFO] Upgrade goal initialized: [
+  {
+    "name": "Java",
+    "groupId": "java",
+    "artifactId": "*",
+    "version": "21",
+    "recipes": [
+      {
+        "id": "com.microsoft.java.UpgradeToJava21",
+        "name": "Upgrade from Java 8 to Java 21",
+        "description": "Migrate Java 8 to Java 21.",
+        "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava21",
+        "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.UpgradeToJava21` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 21 from any previous version larger than Java 8.\n"
+      }
+    ],
+    "supportedSources": [
+      {
+        "groupId": "java",
+        "artifactId": "*",
+        "version": ">=8 <21"
+      },
+      {
+        "name": "Java",
+        "groupId": "java",
+        "artifactId": "*",
+        "version": "11",
+        "recipes": [
+          {
+            "id": "com.microsoft.java.UpgradeToJava11",
+            "name": "Upgrade from Java 8 to Java 11",
+            "description": "Migrate Java 8 to Java 11.",
+            "url": "https://docs.openrewrite.org/recipes/java/migrate/java8tojava11",
+            "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.Java8toJava11` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 11 from any previous version larger than Java 8.\n"
+          }
+        ],
+        "supportedSources": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": ">=8 <11"
+          }
+        ],
+        "effects": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "11"
+          }
+        ]
+      },
+      {
+        "name": "Java",
+        "groupId": "java",
+        "artifactId": "*",
+        "version": "17",
+        "recipes": [
+          {
+            "id": "com.microsoft.java.UpgradeToJava17",
+            "name": "Upgrade from Java 8 to Java 17",
+            "description": "Migrate Java 8 to Java 17.",
+            "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava17",
+            "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.UpgradeToJava17` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 17 from any previous version larger than Java 8.\n"
+          }
+        ],
+        "supportedSources": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": ">=8 <17"
+          },
+          {
+            "name": "Java",
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "11",
+            "recipes": [
+              {
+                "id": "com.microsoft.java.UpgradeToJava11",
+                "name": "Upgrade from Java 8 to Java 11",
+                "description": "Migrate Java 8 to Java 11.",
+                "url": "https://docs.openrewrite.org/recipes/java/migrate/java8tojava11",
+                "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.Java8toJava11` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 11 from any previous version larger than Java 8.\n"
+              }
+            ],
+            "supportedSources": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": ">=8 <11"
+              }
+            ],
+            "effects": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": "11"
+              }
+            ]
+          }
+        ],
+        "effects": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "17"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "groupId": "java",
+        "artifactId": "*",
+        "version": "21"
+      }
+    ]
+  },
+  {
+    "name": "Spring Framework",
+    "groupId": "org.springframework",
+    "artifactId": "*",
+    "version": "6.0.x",
+    "dependencies": [
+      {
+        "groupId": "java",
+        "artifactId": "*",
+        "version": ">=17"
+      }
+    ],
+    "recipes": [
+      {
+        "id": "com.microsoft.java.UpgradeToSpringFramework_6_0",
+        "name": "Upgrade Spring Framework to 6.0",
+        "description": "Migrate low-level Spring Framework to 6.0 directly.",
+        "url": "https://docs.openrewrite.org/recipes/java/spring/framework/upgradespringframework_6_0",
+        "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.spring.framework.UpgradeSpringFramework_6_0` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Framework to 6.0 from any previous version.\n"
+      }
+    ],
+    "supportedSources": [
+      {
+        "groupId": "org.springframework",
+        "artifactId": "*",
+        "version": "<6.0.23"
+      }
+    ],
+    "effects": [
+      {
+        "groupId": "org.springframework",
+        "artifactId": "*",
+        "version": "6.0.x"
+      }
+    ]
+  }
+]
+2026-01-20T08:52:11.603Z [INFO] Initializing upgrade options...
+2026-01-20T08:52:11.603Z [INFO] Source Java version: 8
+2026-01-20T08:52:11.604Z [INFO] Source JDK: {"name":"java","path":"C:\\Users\\DOC\\.jdk\\jdk-8\\bin","version":"8"}
+2026-01-20T08:52:11.604Z [INFO] Target Java version: 21
+2026-01-20T08:52:11.760Z [INFO] Target JDK: undefined
+2026-01-20T08:52:11.760Z [INFO] Maven project detected.
+2026-01-20T08:52:11.761Z [INFO] Build tool type: mvn
+2026-01-20T08:52:11.761Z [INFO] Build tool: {"name":"mvn","path":"C:\\Users\\DOC\\Maven\\apache-maven-3.9.6\\bin","version":""}
+2026-01-20T08:52:11.761Z [INFO] Working branch: appmod/java-upgrade-20260120085148
+2026-01-20T08:52:11.762Z [INFO] Upgrade options initialized: {
+  "target": {
+    "jdk": {},
+    "dependencies": [
+      {
+        "name": "Java",
+        "groupId": "java",
+        "artifactId": "*",
+        "version": "21",
+        "recipes": [
+          {
+            "id": "com.microsoft.java.UpgradeToJava21",
+            "name": "Upgrade from Java 8 to Java 21",
+            "description": "Migrate Java 8 to Java 21.",
+            "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava21",
+            "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.UpgradeToJava21` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 21 from any previous version larger than Java 8.\n"
+          }
+        ],
+        "supportedSources": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": ">=8 <21"
+          },
+          {
+            "name": "Java",
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "11",
+            "recipes": [
+              {
+                "id": "com.microsoft.java.UpgradeToJava11",
+                "name": "Upgrade from Java 8 to Java 11",
+                "description": "Migrate Java 8 to Java 11.",
+                "url": "https://docs.openrewrite.org/recipes/java/migrate/java8tojava11",
+                "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.Java8toJava11` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 11 from any previous version larger than Java 8.\n"
+              }
+            ],
+            "supportedSources": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": ">=8 <11"
+              }
+            ],
+            "effects": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": "11"
+              }
+            ]
+          },
+          {
+            "name": "Java",
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "17",
+            "recipes": [
+              {
+                "id": "com.microsoft.java.UpgradeToJava17",
+                "name": "Upgrade from Java 8 to Java 17",
+                "description": "Migrate Java 8 to Java 17.",
+                "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava17",
+                "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.UpgradeToJava17` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 17 from any previous version larger than Java 8.\n"
+              }
+            ],
+            "supportedSources": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": ">=8 <17"
+              },
+              {
+                "name": "Java",
+                "groupId": "java",
+                "artifactId": "*",
+                "version": "11",
+                "recipes": [
+                  {
+                    "id": "com.microsoft.java.UpgradeToJava11",
+                    "name": "Upgrade from Java 8 to Java 11",
+                    "description": "Migrate Java 8 to Java 11.",
+                    "url": "https://docs.openrewrite.org/recipes/java/migrate/java8tojava11",
+                    "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.Java8toJava11` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 11 from any previous version larger than Java 8.\n"
+                  }
+                ],
+                "supportedSources": [
+                  {
+                    "groupId": "java",
+                    "artifactId": "*",
+                    "version": ">=8 <11"
+                  }
+                ],
+                "effects": [
+                  {
+                    "groupId": "java",
+                    "artifactId": "*",
+                    "version": "11"
+                  }
+                ]
+              }
+            ],
+            "effects": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": "17"
+              }
+            ]
+          }
+        ],
+        "effects": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "21"
+          }
+        ]
+      },
+      {
+        "name": "Spring Framework",
+        "groupId": "org.springframework",
+        "artifactId": "*",
+        "version": "6.0.x",
+        "dependencies": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": ">=17"
+          }
+        ],
+        "recipes": [
+          {
+            "id": "com.microsoft.java.UpgradeToSpringFramework_6_0",
+            "name": "Upgrade Spring Framework to 6.0",
+            "description": "Migrate low-level Spring Framework to 6.0 directly.",
+            "url": "https://docs.openrewrite.org/recipes/java/spring/framework/upgradespringframework_6_0",
+            "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.spring.framework.UpgradeSpringFramework_6_0` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Framework to 6.0 from any previous version.\n"
+          }
+        ],
+        "supportedSources": [
+          {
+            "groupId": "org.springframework",
+            "artifactId": "*",
+            "version": "<6.0.23"
+          }
+        ],
+        "effects": [
+          {
+            "groupId": "org.springframework",
+            "artifactId": "*",
+            "version": "6.0.x"
+          }
+        ]
+      }
+    ],
+    "buildTool": {
+      "name": "mvn",
+      "path": "C:\\Users\\DOC\\Maven\\apache-maven-3.9.6\\bin",
+      "version": ""
+    }
+  },
+  "workingBranch": "appmod/java-upgrade-20260120085148",
+  "runTests": true
+}
+2026-01-20T08:52:11.762Z [INFO] Project dependencies loaded: [
+  "org.springframework:spring-core:5.3.43:jar",
+  "org.springframework:spring-beans:5.3.43:jar",
+  "org.springframework:spring-context:5.3.43:jar",
+  "org.springframework:spring-jdbc:5.3.43:jar",
+  "org.springframework:spring-tx:5.3.43:jar",
+  "org.springframework:spring-web:5.3.43:jar",
+  "org.springframework:spring-webmvc:5.3.43:jar",
+  "org.springframework:spring-test:5.3.43:jar",
+  "org.mybatis:mybatis:3.5.16:jar",
+  "org.mybatis:mybatis-spring:2.1.2:jar",
+  "com.mysql:mysql-connector-j:8.4.0:jar",
+  "com.mchange:c3p0:0.10.0:jar",
+  "javax.servlet:javax.servlet-api:3.1.0:jar",
+  "javax.servlet.jsp:jsp-api:2.2:jar",
+  "javax.servlet:jstl:1.2:jar",
+  "com.fasterxml.jackson.core:jackson-databind:2.13.4.2:jar",
+  "org.apache.logging.log4j:log4j-core:2.25.3:jar",
+  "org.slf4j:slf4j-api:1.7.36:jar",
+  "org.apache.logging.log4j:log4j-slf4j-impl:2.25.3:jar",
+  "org.apache.commons:commons-lang3:3.18.0:jar",
+  "commons-fileupload:commons-fileupload:1.6:jar",
+  "commons-io:commons-io:2.14.0:jar",
+  "org.apache.poi:poi:4.1.2:jar",
+  "org.apache.poi:poi-ooxml:4.1.2:jar"
+]
+2026-01-20T08:52:11.762Z [INFO] Project modules loaded: [
+  "com.mybatis:bookims-ssm:1.0-SNAPSHOT"
+]
+2026-01-20T08:52:11.763Z [INFO] done initializing context.
+2026-01-20T08:52:11.763Z [INFO] Source dependencies: [
+  {
+    "groupId": "org.springframework",
+    "artifactId": "spring-core",
+    "type": "jar",
+    "version": "5.3.43",
+    "scope": "compile",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "org.springframework",
+    "artifactId": "spring-beans",
+    "type": "jar",
+    "version": "5.3.43",
+    "scope": "compile",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "org.springframework",
+    "artifactId": "spring-context",
+    "type": "jar",
+    "version": "5.3.43",
+    "scope": "compile",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "org.springframework",
+    "artifactId": "spring-jdbc",
+    "type": "jar",
+    "version": "5.3.43",
+    "scope": "compile",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "org.springframework",
+    "artifactId": "spring-tx",
+    "type": "jar",
+    "version": "5.3.43",
+    "scope": "compile",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "org.springframework",
+    "artifactId": "spring-web",
+    "type": "jar",
+    "version": "5.3.43",
+    "scope": "compile",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "org.springframework",
+    "artifactId": "spring-webmvc",
+    "type": "jar",
+    "version": "5.3.43",
+    "scope": "compile",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "org.springframework",
+    "artifactId": "spring-test",
+    "type": "jar",
+    "version": "5.3.43",
+    "scope": "compile",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "org.mybatis",
+    "artifactId": "mybatis",
+    "type": "jar",
+    "version": "3.5.16",
+    "scope": "compile",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "org.mybatis",
+    "artifactId": "mybatis-spring",
+    "type": "jar",
+    "version": "2.1.2",
+    "scope": "compile",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "com.mysql",
+    "artifactId": "mysql-connector-j",
+    "type": "jar",
+    "version": "8.4.0",
+    "scope": "compile",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "com.mchange",
+    "artifactId": "c3p0",
+    "type": "jar",
+    "version": "0.10.0",
+    "scope": "compile",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "javax.servlet",
+    "artifactId": "javax.servlet-api",
+    "type": "jar",
+    "version": "3.1.0",
+    "scope": "provided",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "javax.servlet.jsp",
+    "artifactId": "jsp-api",
+    "type": "jar",
+    "version": "2.2",
+    "scope": "provided",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "javax.servlet",
+    "artifactId": "jstl",
+    "type": "jar",
+    "version": "1.2",
+    "scope": "compile",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "com.fasterxml.jackson.core",
+    "artifactId": "jackson-databind",
+    "type": "jar",
+    "version": "2.13.4.2",
+    "scope": "compile",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "org.apache.logging.log4j",
+    "artifactId": "log4j-core",
+    "type": "jar",
+    "version": "2.25.3",
+    "scope": "compile",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "org.slf4j",
+    "artifactId": "slf4j-api",
+    "type": "jar",
+    "version": "1.7.36",
+    "scope": "compile",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "org.apache.logging.log4j",
+    "artifactId": "log4j-slf4j-impl",
+    "type": "jar",
+    "version": "2.25.3",
+    "scope": "compile",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "org.apache.commons",
+    "artifactId": "commons-lang3",
+    "type": "jar",
+    "version": "3.18.0",
+    "scope": "compile",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "commons-fileupload",
+    "artifactId": "commons-fileupload",
+    "type": "jar",
+    "version": "1.6",
+    "scope": "compile",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "commons-io",
+    "artifactId": "commons-io",
+    "type": "jar",
+    "version": "2.14.0",
+    "scope": "compile",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "org.apache.poi",
+    "artifactId": "poi",
+    "type": "jar",
+    "version": "4.1.2",
+    "scope": "compile",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "org.apache.poi",
+    "artifactId": "poi-ooxml",
+    "type": "jar",
+    "version": "4.1.2",
+    "scope": "compile",
+    "module": "bookims-ssm"
+  },
+  {
+    "groupId": "java",
+    "artifactId": "*",
+    "version": "8"
+  }
+]
+2026-01-20T08:52:11.764Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object]
+2026-01-20T08:52:11.764Z [WARN] No source dependencies found for Spring Boot. Skipping target dependency validation
+2026-01-20T08:52:11.764Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Spring Boot
+2026-01-20T08:52:11.764Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Spring Framework
+2026-01-20T08:52:11.765Z [WARN] No source dependencies found for Spring Security. Skipping target dependency validation
+2026-01-20T08:52:11.765Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Spring Security
+2026-01-20T08:52:11.765Z [WARN] No source dependencies found for Jakarta EE. Skipping target dependency validation
+2026-01-20T08:52:11.765Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Jakarta EE
+2026-01-20T08:52:11.766Z [WARN] No source dependencies found for JUnit. Skipping target dependency validation
+2026-01-20T08:52:11.766Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:JUnit
+2026-01-20T08:52:11.766Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Java
+2026-01-20T08:52:11.767Z [INFO] validateAndUpdateTargets, userTargets: [object Object],[object Object]
+2026-01-20T08:52:11.768Z [INFO] Upgrade route: upgrade `Spring Framework` to *6.0.x*, upgrade `Java` to *21* with oneStepOneFramework=false
+2026-01-20T08:52:11.768Z [INFO] Upgrade route planned: [
+  [
+    {
+      "name": "Spring Framework",
+      "groupId": "org.springframework",
+      "artifactId": "*",
+      "version": "6.0.x",
+      "dependencies": [
+        {
+          "groupId": "java",
+          "artifactId": "*",
+          "version": ">=17"
+        }
+      ],
+      "recipes": [
+        {
+          "id": "com.microsoft.java.UpgradeToSpringFramework_6_0",
+          "name": "Upgrade Spring Framework to 6.0",
+          "description": "Migrate low-level Spring Framework to 6.0 directly.",
+          "url": "https://docs.openrewrite.org/recipes/java/spring/framework/upgradespringframework_6_0",
+          "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.spring.framework.UpgradeSpringFramework_6_0` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Framework to 6.0 from any previous version.\n"
+        }
+      ],
+      "supportedSources": [
+        {
+          "groupId": "org.springframework",
+          "artifactId": "*",
+          "version": "<6.0.23"
+        }
+      ],
+      "effects": [
+        {
+          "groupId": "org.springframework",
+          "artifactId": "*",
+          "version": "6.0.x"
+        }
+      ]
+    },
+    {
+      "name": "Java",
+      "groupId": "java",
+      "artifactId": "*",
+      "version": "21",
+      "recipes": [
+        {
+          "id": "com.microsoft.java.UpgradeToJava21",
+          "name": "Upgrade from Java 8 to Java 21",
+          "description": "Migrate Java 8 to Java 21.",
+          "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava21",
+          "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.UpgradeToJava21` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 21 from any previous version larger than Java 8.\n"
+        }
+      ],
+      "supportedSources": [
+        {
+          "groupId": "java",
+          "artifactId": "*",
+          "version": ">=8 <21"
+        },
+        {
+          "name": "Java",
+          "groupId": "java",
+          "artifactId": "*",
+          "version": "11",
+          "recipes": [
+            {
+              "id": "com.microsoft.java.UpgradeToJava11",
+              "name": "Upgrade from Java 8 to Java 11",
+              "description": "Migrate Java 8 to Java 11.",
+              "url": "https://docs.openrewrite.org/recipes/java/migrate/java8tojava11",
+              "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.Java8toJava11` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 11 from any previous version larger than Java 8.\n"
+            }
+          ],
+          "supportedSources": [
+            {
+              "groupId": "java",
+              "artifactId": "*",
+              "version": ">=8 <11"
+            }
+          ],
+          "effects": [
+            {
+              "groupId": "java",
+              "artifactId": "*",
+              "version": "11"
+            }
+          ]
+        },
+        {
+          "name": "Java",
+          "groupId": "java",
+          "artifactId": "*",
+          "version": "17",
+          "recipes": [
+            {
+              "id": "com.microsoft.java.UpgradeToJava17",
+              "name": "Upgrade from Java 8 to Java 17",
+              "description": "Migrate Java 8 to Java 17.",
+              "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava17",
+              "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.UpgradeToJava17` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 17 from any previous version larger than Java 8.\n"
+            }
+          ],
+          "supportedSources": [
+            {
+              "groupId": "java",
+              "artifactId": "*",
+              "version": ">=8 <17"
+            },
+            {
+              "name": "Java",
+              "groupId": "java",
+              "artifactId": "*",
+              "version": "11",
+              "recipes": [
+                {
+                  "id": "com.microsoft.java.UpgradeToJava11",
+                  "name": "Upgrade from Java 8 to Java 11",
+                  "description": "Migrate Java 8 to Java 11.",
+                  "url": "https://docs.openrewrite.org/recipes/java/migrate/java8tojava11",
+                  "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.Java8toJava11` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 11 from any previous version larger than Java 8.\n"
+                }
+              ],
+              "supportedSources": [
+                {
+                  "groupId": "java",
+                  "artifactId": "*",
+                  "version": ">=8 <11"
+                }
+              ],
+              "effects": [
+                {
+                  "groupId": "java",
+                  "artifactId": "*",
+                  "version": "11"
+                }
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "groupId": "java",
+              "artifactId": "*",
+              "version": "17"
+            }
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "groupId": "java",
+          "artifactId": "*",
+          "version": "21"
+        }
+      ]
+    }
+  ]
+]
+2026-01-20T08:52:11.837Z [INFO]  M .applycrypto/changedFileList_book-ssm.txt
+ D ".applycrypto/chgLog/book-ssm \354\235\264\352\264\200 \354\202\260\354\266\234\353\254\274 (llm) - 20260116.xlsx"
+ D ".applycrypto/chgLog/book-ssm \354\235\264\352\264\200 \354\202\260\354\266\234\353\254\274 (llm) - 20260117.xlsx"
+ D ".applycrypto/chgLog/book-ssm \354\235\264\352\264\200 \354\202\260\354\266\234\353\254\274 (llm) - 20260120.xlsx"
+ D ".applycrypto/chgLog/book-ssm \354\235\264\352\264\200 \354\202\260\354\266\234\353\254\274 - 20260116.xlsx"
+ D ".applycrypto/chgLog/book-ssm \354\235\264\352\264\200 \354\202\260\354\266\234\353\254\274 - 20260117.xlsx"
+ D ".applycrypto/chgLog/book-ssm \354\235\264\352\264\200 \354\202\260\354\266\234\353\254\274 - 20260120.xlsx"
+ M .applycrypto/spec/EmpController_20260120.xlsx
+ M .applycrypto/spec/EmployeeController_20260120.xlsx
+ M .applycrypto/spec/EmployeeService_20260120.xlsx
+ M .vscode/settings.json
+ M pom.xml
+ M src/com/mybatis/beans/MapParam.java
+ M src/com/mybatis/controller/BookController.java
+ M src/com/mybatis/controller/EmpController.java
+ D src/com/mybatis/controller/EmpController.java.backup
+ M src/com/mybatis/dao/MapInterceptor.java
+ M src/com/mybatis/service/EmployeeService.java
+ M src/com/mybatis/service/ExcleImpl.java
+ M target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+ M target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+ M web/index.html
+?? .applycrypto/debug_compare_EmpController.java.txt
+?? .applycrypto/output/
+?? .github/
+?? target/tomcat/
+
+2026-01-20T08:52:11.846Z [INFO] Upgrade plan written to c:\Project\SSLife\book-ssm\.github\java-upgrade\20260120085148\plan.md

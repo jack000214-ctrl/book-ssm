@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "timestamp": "2026-01-26T13:38:07.452518",
+    "step_number": 2,
+    "phase": "planning",
+    "table_name": "tadm00100",
+    "layer": "",
+    "tokens_used": 17081,
+    "file_paths": [
+      "D:\\RES\\workspace\\hcs-adm\\src\\main\\java\\com\\samsunglife\\healthcare\\adminWeb\\controller\\blocking\\BlockingController.java",
+      "D:\\RES\\workspace\\hcs-adm\\src\\main\\java\\com\\samsunglife\\healthcare\\adminWeb\\service\\blocking\\nonTxImpl\\BlockingServiceImpl.java",
+      "D:\\RES\\workspace\\hcs-adm\\src\\main\\java\\com\\samsunglife\\healthcare\\adminWeb\\service\\code\\impl\\CodeServiceImpl.java"
+    ]
+  },
+  "result": {
+    "data_flow_analysis": {
+      "overview": "The TADM00100 table stores the creator name (GVNM) encrypted with policy P017. All SELECT queries in the blocking module retrieve this column.",
+      "flows": [
+        {
+          "flow_id": "FLOW_001",
+          "flow_name": "Blocked Service List Retrieval",
+          "direction": "DB_TO_OUTBOUND",
+          "data_source": {
+            "type": "DB",
+            "description": "SELECT blocked service list with encrypted GVNM (alias aenam)"
+          },
+          "data_sink": {
+            "type": "HTTP_RESPONSE",
+            "description": "Returned to client via view rendering"
+          },
+          "path": "BlockingController.serviceList -> BlockingServiceImpl.blockedServiceList -> BlockingMapper.blockedServiceList -> DB",
+          "sensitive_columns": [
+            "GVNM"
+          ],
+          "sql_query_id": "blockedServiceList"
+        },
+        {
+          "flow_id": "FLOW_002",
+          "flow_name": "Blocked Service Detail Retrieval",
+          "direction": "DB_TO_OUTBOUND",
+          "data_source": {
+            "type": "DB",
+            "description": "SELECT single blocked service record with encrypted GVNM (alias aenam)"
+          },
+          "data_sink": {
+            "type": "HTTP_RESPONSE",
+            "description": "Returned to client via view rendering"
+          },
+          "path": "BlockingController.serviceDetail -> BlockingServiceImpl.selectBlockedServiceInfo -> BlockingMapper.selectBlockedServiceInfo -> DB",
+          "sensitive_columns": [
+            "GVNM"
+          ],
+          "sql_query_id": "selectBlockedServiceInfo"
+        },
+        {
+          "flow_id": "FLOW_003",
+          "flow_name": "Blocked User List Retrieval",
+          "direction": "DB_TO_OUTBOUND",
+          "data_source": {
+            "type": "DB",
+            "description": "SELECT blocked user list with encrypted GVNM (alias aenam)"
+          },
+          "data_sink": {
+            "type": "HTTP_RESPONSE",
+            "description": "Returned to client via view rendering"
+          },
+          "path": "BlockingController.userList -> BlockingServiceImpl.selectBlockedUserInfoList -> BlockingMapper.selectBlockedUserInfoList -> DB",
+          "sensitive_columns": [
+            "GVNM"
+          ],
+          "sql_query_id": "selectBlockedUserInfoList"
+        },
+        {
+          "flow_id": "FLOW_004",
+          "flow_name": "Blocked User Detail Retrieval",
+          "direction": "DB_TO_OUTBOUND",
+          "data_source": {
+            "type": "DB",
+            "description": "SELECT blocked user detail list with encrypted GVNM (alias aenam)"
+          },
+          "data_sink": {
+            "type": "HTTP_RESPONSE",
+            "description": "Returned to client via view rendering"
+          },
+          "path": "BlockingController.userDetail -> BlockingServiceImpl.selectedBlockedUserDetailInfo -> BlockingMapper.selectedBlockedUserDetailInfo -> DB",
+          "sensitive_columns": [
+            "GVNM"
+          ],
+          "sql_query_id": "selectedBlockedUserDetailInfo"
+        }
+      ]
+    },
+    "modification_instructions": [
+      {
+        "flow_id": "FLOW_001",
+        "file_name": "BlockingServiceImpl.java",
+        "target_method": "blockedServiceList",
+        "action": "DECRYPT",
+        "reason": "SELECT command returns encrypted creator name (GVNM) as aenam; must decrypt each element before returning to controller.",
+        "target_properties": [
+          "aenam"
+        ],
+        "insertion_point": "After mapper.blockedServiceList(params) call, before returning the list.",
+        "code_pattern_hint": "List<BlockedServiceInfoVO> list = this.mapper.blockedServiceList(params);\nfor (BlockedServiceInfoVO vo : list) {\n vo.setAenam(ksignUtil.ksignDec(\"P017\", vo.getAenam()));\n}"
+      },
+      {
+        "flow_id": "FLOW_002",
+        "file_name": "BlockingServiceImpl.java",
+        "target_method": "selectBlockedServiceInfo",
+        "action": "DECRYPT",
+        "reason": "SELECT command returns encrypted creator name (GVNM) as aenam; must decrypt before returning to controller.",
+        "target_properties": [
+          "aenam"
+        ],
+        "insertion_point": "After mapper.selectBlockedServiceInfo(params) call, before returning the VO to the controller.",
+        "code_pattern_hint": "BlockedServiceInfoVO vo = this.mapper.selectBlockedServiceInfo(params);\nvo.setAenam(ksignUtil.ksignDec(\"P017\", vo.getAenam()));"
+      },
+      {
+        "flow_id": "FLOW_003",
+        "file_name": "BlockingServiceImpl.java",
+        "target_method": "selectBlockedUserInfoList",
+        "action": "DECRYPT",
+        "reason": "SELECT command returns encrypted creator name (GVNM) as aenam; must decrypt each element before building PageVO.",
+        "target_properties": [
+          "aenam"
+        ],
+        "insertion_point": "After mapper.selectBlockedUserInfoList(params) call, before setting list into PageVO.",
+        "code_pattern_hint": "List<BlockedUserInfoVO> list = this.mapper.selectBlockedUserInfoList(params);\nfor (BlockedUserInfoVO vo : list) {\n vo.setAenam(ksignUtil.ksignDec(\"P017\", vo.getAenam()));\n}"
+      },
+      {
+        "flow_id": "FLOW_004",
+        "file_name": "BlockingServiceImpl.java",
+        "target_method": "selectedBlockedUserDetailInfo",
+        "action": "DECRYPT",
+        "reason": "SELECT command returns encrypted creator name (GVNM) as aenam; must decrypt each element before returning to controller.",
+        "target_properties": [
+          "aenam"
+        ],
+        "insertion_point": "After mapper.selectedBlockedUserDetailInfo(params) call, before returning the list to the controller.",
+        "code_pattern_hint": "List<BlockedUserInfoVO> list = this.mapper.selectedBlockedUserDetailInfo(params);\nfor (BlockedUserInfoVO vo : list) {\n vo.setAenam(ksignUtil.ksignDec(\"P017\", vo.getAenam()));\n}"
+      }
+    ]
+  }
+}

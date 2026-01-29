@@ -1,0 +1,51 @@
+{
+  "result": {
+    "queries": [
+      {
+        "query_id": "selectOrderHistory",
+        "sql_summary": "주문 이력 조회",
+        "input_mapping": {
+          "type_category": "PRIMITIVE",
+          "class_name": "int"
+        },
+        "output_mapping": {
+          "type_category": "LIST",
+          "class_name": "List<OrderVO>",
+          "crypto_fields": [
+            {
+              "column_name": "customer_name"
+            },
+            {
+              "column_name": "delivery_address"
+            }
+          ]
+        }
+      },
+      {
+        "query_id": "insertOrder",
+        "sql_summary": "주문 등록",
+        "input_mapping": {
+          "type_category": "VO",
+          "class_name": "OrderVO",
+          "crypto_fields": [
+            {
+              "column_name": "customer_name"
+            },
+            {
+              "column_name": "delivery_address"
+            }
+          ]
+        },
+        "output_mapping": {
+          "type_category": "PRIMITIVE",
+          "class_name": "int"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "file_paths": [
+      "src/main/java/com/example/OrderController.java"
+    ]
+  }
+}

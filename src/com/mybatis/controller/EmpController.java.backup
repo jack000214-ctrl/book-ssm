@@ -81,6 +81,14 @@ public class EmpController {
     public String getEmps(Map<String,Object> map)
     {
         List<Employee> emps = employeeService.getEmps();
+        // Decrypt personal information after retrieval
+        if (emps != null) {
+            for (Employee e : emps) {
+                e.setLastName(k_sign.CryptoService.decrypt(e.getLastName(), k_sign.CryptoService.P20, K_SIGN_NAME));
+                e.setDayOfBirth(k_sign.CryptoService.decrypt(e.getDayOfBirth(), k_sign.CryptoService.P30, K_SIGN_DOB));
+                e.setJuminNumber(k_sign.CryptoService.decrypt(e.getJuminNumber(), k_sign.CryptoService.P10, K_SIGN_JUMIN));
+            }
+        }
         map.put("employees", emps);
         int code = 200;
         boolean status = true;
@@ -130,6 +138,14 @@ public class EmpController {
         int pageIndex = (int) map.get("pageIndex");
         int size = (int) map.get("size");
         List<Employee> emps = employeeService.getEmpsByPage((pageIndex-1)*size,size);
+        // Decrypt personal information after retrieval
+        if (emps != null) {
+            for (Employee e : emps) {
+                // e.setLastName(k_sign.CryptoService.decrypt(e.getLastName(), k_sign.CryptoService.P20, K_SIGN_NAME));
+                // e.setDayOfBirth(k_sign.CryptoService.decrypt(e.getDayOfBirth(), k_sign.CryptoService.P30, K_SIGN_DOB));
+                // e.setJuminNumber(k_sign.CryptoService.decrypt(e.getJuminNumber(), k_sign.CryptoService.P10, K_SIGN_JUMIN));
+            }
+        }
         int total = employeeService.getLength();
         int code = 200;
         boolean status = true;
@@ -188,6 +204,8 @@ public class EmpController {
     public String addEmpByGet(@RequestParam("employeename") String employeename, @RequestParam("sex") int sex, @RequestParam("email") String email, @RequestParam("did") Integer did) {
         Employee employee = new Employee();
         employee.setEmail(email);
+        // Encrypt name before setting
+        // employee.setLastName(k_sign.CryptoService.encrypt(employeename, k_sign.CryptoService.P20, K_SIGN_NAME));
         employee.setLastName(employeename);
         employee.setSex(sex);
         employee.setDept(deptService.getDeptById(did));
@@ -203,6 +221,10 @@ public class EmpController {
     @ResponseBody
     public String addEmpByPost(@RequestBody Employee emp) {
         System.out.println("添加emp：" + emp);
+        // Encrypt personal information before saving
+        // emp.setLastName(k_sign.CryptoService.encrypt(emp.getLastName(), k_sign.CryptoService.P20, K_SIGN_NAME));
+        // emp.setDayOfBirth(k_sign.CryptoService.encrypt(emp.getDayOfBirth(), k_sign.CryptoService.P30, K_SIGN_DOB));
+        // emp.setJuminNumber(k_sign.CryptoService.encrypt(emp.getJuminNumber(), k_sign.CryptoService.P10, K_SIGN_JUMIN));
         employeeService.save(emp);
         int code = 200;
         boolean status = true;
@@ -223,6 +245,8 @@ public class EmpController {
         Integer sex = Integer.parseInt(request.getParameter("sex"));
         Employee employee = new Employee();
         employee.setEmail(email);
+        // Encrypt name before setting
+        // employee.setLastName(k_sign.CryptoService.encrypt(lastName, k_sign.CryptoService.P20, K_SIGN_NAME));
         employee.setLastName(lastName);
         employee.setSex(sex);
         employee.setId(id);
@@ -245,6 +269,10 @@ public class EmpController {
     @ResponseBody
     public String editEmpByPost(@RequestBody Employee emp) {
         System.out.println("添加emp：" + emp);
+        // Encrypt personal information before updating
+        // emp.setLastName(k_sign.CryptoService.encrypt(emp.getLastName(), k_sign.CryptoService.P20, K_SIGN_NAME));
+        // emp.setDayOfBirth(k_sign.CryptoService.encrypt(emp.getDayOfBirth(), k_sign.CryptoService.P30, K_SIGN_DOB));
+        // emp.setJuminNumber(k_sign.CryptoService.encrypt(emp.getJuminNumber(), k_sign.CryptoService.P10, K_SIGN_JUMIN));
         employeeService.update(emp);
         int code = 200;
         boolean status = true;
@@ -278,9 +306,9 @@ public class EmpController {
         // Decrypt personal information after retrieval
         if (list != null) {
             for (Employee e : list) {
-                e.setLastName(k_sign.CryptoService.decrypt(e.getLastName(), k_sign.CryptoService.P20, K_SIGN_NAME));
-                e.setDayOfBirth(k_sign.CryptoService.decrypt(e.getDayOfBirth(), k_sign.CryptoService.P30, K_SIGN_DOB));
-                e.setJuminNumber(k_sign.CryptoService.decrypt(e.getJuminNumber(), k_sign.CryptoService.P10, K_SIGN_JUMIN));
+                // e.setLastName(k_sign.CryptoService.decrypt(e.getLastName(), k_sign.CryptoService.P20, K_SIGN_NAME));
+                // e.setDayOfBirth(k_sign.CryptoService.decrypt(e.getDayOfBirth(), k_sign.CryptoService.P30, K_SIGN_DOB));
+                // e.setJuminNumber(k_sign.CryptoService.decrypt(e.getJuminNumber(), k_sign.CryptoService.P10, K_SIGN_JUMIN));
             }
         }
         Map<String,Object> page_map = new HashMap<>();

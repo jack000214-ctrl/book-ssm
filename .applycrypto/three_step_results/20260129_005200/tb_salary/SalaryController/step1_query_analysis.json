@@ -1,0 +1,18 @@
+{
+  "queries": [
+    {
+      "query_id": "findSalary",
+      "sql_summary": "SELECT emp_id, salary FROM salary WHERE emp_id = ?",
+      "output_mapping": {
+        "crypto_fields": [
+          {"column_name": "salary"}
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "file_paths": [
+      "src/main/java/com/example/salary/SalaryMapper.java"
+    ]
+  }
+}

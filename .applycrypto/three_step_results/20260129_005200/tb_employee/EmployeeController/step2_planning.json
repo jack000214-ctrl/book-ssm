@@ -1,0 +1,80 @@
+{
+  "result": {
+    "data_flow_analysis": {
+      "flows": [
+        {
+          "flow_id": "flow_emp_001",
+          "sql_query_id": "selectEmployeeList",
+          "data_flow": "Controller -> Service -> Mapper"
+        },
+        {
+          "flow_id": "flow_emp_002",
+          "sql_query_id": "insertEmployee",
+          "data_flow": "Controller -> Service -> Mapper"
+        },
+        {
+          "flow_id": "flow_emp_003",
+          "sql_query_id": "com.example.mapper.EmployeeMapper.selectById",
+          "data_flow": "Controller -> Service -> Mapper"
+        },
+        {
+          "flow_id": "flow_emp_004",
+          "sql_query_id": "updateEmployee",
+          "data_flow": "Controller -> Service -> Mapper"
+        },
+        {
+          "flow_id": "flow_emp_005",
+          "sql_query_id": "deleteEmployee",
+          "data_flow": "Controller -> Service -> Mapper"
+        }
+      ]
+    },
+    "modification_instructions": [
+      {
+        "flow_id": "flow_emp_001",
+        "file_name": "EmployeeController.java",
+        "target_method": "selectEmployeeList",
+        "action": "ADD_DECRYPTION",
+        "reason": "개인정보 복호화 필요",
+        "insertion_point": "AFTER_QUERY",
+        "code_pattern_hint": "Use CryptoUtil.decrypt()"
+      },
+      {
+        "flow_id": "flow_emp_002",
+        "file_name": "EmployeeController.java",
+        "target_method": "insertEmployee",
+        "action": "ADD_ENCRYPTION",
+        "reason": "개인정보 암호화 필요",
+        "insertion_point": "BEFORE_INSERT",
+        "code_pattern_hint": "Use CryptoUtil.encrypt()"
+      },
+      {
+        "flow_id": "flow_emp_003",
+        "file_name": "EmployeeController.java",
+        "target_method": "getEmployee",
+        "action": "ADD_DECRYPTION",
+        "reason": "주민번호 복호화 필요",
+        "insertion_point": "AFTER_QUERY",
+        "code_pattern_hint": "Use CryptoUtil.decryptJumin()"
+      },
+      {
+        "flow_id": "flow_emp_004",
+        "file_name": "EmployeeController.java",
+        "target_method": "updateEmployee",
+        "action": "ADD_ENCRYPTION",
+        "reason": "성별 정보 암호화 필요",
+        "insertion_point": "BEFORE_UPDATE",
+        "code_pattern_hint": "Use CryptoUtil.encryptSex()"
+      },
+      {
+        "flow_id": "flow_emp_005",
+        "file_name": "EmployeeController.java",
+        "target_method": "deleteEmployee",
+        "action": "NO_ACTION",
+        "reason": "삭제는 암호화 불필요",
+        "insertion_point": "NONE",
+        "code_pattern_hint": "No encryption needed"
+      }
+    ]
+  }
+}

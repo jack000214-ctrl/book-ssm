@@ -1,0 +1,38 @@
+{
+  "result": {
+    "data_flow_analysis": {
+      "flows": [
+        {
+          "flow_id": "flow_dept_001",
+          "sql_query_id": "selectDepartmentList",
+          "data_flow": "Controller -> Service -> Mapper"
+        },
+        {
+          "flow_id": "flow_dept_002",
+          "sql_query_id": "com.example.mapper.DepartmentMapper.findByCompanyId",
+          "data_flow": "Controller -> Service -> Mapper"
+        }
+      ]
+    },
+    "modification_instructions": [
+      {
+        "flow_id": "flow_dept_001",
+        "file_name": "DepartmentController.java",
+        "target_method": "selectDepartmentList",
+        "action": "NO_ACTION",
+        "reason": "암호화 대상 컬럼 없음",
+        "insertion_point": "NONE",
+        "code_pattern_hint": "No modification needed"
+      },
+      {
+        "flow_id": "flow_dept_002",
+        "file_name": "DepartmentController.java",
+        "target_method": "getDepartmentsByCompany",
+        "action": "NO_ACTION",
+        "reason": "암호화 대상 컬럼 없음",
+        "insertion_point": "NONE",
+        "code_pattern_hint": "No modification needed"
+      }
+    ]
+  }
+}

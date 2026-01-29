@@ -1,0 +1,36 @@
+{
+  "result": {
+    "data_flow_analysis": {
+      "flows": [
+        {
+          "flow_id": "FLOW_MIX_001",
+          "sql_query_id": "mixedQuery1",
+          "path": "com.example.mixed.MixedController.getList"
+        },
+        {
+          "flow_id": "FLOW_MIX_002",
+          "sql_query_id": "mixedMapQuery",
+          "path": "com.example.mixed.MixedController.getMapList"
+        }
+      ]
+    },
+    "modification_instructions": [
+      {
+        "flow_id": "FLOW_MIX_001",
+        "file_name": "MixedController.java",
+        "target_method": "getList",
+        "action": "modify",
+        "insertion_point": "after_call",
+        "code_pattern_hint": "encrypt name"
+      },
+      {
+        "flow_id": "FLOW_MIX_002",
+        "file_name": "MixedController.java",
+        "target_method": "getMapList",
+        "action": "modify",
+        "insertion_point": "after_call",
+        "code_pattern_hint": "wrap map values"
+      }
+    ]
+  }
+}

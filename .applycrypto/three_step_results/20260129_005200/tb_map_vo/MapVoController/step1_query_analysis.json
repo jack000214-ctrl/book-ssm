@@ -1,0 +1,30 @@
+{
+  "result": {
+    "queries": [
+      {
+        "query_id": "mapVoQuery",
+        "sql_summary": "SELECT id, data FROM tb_map_vo",
+        "input_mapping": {
+          "type_category": "VO",
+          "class_name": "InputVo"
+        },
+        "output_mapping": {
+          "type_category": "MAP",
+          "class_name": "OutputMap",
+          "crypto_fields": [
+            {"column_name": "data"}
+          ]
+        }
+      }
+    ],
+    "objects": [
+      {"type_category": "VO", "class_name": "InputVo"},
+      {"type_category": "MAP", "class_name": "OutputMap"}
+    ]
+  },
+  "metadata": {
+    "file_paths": [
+      "src/main/java/com/example/mapvo/MapVoController.java"
+    ]
+  }
+}

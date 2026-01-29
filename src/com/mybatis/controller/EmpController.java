@@ -44,7 +44,7 @@ public class EmpController {
         User u = employeeService.login(user);
         int code = 200;
         boolean status = true;
-//        // 로그인 실패
+//        // 登录失败
         if(u==null)
         {
             code = 500;
@@ -63,16 +63,18 @@ public class EmpController {
     @RequestMapping(value="/api/getUserInfo",method=RequestMethod.POST)
     @ResponseBody
     public String getUserInfo(@RequestBody User user) {
+        /*
         System.out.println("获取用户信息：" + user);
+        */
         User u = employeeService.getUserInfo(user);
         int code = 200;
         boolean status = true;
-        if(u==null)
+        /* if(u==null)
         {
             code = 500;
             status = false;
             System.out.println("获取用户信息:"+u);
-        }
+        } */
         String result = fill(u,code, status);
         return result;
     }

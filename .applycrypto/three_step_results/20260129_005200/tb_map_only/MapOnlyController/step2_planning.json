@@ -1,0 +1,23 @@
+{
+  "result": {
+    "data_flow_analysis": {
+      "flows": [
+        {
+          "flow_id": "FLOW_MAP_001",
+          "sql_query_id": "mapOnlyQuery",
+          "path": "com.example.map.MapOnlyController.getMap"
+        }
+      ]
+    },
+    "modification_instructions": [
+      {
+        "flow_id": "FLOW_MAP_001",
+        "file_name": "MapOnlyController.java",
+        "target_method": "getMap",
+        "action": "annotate",
+        "insertion_point": "before_return",
+        "code_pattern_hint": "no-op"
+      }
+    ]
+  }
+}

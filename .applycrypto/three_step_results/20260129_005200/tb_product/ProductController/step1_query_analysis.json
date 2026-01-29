@@ -1,0 +1,24 @@
+{
+  "result": {
+    "queries": [
+      {
+        "query_id": "selectProductByCategory",
+        "sql_summary": "카테고리별 상품 조회",
+        "input_mapping": {
+          "type_category": "PRIMITIVE",
+          "class_name": "String"
+        },
+        "output_mapping": {
+          "type_category": "LIST",
+          "class_name": "List<ProductVO>",
+          "crypto_fields": []
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "file_paths": [
+      "src/main/java/com/example/ProductController.java"
+    ]
+  }
+}

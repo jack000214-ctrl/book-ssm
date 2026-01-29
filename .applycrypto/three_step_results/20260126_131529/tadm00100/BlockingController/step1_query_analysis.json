@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "timestamp": "2026-01-26T13:37:52.746286",
+    "step_number": 1,
+    "phase": "query_analysis",
+    "table_name": "tadm00100",
+    "layer": "",
+    "tokens_used": 23181,
+    "file_paths": [
+      "D:\\RES\\workspace\\hcs-adm\\src\\main\\java\\com\\samsunglife\\healthcare\\adminWeb\\controller\\blocking\\BlockingController.java",
+      "D:\\RES\\workspace\\hcs-adm\\src\\main\\java\\com\\samsunglife\\healthcare\\adminWeb\\service\\blocking\\nonTxImpl\\BlockingServiceImpl.java",
+      "D:\\RES\\workspace\\hcs-adm\\src\\main\\java\\com\\samsunglife\\healthcare\\adminWeb\\service\\code\\impl\\CodeServiceImpl.java"
+    ]
+  },
+  "result": {
+    "queries": [
+      {
+        "query_id": "blockedServiceList",
+        "command_type": "SELECT",
+        "sql_summary": "Retrieves blocked service list with pagination, joining service and code tables and left joining TADM00100 to obtain the creator name.",
+        "input_mapping": {
+          "type_category": "VO",
+          "class_name": "SearchVO",
+          "crypto_fields": []
+        },
+        "output_mapping": {
+          "type_category": "VO",
+          "class_name": "BlockedServiceInfoVO",
+          "crypto_fields": [
+            {
+              "column_name": "GVNM",
+              "java_field": "aenam",
+              "getter": "getAenam",
+              "setter": "setAenam"
+            }
+          ]
+        }
+      },
+      {
+        "query_id": "selectBlockedServiceInfo",
+        "command_type": "SELECT",
+        "sql_summary": "Selects a single blocked service record by URL, joining code tables and left joining TADM00100 to obtain the creator name. The encrypted GVNM column is returned as alias aenam.",
+        "input_mapping": {
+          "type_category": "VO",
+          "class_name": "BlockedServiceInfoVO",
+          "crypto_fields": []
+        },
+        "output_mapping": {
+          "type_category": "VO",
+          "class_name": "BlockedServiceInfoVO",
+          "crypto_fields": [
+            {
+              "column_name": "GVNM",
+              "java_field": "aenam",
+              "getter": "getAenam",
+              "setter": "setAenam"
+            }
+          ]
+        }
+      },
+      {
+        "query_id": "selectBlockedUserInfoList",
+        "command_type": "SELECT",
+        "sql_summary": "Retrieves a paginated list of blocked users, joining user and reason tables and left joining TADM00100 to get the creator name. The encrypted GVNM column is returned as alias aenam.",
+        "input_mapping": {
+          "type_category": "VO",
+          "class_name": "SearchVO",
+          "crypto_fields": []
+        },
+        "output_mapping": {
+          "type_category": "VO",
+          "class_name": "BlockedUserInfoVO",
+          "crypto_fields": [
+            {
+              "column_name": "GVNM",
+              "java_field": "aenam",
+              "getter": "getAenam",
+              "setter": "setAenam"
+            }
+          ]
+        }
+      },
+      {
+        "query_id": "selectedBlockedUserDetailInfo",
+        "command_type": "SELECT",
+        "sql_summary": "Selects detailed blocked user information for a given user UUID, joining reason and code tables and left joining TADM00100 to obtain the creator name. The encrypted GVNM column is returned as alias aenam.",
+        "input_mapping": {
+          "type_category": "VO",
+          "class_name": "BlockedUserInfoVO",
+          "crypto_fields": []
+        },
+        "output_mapping": {
+          "type_category": "VO",
+          "class_name": "BlockedUserInfoVO",
+          "crypto_fields": [
+            {
+              "column_name": "GVNM",
+              "java_field": "aenam",
+              "getter": "getAenam",
+              "setter": "setAenam"
+            }
+          ]
+        }
+      },
+      {
+        "query_id": "getCodeList",
+        "command_type": "SELECT",
+        "sql_summary": "Retrieves a hierarchical list of common codes. The creator name column AENAM is derived from the encrypted GVNM column in TADM00100.",
+        "input_mapping": {
+          "type_category": "MAP",
+          "class_name": "Map",
+          "crypto_fields": []
+        },
+        "output_mapping": {
+          "type_category": "VO",
+          "class_name": "CommonCodeVO",
+          "crypto_fields": [
+            {
+              "column_name": "GVNM",
+              "java_field": "aenam",
+              "getter": "getAenam",
+              "setter": "setAenam"
+            }
+          ]
+        }
+      },
+      {
+        "query_id": "searchCodeList",
+        "command_type": "SELECT",
+        "sql_summary": "Searches common codes with optional filters. The creator name column AENAM is resolved from the encrypted GVNM column in TADM00100.",
+        "input_mapping": {
+          "type_category": "MAP",
+          "class_name": "Map",
+          "crypto_fields": []
+        },
+        "output_mapping": {
+          "type_category": "VO",
+          "class_name": "CommonCodeVO",
+          "crypto_fields": [
+            {
+              "column_name": "GVNM",
+              "java_field": "aenam",
+              "getter": "getAenam",
+              "setter": "setAenam"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

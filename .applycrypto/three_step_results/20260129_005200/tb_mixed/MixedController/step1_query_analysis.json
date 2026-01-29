@@ -1,0 +1,46 @@
+{
+  "result": {
+    "queries": [
+      {
+        "query_id": "mixedQuery1",
+        "sql_summary": "SELECT id, name FROM tb_mixed",
+        "output_mapping": {
+          "type_category": "VO",
+          "class_name": "MixedVo",
+          "crypto_fields": [
+            {"column_name": "name"}
+          ]
+        }
+      },
+      {
+        "query_id": "mixedQuery2",
+        "sql_summary": "SELECT id, count FROM tb_mixed_counts",
+        "output_mapping": {
+          "type_category": "PRIMITIVE",
+          "class_name": "",
+          "crypto_fields": []
+        }
+      },
+      {
+        "query_id": "mixedMapQuery",
+        "sql_summary": "SELECT k, v FROM tb_mixed_map",
+        "output_mapping": {
+          "type_category": "MAP",
+          "class_name": "MixedMapModel",
+          "crypto_fields": [
+            {"column_name": "v"}
+          ]
+        }
+      }
+    ],
+    "objects": [
+      {"type_category": "VO", "class_name": "MixedVo"},
+      {"type_category": "MAP", "class_name": "MixedMapModel"}
+    ]
+  },
+  "metadata": {
+    "file_paths": [
+      "src/main/java/com/example/mixed/MixedController.java"
+    ]
+  }
+}

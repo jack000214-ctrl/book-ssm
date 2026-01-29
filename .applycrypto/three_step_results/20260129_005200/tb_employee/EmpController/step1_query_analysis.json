@@ -1,0 +1,18 @@
+{
+  "queries": [
+    {
+      "query_id": "getEmployees",
+      "sql_summary": "SELECT id, name, email FROM employee",
+      "output_mapping": {
+        "crypto_fields": [
+          {"column_name": "email"}
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "file_paths": [
+      "src/main/java/com/example/employee/EmployeeMapper.java"
+    ]
+  }
+}

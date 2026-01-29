@@ -12,9 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 
 import com.mybatis.utils.HttpRequestUtil;
 import com.mybatis.utils.Jackson;
-import com.sun.deploy.net.HttpResponse;
+// import com.sun.deploy.net.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
+import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import com.mybatis.beans.Book;
 import com.mybatis.service.BookService;
-import sun.net.www.http.HttpClient;
+// import sun.net.www.http.HttpClient;
 
 
 @Controller
@@ -267,5 +267,12 @@ public class BookController {
 //    }
 
 //    CloseableHttpClient httpclient= HttpClients.createDefault();HttpGethttpGet= new HttpGet("http://www.baidu.com");
+
+    @RequestMapping("/books")
+    public String listBooks(Model model) {
+        List<Book> books = bookService.getBooks();
+        model.addAttribute("books", books);
+        return "list";
+    }
 
 }

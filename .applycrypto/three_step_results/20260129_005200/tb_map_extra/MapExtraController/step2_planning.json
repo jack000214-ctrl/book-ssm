@@ -1,0 +1,26 @@
+{
+  "result": {
+    "data_flow_analysis": {
+      "flows": [
+        {
+          "sql_query_id": "mapExtraQuery",
+          "handler_class": "MapExtraController",
+          "handler_file": "MapExtraController.java",
+          "model": "ExtraMapModel, ExtraVo",
+          "type_category": "MAP"
+        }
+      ]
+    },
+    "modification_instructions": [
+      {
+        "query_id": "mapExtraQuery",
+        "file_name": "MapExtraController.java",
+        "target_method": "handleMapExtra",
+        "action": "encrypt",
+        "reason": "test augmentation: provide file reference",
+        "insertion_point": "beforeReturn",
+        "code_pattern_hint": "map processing"
+      }
+    ]
+  }
+}

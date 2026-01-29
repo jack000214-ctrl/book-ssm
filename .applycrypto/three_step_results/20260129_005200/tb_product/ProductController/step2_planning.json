@@ -1,0 +1,24 @@
+{
+  "result": {
+    "data_flow_analysis": {
+      "flows": [
+        {
+          "flow_id": "flow_prod_001",
+          "sql_query_id": "selectProductByCategory",
+          "data_flow": "Controller -> Service -> Mapper"
+        }
+      ]
+    },
+    "modification_instructions": [
+      {
+        "flow_id": "flow_prod_001",
+        "file_name": "ProductController.java",
+        "target_method": "getProductsByCategory",
+        "action": "NO_ACTION",
+        "reason": "암호화 대상 컬럼 없음",
+        "insertion_point": "NONE",
+        "code_pattern_hint": "No encryption needed"
+      }
+    ]
+  }
+}

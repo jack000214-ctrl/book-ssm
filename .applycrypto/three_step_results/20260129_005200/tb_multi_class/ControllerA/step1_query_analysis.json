@@ -1,0 +1,18 @@
+{
+  "result": {
+    "queries": [
+      {
+        "query_id": "multiClassQueryA1",
+        "sql": "SELECT id, name, value FROM tb_multi_class",
+        "table": "tb_multi_class",
+        "output_mapping": {
+          "crypto_fields": [
+            { "column_name": "value", "type_category": "VO", "class_name": "MultiAClass" }
+          ],
+          "type_category": "VO",
+          "class_name": "MultiAClass"
+        }
+      }
+    ]
+  }
+}

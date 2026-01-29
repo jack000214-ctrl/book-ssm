@@ -10,6 +10,7 @@ import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.HorizontalAlignment;
 
 import com.mybatis.beans.Employee;
 
@@ -21,36 +22,36 @@ public class ExcleImpl {
 	}
 	public void export(List<Employee> list,String[] titles, ServletOutputStream out) throws Exception {
 		try {
-			// µÚÒ»²½£¬´´½¨Ò»¸öworkbook£¬¶ÔÓ¦Ò»¸öExcelÎÄ¼þ
+			// ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½workbookï¿½ï¿½ï¿½ï¿½Ó¦Ò»ï¿½ï¿½Excelï¿½Ä¼ï¿½
 			HSSFWorkbook workbook = new HSSFWorkbook();
 
-			// µÚ¶þ²½£¬ÔÚwebbookÖÐÌí¼ÓÒ»¸ösheet,¶ÔÓ¦ExcelÎÄ¼þÖÐµÄsheet
+			// ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½webbookï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½sheet,ï¿½ï¿½Ó¦Excelï¿½Ä¼ï¿½ï¿½Ðµï¿½sheet
 			HSSFSheet hssfSheet = workbook.createSheet("sheet1");
 
-			// µÚÈý²½£¬ÔÚsheetÖÐÌí¼Ó±íÍ·µÚ0ÐÐ,×¢ÒâÀÏ°æ±¾poi¶ÔExcelµÄÐÐÊýÁÐÊýÓÐÏÞÖÆshort
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sheetï¿½ï¿½ï¿½ï¿½ï¿½Ó±ï¿½Í·ï¿½ï¿½0ï¿½ï¿½,×¢ï¿½ï¿½ï¿½Ï°æ±¾poiï¿½ï¿½Excelï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½short
 
 			HSSFRow row = hssfSheet.createRow(0);
-			// µÚËÄ²½£¬´´½¨µ¥Ôª¸ñ£¬²¢ÉèÖÃÖµ±íÍ· ÉèÖÃ±íÍ·¾ÓÖÐ
+			// ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ñ£¬²ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Í· ï¿½ï¿½ï¿½Ã±ï¿½Í·ï¿½ï¿½ï¿½ï¿½
 			HSSFCellStyle hssfCellStyle = workbook.createCellStyle();
 
-			// ¾ÓÖÐÑùÊ½
-			hssfCellStyle.setAlignment(HSSFCellStyle.ALIGN_CENTER);
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
+			hssfCellStyle.setAlignment(HorizontalAlignment.CENTER);
 
 			HSSFCell hssfCell = null;
 			for (int i = 0; i < titles.length; i++) {
-				hssfCell = row.createCell(i);// ÁÐË÷Òý´Ó0¿ªÊ¼
-				hssfCell.setCellValue(titles[i]);// ÁÐÃû1
-				hssfCell.setCellStyle(hssfCellStyle);// ÁÐ¾ÓÖÐÏÔÊ¾
+				hssfCell = row.createCell(i);// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0ï¿½ï¿½Ê¼
+				hssfCell.setCellValue(titles[i]);// ï¿½ï¿½ï¿½ï¿½1
+				hssfCell.setCellStyle(hssfCellStyle);// ï¿½Ð¾ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾
 			}
 
-			// µÚÎå²½£¬Ð´ÈëÊµÌåÊý¾Ý
-//			Person person1 = new Person("1", "ÕÅÈý", "123", "26");
-//			Person person2 = new Person("2", "ÀîËÄ", "123", "18");
-//			Person person3 = new Person("3", "ÍõÎå", "123", "77");
-//			Person person4 = new Person("4", "ÐìÐ¡óã", "123", "1");
+			// ï¿½ï¿½ï¿½å²½ï¿½ï¿½Ð´ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//			Person person1 = new Person("1", "ï¿½ï¿½ï¿½ï¿½", "123", "26");
+//			Person person2 = new Person("2", "ï¿½ï¿½ï¿½ï¿½", "123", "18");
+//			Person person3 = new Person("3", "ï¿½ï¿½ï¿½ï¿½", "123", "77");
+//			Person person4 = new Person("4", "ï¿½ï¿½Ð¡ï¿½ï¿½", "123", "1");
 
 
-			// ÕâÀïÎÒ°Ñlistµ±×öÊý¾Ý¿âÀ²
+			// ï¿½ï¿½ï¿½ï¿½ï¿½Ò°ï¿½listï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½
 //			ArrayList<Person> list = new ArrayList<Person>();
 //			list.add(person1);
 //			list.add(person2);
@@ -61,7 +62,7 @@ public class ExcleImpl {
 				row = hssfSheet.createRow(i + 1);
 				Employee employee = list.get(i);
 
-				// µÚÁù²½£¬´´½¨µ¥Ôª¸ñ£¬²¢ÉèÖÃÖµ
+				// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ñ£¬²ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
 				Integer id = null;
 				if (employee.getId() != null) {
 					id = employee.getId();
@@ -74,7 +75,7 @@ public class ExcleImpl {
 //				if (employee.getSex().) {
 //					String sex_str = employee.getSex();
 //					if (sex_str == "1"||sex_str.equals("1"))
-//						sex = "ÄÐ";
+//						sex = "ï¿½ï¿½";
 //					else {
 //						sex = "Å®";
 //					}
@@ -90,7 +91,7 @@ public class ExcleImpl {
 				row.createCell(3).setCellValue(email);
 			}
 
-			// µÚÆß²½£¬½«ÎÄ¼þÊä³öµ½¿Í»§¶Ëä¯ÀÀÆ÷
+			// ï¿½ï¿½ï¿½ß²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			try {
 				workbook.write(out);
 				out.flush();
@@ -101,7 +102,7 @@ public class ExcleImpl {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new Exception("µ¼³öÐÅÏ¢Ê§°Ü£¡");
+			throw new Exception("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢Ê§ï¿½Ü£ï¿½");
 
 		}
 	}

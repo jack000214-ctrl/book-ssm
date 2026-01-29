@@ -1,0 +1,48 @@
+{
+  "result": {
+    "queries": [
+      {
+        "query_id": "selectCustomerList",
+        "sql_summary": "고객 목록 조회",
+        "input_mapping": {
+          "type_category": "VO",
+          "class_name": "CustomerSearchVO"
+        },
+        "output_mapping": {
+          "type_category": "LIST",
+          "class_name": "List<CustomerVO>",
+          "crypto_fields": [
+            {
+              "column_name": "resident_number"
+            },
+            {
+              "column_name": "card_number"
+            }
+          ]
+        }
+      },
+      {
+        "query_id": "com.example.mapper.CustomerMapper.findByPhone",
+        "sql_summary": "전화번호로 고객 조회",
+        "input_mapping": {
+          "type_category": "PRIMITIVE",
+          "class_name": "String"
+        },
+        "output_mapping": {
+          "type_category": "VO",
+          "class_name": "CustomerVO",
+          "crypto_fields": [
+            {
+              "column_name": "resident_number"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "file_paths": [
+      "src/main/java/com/example/CustomerController.java"
+    ]
+  }
+}

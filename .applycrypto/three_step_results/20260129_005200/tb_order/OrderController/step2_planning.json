@@ -1,0 +1,38 @@
+{
+  "result": {
+    "data_flow_analysis": {
+      "flows": [
+        {
+          "flow_id": "flow_order_001",
+          "sql_query_id": "selectOrderHistory",
+          "data_flow": "Controller -> Service -> Mapper"
+        },
+        {
+          "flow_id": "flow_order_002",
+          "sql_query_id": "insertOrder",
+          "data_flow": "Controller -> Service -> Mapper"
+        }
+      ]
+    },
+    "modification_instructions": [
+      {
+        "flow_id": "flow_order_001",
+        "file_name": "OrderController.java",
+        "target_method": "getOrderHistory",
+        "action": "ADD_DECRYPTION",
+        "reason": "고객명 및 배송주소 복호화 필요",
+        "insertion_point": "AFTER_QUERY",
+        "code_pattern_hint": "Use CryptoUtil.decryptName() and CryptoUtil.decryptAddress()"
+      },
+      {
+        "flow_id": "flow_order_002",
+        "file_name": "OrderController.java",
+        "target_method": "placeOrder",
+        "action": "ADD_ENCRYPTION",
+        "reason": "고객명 및 배송주소 암호화 필요",
+        "insertion_point": "BEFORE_INSERT",
+        "code_pattern_hint": "Use CryptoUtil.encryptName() and CryptoUtil.encryptAddress()"
+      }
+    ]
+  }
+}

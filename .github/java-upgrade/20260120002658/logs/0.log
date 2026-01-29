@@ -1,0 +1,28 @@
+2026-01-20T00:31:25.604Z [INFO] ---------------------prepare setup_upgrade_environment----------------------
+2026-01-20T00:31:25.605Z [INFO] [Tool.prepareInvocation]({name: setup_upgrade_environment, input: {
+  "sessionId": "20260120002658"
+}}).
+2026-01-20T00:31:25.605Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-01-20T00:31:25.605Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Setup Development Environment"
+}}).
+2026-01-20T00:31:25.606Z [INFO] ----------------------prepared setup_upgrade_environment----------------------
+2026-01-20T00:31:25.747Z [INFO] ----------------------invoke setup_upgrade_environment----------------------
+2026-01-20T00:31:25.748Z [INFO] [Tool.invoke]({name: setup_upgrade_environment, input: {
+  "sessionId": "20260120002658"
+}}).
+2026-01-20T00:31:25.748Z [INFO] [Plan.tryStartTask]({tool:setup_upgrade_environment, nextTask:{type:undefined, tool:undefined}}
+2026-01-20T00:31:25.749Z [INFO] [Plan.tryStartTask]: no next task, create new one.
+2026-01-20T00:31:25.749Z [INFO] [Plan.createTaskAtStart]({tool: setup_upgrade_environment, input: {
+  "sessionId": "20260120002658"
+}}).
+2026-01-20T00:31:25.749Z [INFO] [Plan.tryStartTask]: starting task setupEnvironment
+2026-01-20T00:31:25.749Z [INFO] [Task.start](): Starting task setupEnvironment
+2026-01-20T00:31:25.750Z [INFO] [Task.start](6): Started task setupEnvironment
+2026-01-20T00:31:25.750Z [INFO] [Tool.invoke] validate GitHub Copilot license.
+2026-01-20T00:31:25.750Z [INFO] [Tool.invoke] do pre-invoke.
+2026-01-20T00:31:25.751Z [INFO] [Tool.invoke] do invoke.
+2026-01-20T00:31:25.751Z [ERROR] [Tool.invoke] error occurs when invoking tool setup_upgrade_environment: UserError: File c:\Project\SSLife\book-ssm\.github\java-upgrade\20260120002658\plan.md does not exist, please invoke tool #generate_upgrade_plan to generate a valid upgrade plan first..
+2026-01-20T00:31:25.752Z [INFO] [Task.complete](6): Completing task setupEnvironment
+2026-01-20T00:31:25.752Z [INFO] ----------------------invoked setup_upgrade_environment----------------------
+2026-01-20T00:31:25.753Z [INFO] [Task.complete](6): Completed task setupEnvironment

@@ -1,0 +1,25 @@
+{
+  "result": {
+    "queries": [
+      {
+        "query_id": "mapOnlyQuery",
+        "sql_summary": "SELECT key, value FROM tb_map_only",
+        "output_mapping": {
+          "type_category": "MAP",
+          "class_name": "MapOnlyModel",
+          "crypto_fields": [
+            {"column_name": "value"}
+          ]
+        }
+      }
+    ],
+    "objects": [
+      {"type_category": "MAP", "class_name": "MapOnlyModel"}
+    ]
+  },
+  "metadata": {
+    "file_paths": [
+      "src/main/java/com/example/map/MapOnlyController.java"
+    ]
+  }
+}

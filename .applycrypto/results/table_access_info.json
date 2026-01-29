@@ -1,210 +1,224 @@
-[
-  {
-    "table_name": "tb_employee",
-    "columns": [
-      {
-        "name": "day_of_birth",
-        "new_column": false
-      },
-      {
-        "name": "jumin_number",
-        "new_column": false
-      },
-      {
-        "name": "last_name",
-        "new_column": false
-      },
-      {
-        "name": "sex",
-        "new_column": false
-      }
-    ],
-    "access_files": [
-      "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\beans\\Employee.java",
-      "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmpController.java",
-      "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmployeeController.java",
-      "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\dao\\EmployeeMapper.java",
-      "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\service\\EmployeeService.java"
-    ],
-    "query_type": "SELECT",
-    "sql_query": "select e.id id,e.last_name last_name,e.sex sex, e.email email, e.day_of_birth day_of_birth, e.jumin_number jumin_number,\n e.dept_id d_id,d.id did,d.dept_name dept_name from\n tb_employee e,tb_department d where e.dept_id = d.id",
-    "layer": "Repository",
-    "sql_queries": [
-      {
-        "id": "getEmps",
-        "query_type": "SELECT",
-        "sql": "select e.id id,e.last_name last_name,e.sex sex, e.email email, e.day_of_birth day_of_birth, e.jumin_number jumin_number,\n e.dept_id d_id,d.id did,d.dept_name dept_name from\n tb_employee e,tb_department d where e.dept_id = d.id",
-        "strategy_specific": {
-          "namespace": "com.mybatis.dao.EmployeeMapper",
-          "parameter_type": null,
-          "result_type": "com.mybatis.beans.Employee",
-          "result_map": "MyDifEmp"
+{
+  "tables": [
+    {
+      "table_name": "tb_employee",
+      "sql_queries": [
+        {
+          "id": "selectEmployeeList",
+          "call_stacks": [
+            "com.example.EmployeeController.selectEmployeeList",
+            "com.example.EmployeeService.getEmployeeList"
+          ],
+          "access_files": [
+            "src/main/java/com/example/EmployeeController.java",
+            "src/main/java/com/example/EmployeeService.java"
+          ],
+          "strategy_specific": {
+            "result_map": "employeeResultMap"
+          }
+        },
+        {
+          "id": "insertEmployee",
+          "call_stacks": [
+            "com.example.EmployeeController.insertEmployee"
+          ],
+          "access_files": [
+            "src/main/java/com/example/EmployeeController.java"
+          ],
+          "strategy_specific": {
+            "result_map": null
+          }
+        },
+        {
+          "id": "com.example.mapper.EmployeeMapper.selectById",
+          "call_stacks": [
+            "com.example.EmployeeController.getEmployee",
+            "com.example.EmployeeService.getEmployee"
+          ],
+          "access_files": [
+            "src/main/java/com/example/EmployeeController.java",
+            "src/main/java/com/example/EmployeeService.java"
+          ],
+          "strategy_specific": {}
+        },
+        {
+          "id": "updateEmployee",
+          "call_stacks": [
+            "com.example.EmployeeController.updateEmployee",
+            "com.example.EmployeeService.updateEmployee"
+          ],
+          "access_files": [
+            "src/main/java/com/example/EmployeeController.java"
+          ],
+          "strategy_specific": {
+            "result_map": "updateResultMap"
+          }
+        },
+        {
+          "id": "deleteEmployee",
+          "call_stacks": [
+            "com.example.EmployeeController.deleteEmployee"
+          ],
+          "access_files": [
+            "src/main/java/com/example/EmployeeController.java"
+          ],
+          "strategy_specific": {
+            "result_map": null
+          }
         }
-      },
-      {
-        "id": "query",
-        "query_type": "SELECT",
-        "sql": "select e.id id,e.last_name last_name,e.sex sex, e.email email, e.day_of_birth day_of_birth, e.jumin_number jumin_number,\n e.dept_id d_id,d.id did,d.dept_name dept_name from\n tb_employee e left join tb_department d on  e.dept_id = d.id  where CONCAT(e.id, last_name, sex, email, e.day_of_birth, e.jumin_number, e.dept_id, d.id, d.dept_name)  like #{condition}",
-        "strategy_specific": {
-          "namespace": "com.mybatis.dao.EmployeeMapper",
-          "parameter_type": null,
-          "result_type": "com.mybatis.beans.Employee",
-          "result_map": "conditionEmp"
-        }
-      },
-      {
-        "id": "getEmpsByPage",
-        "query_type": "SELECT",
-        "sql": "select e.id id,e.last_name last_name,e.sex sex, e.email email, e.day_of_birth day_of_birth, e.jumin_number jumin_number,\n e.dept_id d_id,d.id did,d.dept_name dept_name from\n tb_employee e,tb_department d where e.dept_id = d.id limit #{param1} , #{param2}",
-        "strategy_specific": {
-          "namespace": "com.mybatis.dao.EmployeeMapper",
-          "parameter_type": null,
-          "result_type": "com.mybatis.beans.Employee",
-          "result_map": "pageEmp"
-        }
-      },
-      {
-        "id": "getEmpById",
-        "query_type": "SELECT",
-        "sql": "select id, last_name lastName, sex, email, day_of_birth dayOfBirth, jumin_number juminNumber  from tb_employee where id = #{id}",
-        "strategy_specific": {
-          "namespace": "com.mybatis.dao.EmployeeMapper",
-          "parameter_type": null,
-          "result_type": "com.mybatis.beans.Employee",
-          "result_map": null
-        }
-      },
-      {
-        "id": "addEmp",
-        "query_type": "INSERT",
-        "sql": "insert into tb_employee(last_name,email,sex,day_of_birth,jumin_number,dept_id) values(#{lastName},#{email},#{sex},#{dayOfBirth},#{juminNumber},#{dept.id})",
-        "strategy_specific": {
-          "namespace": "com.mybatis.dao.EmployeeMapper",
-          "parameter_type": "com.mybatis.beans.Employee",
-          "result_type": null,
-          "result_map": null
-        }
-      },
-      {
-        "id": "updateEmp",
-        "query_type": "UPDATE",
-        "sql": "update tb_employee set last_name=#{lastName},email=#{email},sex=#{sex},day_of_birth=#{dayOfBirth},jumin_number=#{juminNumber},dept_id=#{dept.id} where id=#{id}",
-        "strategy_specific": {
-          "namespace": "com.mybatis.dao.EmployeeMapper",
-          "parameter_type": null,
-          "result_type": null,
-          "result_map": null
-        }
-      },
-      {
-        "id": "getEmps",
-        "query_type": "SELECT",
-        "sql": "select e.id id,e.last_name last_name,e.sex sex, e.email email, e.day_of_birth day_of_birth, e.jumin_number jumin_number,\n e.dept_id d_id,d.id did,d.dept_name dept_name from\n tb_employee e,tb_department d where e.dept_id = d.id",
-        "strategy_specific": {
-          "namespace": "com.mybatis.dao.EmployeeMapper",
-          "parameter_type": null,
-          "result_type": "com.mybatis.beans.Employee",
-          "result_map": "MyDifEmp"
-        }
-      },
-      {
-        "id": "query",
-        "query_type": "SELECT",
-        "sql": "select e.id id,e.last_name last_name,e.sex sex, e.email email, e.day_of_birth day_of_birth, e.jumin_number jumin_number,\n e.dept_id d_id,d.id did,d.dept_name dept_name from\n tb_employee e left join tb_department d on  e.dept_id = d.id  where CONCAT(e.id, last_name, sex, email, e.day_of_birth, e.jumin_number, e.dept_id, d.id, d.dept_name)  like #{condition}",
-        "strategy_specific": {
-          "namespace": "com.mybatis.dao.EmployeeMapper",
-          "parameter_type": null,
-          "result_type": "com.mybatis.beans.Employee",
-          "result_map": "conditionEmp"
-        }
-      },
-      {
-        "id": "getEmpsByPage",
-        "query_type": "SELECT",
-        "sql": "select e.id id,e.last_name last_name,e.sex sex, e.email email, e.day_of_birth day_of_birth, e.jumin_number jumin_number,\n e.dept_id d_id,d.id did,d.dept_name dept_name from\n tb_employee e,tb_department d where e.dept_id = d.id limit #{param1} , #{param2}",
-        "strategy_specific": {
-          "namespace": "com.mybatis.dao.EmployeeMapper",
-          "parameter_type": null,
-          "result_type": "com.mybatis.beans.Employee",
-          "result_map": "pageEmp"
-        }
-      },
-      {
-        "id": "getEmpById",
-        "query_type": "SELECT",
-        "sql": "select id, last_name lastName, sex, email, day_of_birth dayOfBirth, jumin_number juminNumber  from tb_employee where id = #{id}",
-        "strategy_specific": {
-          "namespace": "com.mybatis.dao.EmployeeMapper",
-          "parameter_type": null,
-          "result_type": "com.mybatis.beans.Employee",
-          "result_map": null
-        }
-      },
-      {
-        "id": "addEmp",
-        "query_type": "INSERT",
-        "sql": "insert into tb_employee(last_name,email,sex,day_of_birth,jumin_number,dept_id) values(#{lastName},#{email},#{sex},#{dayOfBirth},#{juminNumber},#{dept.id})",
-        "strategy_specific": {
-          "namespace": "com.mybatis.dao.EmployeeMapper",
-          "parameter_type": "com.mybatis.beans.Employee",
-          "result_type": null,
-          "result_map": null
-        }
-      },
-      {
-        "id": "updateEmp",
-        "query_type": "UPDATE",
-        "sql": "update tb_employee set last_name=#{lastName},email=#{email},sex=#{sex},day_of_birth=#{dayOfBirth},jumin_number=#{juminNumber},dept_id=#{dept.id} where id=#{id}",
-        "strategy_specific": {
-          "namespace": "com.mybatis.dao.EmployeeMapper",
-          "parameter_type": null,
-          "result_type": null,
-          "result_map": null
-        }
-      }
-    ],
-    "layer_files": {
-      "Repository": [
-        "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\beans\\Employee.java",
-        "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\dao\\EmployeeMapper.java"
       ],
-      "service": [
-        "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\service\\EmployeeService.java"
-      ],
-      "controller": [
-        "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmpController.java",
-        "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmployeeController.java"
-      ]
+      "strategy_specific": {
+        "result_map": "defaultResultMap"
+      }
     },
-    "modified_files": [
-      {
-        "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmpController.java",
-        "layer": "Emp",
-        "modification_type": "encryption",
-        "status": "success",
-        "timestamp": "2026-01-17T02:26:35.213521",
-        "tokens_used": 9698,
-        "diff": "package com.mybatis.controller;\n\nimport java.io.UnsupportedEncodingException;\nimport java.util.*;\nimport javax.servlet.http.HttpServletRequest;\n\nimport com.mybatis.beans.User;\nimport com.mybatis.utils.Jackson;\nimport org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.stereotype.Controller;\nimport org.springframework.web.bind.annotation.RequestBody;\nimport org.springframework.web.bind.annotation.RequestMapping;\nimport org.springframework.web.bind.annotation.RequestMethod;\nimport org.springframework.web.bind.annotation.RequestParam;\nimport org.springframework.web.bind.annotation.ResponseBody;\nimport com.mybatis.beans.Department;\nimport com.mybatis.beans.Employee;\nimport com.mybatis.service.DepartmentService;\nimport com.mybatis.service.EmployeeService;\n\n/******************************\n * TITLE : 직원 공통\n * HISTORY: 2024.06.10 최초작성\n ******************************/\n\n@Controller\npublic class EmpController {\n\n    @Autowired\n    private EmployeeService employeeService;\n\n    @Autowired\n    private DepartmentService deptService;\n\n    /**\n    * 로그인\n    * @param user \n    * @return String\n    */\n    @RequestMapping(value=\"/api/login\",method=RequestMethod.POST)\n    @ResponseBody\n    public String login(@RequestBody User user) {\n        System.out.println(\"登陆：\" + user);\n        User u = employeeService.login(user);\n        int code = 200;\n        boolean status = true;\n//        // 로그인 실패\n        if(u==null)\n        {\n            code = 500;\n            status = false;\n            System.out.println(\"登陆:\"+u);\n        }\n        String result = fill(u,code, status);\n        return result;\n    }\n\n    /**\n    * 用户信息查询\n    * @param user \n    * @return String\n    */\n    @RequestMapping(value=\"/api/getUserInfo\",method=RequestMethod.POST)\n    @ResponseBody\n    public String getUserInfo(@RequestBody User user) {\n        System.out.println(\"获取用户信息：\" + user);\n        User u = employeeService.getUserInfo(user);\n        int code = 200;\n        boolean status = true;\n        if(u==null)\n        {\n            code = 500;\n            status = false;\n            System.out.println(\"获取用户信息:\"+u);\n        }\n        String result = fill(u,code, status);\n        return result;\n    }\n    \n    @RequestMapping(\"/api/emps\")\n    public String getEmps(Map<String,Object> map)\n    {\n        List<Employee> emps = employeeService.getEmps();\n        // Decrypt personal information after retrieval\n        if (emps != null) {\n            for (Employee e : emps) {\n                e.setLastName(k_sign.CryptoService.decrypt(e.getLastName(), k_sign.CryptoService.P20, K_SIGN_NAME));\n                e.setDayOfBirth(k_sign.CryptoService.decrypt(e.getDayOfBirth(), k_sign.CryptoService.P30, K_SIGN_DOB));\n                e.setJuminNumber(k_sign.CryptoService.decrypt(e.getJuminNumber(), k_sign.CryptoService.P10, K_SIGN_JUMIN));\n            }\n        }\n        map.put(\"employees\", emps);\n        int code = 200;\n        boolean status = true;\n        Map<String,Object> return_map = new HashMap<>();\n        return_map.put(\"data\",emps);\n        return_map.put(\"code\",code);\n        return_map.put(\"status\",status);\n        String result = ReturnMaps(return_map);\n        return result;\n    }\n\n    @RequestMapping(value=\"/api/emps/init\")\n    @ResponseBody\n    public String init() {\n        List<Employee> emp_list = employeeService.getEmps();\n        List<Department> dept_list = deptService.getDepartments();\n        System.out.println(emp_list.size());\n        System.out.println(dept_list.size());\n        Map<String,Object> map = new HashMap<>();\n        map.put(\"count\", emp_list.size());\n        map.put(\"depts\", dept_list);\n        Map<String, Object> result_map = new HashMap<>();\n        result_map.put(\"count\",emp_list.size());\n        result_map.put(\"depts\",dept_list);\n        return fill(result_map,200,true);\n\n    }\n\n    @ResponseBody\n    @RequestMapping(\"/api/emps/getLength\")\n    public int getLength() {\n        int length = employeeService.getLength();\n        return length;\n    }\n    @ResponseBody\n    @RequestMapping(\"/api/emps/search\")\n    public List<Employee> query(@RequestParam(\"condition\") String condition) {\n        List<Employee> length = employeeService.query(\"%\"+condition+\"%\");\n        return length;\n    }\n    @ResponseBody\n    @RequestMapping(value=\"/api/emps/getByPage\",method=RequestMethod.GET)\n//    public String getByPage(@RequestParam(\"pageIndex\") Integer pageIndex,@RequestParam(\"size\") Integer size) {\n    public String getByPage(HttpServletRequest request) {\n        String json_str = request.getParameter(\"params\");\n        Map<String, Object> map = Jackson.JsonToMap(json_str);\n        int pageIndex = (int) map.get(\"pageIndex\");\n        int size = (int) map.get(\"size\");\n        List<Employee> emps = employeeService.getEmpsByPage((pageIndex-1)*size,size);\n        // Decrypt personal information after retrieval\n        if (emps != null) {\n            for (Employee e : emps) {\n                e.setLastName(k_sign.CryptoService.decrypt(e.getLastName(), k_sign.CryptoService.P20, K_SIGN_NAME));\n                e.setDayOfBirth(k_sign.CryptoService.decrypt(e.getDayOfBirth(), k_sign.CryptoService.P30, K_SIGN_DOB));\n                e.setJuminNumber(k_sign.CryptoService.decrypt(e.getJuminNumber(), k_sign.CryptoService.P10, K_SIGN_JUMIN));\n            }\n        }\n        int total = employeeService.getLength();\n        int code = 200;\n        boolean status = true;\n        Map<String,Object> page_map = new HashMap<>();\n        page_map.put(\"pageIndex\", pageIndex);\n        page_map.put(\"size\", size);\n        page_map.put(\"list\", emps);\n        page_map.put(\"total\", total);\n        String result = fill(page_map,code,status);\n        return result;\n    }\n\n    @RequestMapping(value=\"/api/emps/delEmpByGet\",method=RequestMethod.GET)\n    @ResponseBody\n//    public String delEmpByGet(@RequestParam(\"eid\") Integer id) {\n    public String delEmpByGet(HttpServletRequest request) {\n        String json_str = request.getParameter(\"params\");\n        Map<String, Object> map = Jackson.JsonToMap(json_str);\n        int eid = (int) map.get(\"eid\");\n        employeeService.delete(eid);\n        int code = 200;\n        boolean status = true;\n        String result = fill(\"ok\",code,status);\n        return result;\n    }\n\n    @RequestMapping(value=\"/api/emps/delEmpByBatch\",method=RequestMethod.GET)\n    @ResponseBody\n    public String delEmpByBatch(HttpServletRequest request) {\n        String json_str = request.getParameter(\"params\");\n        Map<String, Object> map = Jackson.JsonToMap(json_str);\n        String ids = (String) map.get(\"ids\");\n        String[] id_array = ids.split(\",\");\n        String result=\"\";\n        boolean status = true;\n        int code=200;\n        try\n        {\n            for(int i = 0;i < id_array.length;i++)\n            {\n                System.out.println(\"删除emp：\"+id_array[i]);\n                employeeService.delete(Integer.parseInt(id_array[i]));\n            }\n        }\n        catch (Exception e)\n        {\n            code = 500;\n            status = false;\n        }\n        result = fill(\"ok\", code, status);\n        return result;\n    }\n\n    @RequestMapping(value=\"/api/emps/addEmpByGet\",method=RequestMethod.GET)\n    @ResponseBody\n    public String addEmpByGet(@RequestParam(\"employeename\") String employeename, @RequestParam(\"sex\") int sex, @RequestParam(\"email\") String email, @RequestParam(\"did\") Integer did) {\n        Employee employee = new Employee();\n        employee.setEmail(email);\n        // Encrypt name before setting\n        employee.setLastName(k_sign.CryptoService.encrypt(employeename, k_sign.CryptoService.P20, K_SIGN_NAME));\n        employee.setSex(sex);\n        employee.setDept(deptService.getDeptById(did));\n        System.out.println(employee);\n        employeeService.save(employee);\n        int code = 200;\n        boolean status = true;\n        String result = fill(\"ok\",code,status);\n        return result;\n    }\n\n    @RequestMapping(value=\"/api/emps/addEmpByPost\",method=RequestMethod.POST)\n    @ResponseBody\n    public String addEmpByPost(@RequestBody Employee emp) {\n        System.out.println(\"添加emp：\" + emp);\n        // Encrypt personal information before saving\n        emp.setLastName(k_sign.CryptoService.encrypt(emp.getLastName(), k_sign.CryptoService.P20, K_SIGN_NAME));\n        emp.setDayOfBirth(k_sign.CryptoService.encrypt(emp.getDayOfBirth(), k_sign.CryptoService.P30, K_SIGN_DOB));\n        emp.setJuminNumber(k_sign.CryptoService.encrypt(emp.getJuminNumber(), k_sign.CryptoService.P10, K_SIGN_JUMIN));\n        employeeService.save(emp);\n        int code = 200;\n        boolean status = true;\n        String result = fill(\"ok\",code, status);\n        return result;\n    }\n\n\n    @RequestMapping(value=\"/api/emps/editEmpByGet\",method=RequestMethod.GET)\n    @ResponseBody\n//  public int addEmp(@RequestBody String employeename,String sex,String email,Integer did) {\n    public String editEmpByGet(HttpServletRequest request/*,@RequestParam(\"lastName\") String lastName, @RequestParam(\"sex\") String sex, @RequestParam(\"email\") String email, @RequestParam(\"eid\") Integer id*/) {\n        String lastName = request.getParameter(\"lastName\");\n        String email = request.getParameter(\"email\");\n        System.out.println(\"get:\"+lastName);\n        Integer id = Integer.parseInt(request.getParameter(\"id\"));\n        Integer did = Integer.parseInt(request.getParameter(\"did\"));\n        Integer sex = Integer.parseInt(request.getParameter(\"sex\"));\n        Employee employee = new Employee();\n        employee.setEmail(email);\n        // Encrypt name before setting\n        employee.setLastName(k_sign.CryptoService.encrypt(lastName, k_sign.CryptoService.P20, K_SIGN_NAME));\n        employee.setSex(sex);\n        employee.setId(id);\n        Department dept = new Department();\n        dept.setId(did);\n        employee.setDept(dept);\n        employeeService.update(employee);\n        int code = 200;\n        boolean status = true;\n        String result = fill(\"ok\",code,status);\n        return result;\n    }\n\n\n    /**\n     * @param emp\n     * @return\n     */\n    @RequestMapping(value=\"/api/emps/editEmpByPost\",method=RequestMethod.POST)\n    @ResponseBody\n    public String editEmpByPost(@RequestBody Employee emp) {\n        System.out.println(\"添加emp：\" + emp);\n        // Encrypt personal information before updating\n        emp.setLastName(k_sign.CryptoService.encrypt(emp.getLastName(), k_sign.CryptoService.P20, K_SIGN_NAME));\n        emp.setDayOfBirth(k_sign.CryptoService.encrypt(emp.getDayOfBirth(), k_sign.CryptoService.P30, K_SIGN_DOB));\n        emp.setJuminNumber(k_sign.CryptoService.encrypt(emp.getJuminNumber(), k_sign.CryptoService.P10, K_SIGN_JUMIN));\n        employeeService.update(emp);\n        int code = 200;\n        boolean status = true;\n        String result = fill(\"ok\",code, status);\n        return result;\n    }\n    @RequestMapping(value=\"/api/emps/query\",method=RequestMethod.GET)\n    @ResponseBody\n    public String query(HttpServletRequest request) {\n        String json_str = request.getParameter(\"params\");\n        Map<String, Object> map = Jackson.JsonToMap(json_str);\n        String condition = (String) map.get(\"condition\");\n        Map<String,Object> resturn_map = new HashMap<>();\n        boolean status = true;\n        int code=200;\n        List<Employee> list = null;\n        try {\n            request.setCharacterEncoding(\"UTF-8\");\n        } catch (UnsupportedEncodingException e) {\n            e.printStackTrace();\n        }\n        try\n        {\n            list = employeeService.query(\"%\"+condition+\"%\");\n        }\n        catch (Exception e)\n        {\n            code = 500;\n            status = false;\n        }\n        // Decrypt personal information after retrieval\n        if (list != null) {\n            for (Employee e : list) {\n                e.setLastName(k_sign.CryptoService.decrypt(e.getLastName(), k_sign.CryptoService.P20, K_SIGN_NAME));\n                e.setDayOfBirth(k_sign.CryptoService.decrypt(e.getDayOfBirth(), k_sign.CryptoService.P30, K_SIGN_DOB));\n                e.setJuminNumber(k_sign.CryptoService.decrypt(e.getJuminNumber(), k_sign.CryptoService.P10, K_SIGN_JUMIN));\n            }\n        }\n        Map<String,Object> page_map = new HashMap<>();\n        page_map.put(\"list\", list);\n        page_map.put(\"total\", list.size());\n        String result = fill(page_map,code,status);\n        return result;\n    }\n\n    /**\n     * @return\n     */\n    @RequestMapping(value=\"/api/emps/getDatas\")\n    @ResponseBody\n    public String getDatas() {\n        List<Map<String, Object>> json_data1 = employeeService.getDatas();\n        List<Map<String, Object>> json_data2 = employeeService.getPer();\n\n        System.out.println(json_data1);\n        System.out.println(json_data2);\n        Map<String,Object> map = new HashMap<>();\n        map.put(\"count\", json_data1);\n        map.put(\"per\", json_data2);\n        String result = fill(map,200, true);\n        return result;\n    }\n    private  String fill(Object data, int code, boolean status)\n    {\n        Map<String,Object> return_map = new HashMap<>();\n        return_map.put(\"data\",data);\n        return_map.put(\"code\",code);\n        return_map.put(\"status\",status);\n        String result = ReturnMaps(return_map);\n        return result;\n    }\n    private String ReturnMaps(Map<String, Object> map)\n    {\n        return  Jackson.MapToJson(map);\n    }\n\n\n}",
-        "reason": "Added encryption for personal information before write operations (save/update) and decryption after read operations (list retrieval) according to the specified policy and sign constants."
-      },
-      {
-        "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\controller\\EmployeeController.java",
-        "layer": "Employee",
-        "modification_type": "encryption",
-        "status": "success",
-        "timestamp": "2026-01-17T02:26:35.213845",
-        "tokens_used": 7698,
-        "reason": "No modification required. All encryption/decryption logic for JUMIN, Name, and Birth Date is correctly handled in the service layer, which complies with the required policy numbers (P10, P20, P30) and key constants (K_SIGN_JUMIN, K_SIGN_NAME, K_SIGN_DOB). The controller only transports data and does not need additional changes."
-      },
-      {
-        "file_path": "C:\\Project\\SSLife\\book-ssm\\src\\com\\mybatis\\service\\EmployeeService.java",
-        "layer": "Employee",
-        "modification_type": "encryption",
-        "status": "success",
-        "timestamp": "2026-01-17T02:26:35.214025",
-        "tokens_used": 7698,
-        "reason": "No modification required. The service already encrypts JUMIN, Name, and Birth Date before persisting and decrypts them after retrieval using the correct policy numbers (P10, P20, P30) and key constants (K_SIGN_JUMIN, K_SIGN_NAME, K_SIGN_DOB). No further changes are needed."
+    {
+      "table_name": "tb_department",
+      "sql_queries": [
+        {
+          "id": "selectDepartmentList",
+          "call_stacks": [
+            "com.example.DepartmentController.selectDepartmentList"
+          ],
+          "access_files": [
+            "src/main/java/com/example/DepartmentController.java"
+          ],
+          "strategy_specific": {
+            "result_map": "departmentResultMap"
+          }
+        },
+        {
+          "id": "com.example.mapper.DepartmentMapper.findByCompanyId",
+          "call_stacks": [
+            "com.example.DepartmentController.getDepartmentsByCompany",
+            "com.example.DepartmentService.findByCompany"
+          ],
+          "access_files": [
+            "src/main/java/com/example/DepartmentController.java",
+            "src/main/java/com/example/DepartmentService.java"
+          ],
+          "strategy_specific": {}
+        }
+      ],
+      "strategy_specific": {}
+    },
+    {
+      "table_name": "tb_user",
+      "sql_queries": [
+        {
+          "id": "selectUserByEmail",
+          "call_stacks": [
+            "com.example.UserController.findUserByEmail",
+            "com.example.UserService.getUserByEmail"
+          ],
+          "access_files": [
+            "src/main/java/com/example/UserController.java",
+            "src/main/java/com/example/UserService.java"
+          ],
+          "strategy_specific": {
+            "result_map": "userResultMap"
+          }
+        },
+        {
+          "id": "insertUser",
+          "call_stacks": [
+            "com.example.UserController.createUser"
+          ],
+          "access_files": [
+            "src/main/java/com/example/UserController.java"
+          ],
+          "strategy_specific": {
+            "result_map": null
+          }
+        }
+      ],
+      "strategy_specific": {
+        "result_map": "userDefaultMap"
       }
-    ]
-  }
-]
+    },
+    {
+      "table_name": "tb_customer",
+      "sql_queries": [
+        {
+          "id": "selectCustomerList",
+          "call_stacks": [
+            "com.example.CustomerController.selectCustomerList",
+            "com.example.CustomerService.getCustomerList"
+          ],
+          "access_files": [
+            "src/main/java/com/example/CustomerController.java",
+            "src/main/java/com/example/CustomerService.java"
+          ],
+          "strategy_specific": {
+            "result_map": "customerResultMap"
+          }
+        },
+        {
+          "id": "com.example.mapper.CustomerMapper.findByPhone",
+          "call_stacks": [
+            "com.example.CustomerController.findCustomerByPhone",
+            "com.example.CustomerService.findByPhone"
+          ],
+          "access_files": [
+            "src/main/java/com/example/CustomerController.java"
+          ],
+          "strategy_specific": {}
+        }
+      ],
+      "strategy_specific": {
+        "result_map": "customerDefaultMap"
+      }
+    },
+    {
+      "table_name": "tb_order",
+      "sql_queries": [
+        {
+          "id": "selectOrderHistory",
+          "call_stacks": [
+            "com.example.OrderController.getOrderHistory",
+            "com.example.OrderService.getOrderHistory"
+          ],
+          "access_files": [
+            "src/main/java/com/example/OrderController.java",
+            "src/main/java/com/example/OrderService.java"
+          ],
+          "strategy_specific": {
+            "result_map": "orderResultMap"
+          }
+        },
+        {
+          "id": "insertOrder",
+          "call_stacks": [
+            "com.example.OrderController.placeOrder"
+          ],
+          "access_files": [
+            "src/main/java/com/example/OrderController.java"
+          ],
+          "strategy_specific": {
+            "result_map": null
+          }
+        }
+      ],
+      "strategy_specific": {}
+    },
+    {
+      "table_name": "tb_product",
+      "sql_queries": [
+        {
+          "id": "selectProductByCategory",
+          "call_stacks": [
+            "com.example.ProductController.getProductsByCategory"
+          ],
+          "access_files": [
+            "src/main/java/com/example/ProductController.java"
+          ],
+          "strategy_specific": {
+            "result_map": "productResultMap"
+          }
+        }
+      ],
+      "strategy_specific": {
+        "result_map": "productDefaultMap"
+      }
+    }
+  ]
+}
