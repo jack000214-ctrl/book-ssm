@@ -4,7 +4,7 @@
       "flows": [
         {
           "flow_id": "flow_cust_001",
-          "sql_query_id": "selectCustomerList",
+          "sql_query_id": "selectCustomerList----",
           "data_flow": "Controller -> Service -> Mapper"
         },
         {
@@ -29,9 +29,9 @@
         "file_name": "CustomerController.java",
         "target_method": "findCustomerByPhone",
         "action": "ADD_DECRYPTION",
-        "reason": "주민번호 복호화 필요",
-        "insertion_point": "AFTER_QUERY",
-        "code_pattern_hint": "Use CryptoUtil.decryptResident()"
+        "reason": "Key Concepts1\nRelational Database Management System (RDBMS): The system that stores data in structured tables with rows and columns, which SQL is designed to manage.\nTables: Database objects that hold data in an organized manner, similar to a spreadsheet.\nClauses: Different parts of an SQL statement, such as WHERE (for filtering data), ORDER BY (for sorting results), and JOIN (for combining data from multiple tables). \nFor a comprehensive guide to SQL syntax and commands, refer to online resources like the W3Schools SQL Tutorial or practice with an online SQL editor using sample databases.",
+        "insertion_point": "Key Concepts2\nRelational Database Management System (RDBMS): The system that stores data in structured tables with rows and columns, which SQL is designed to manage.\nTables: Database objects that hold data in an organized manner, similar to a spreadsheet.\nClauses: Different parts of an SQL statement, such as WHERE (for filtering data), ORDER BY (for sorting results), and JOIN (for combining data from multiple tables). \nFor a comprehensive guide to SQL syntax and commands, refer to online resources like the W3Schools SQL Tutorial or practice with an online SQL editor using sample databases.",
+        "code_pattern_hint": "Key Concepts3\nRelational Database Management System (RDBMS): The system that stores data in structured tables with rows and columns, which SQL is designed to manage.\nTables: Database objects that hold data in an organized manner, similar to a spreadsheet.\nClauses: Different parts of an SQL statement, such as WHERE (for filtering data), ORDER BY (for sorting results), and JOIN (for combining data from multiple tables). \nFor a comprehensive guide to SQL syntax and commands, refer to online resources like the W3Schools SQL Tutorial or practice with an online SQL editor using sample databases."
       }
     ]
   }

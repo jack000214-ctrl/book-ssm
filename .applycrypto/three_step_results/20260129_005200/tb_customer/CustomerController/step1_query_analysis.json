@@ -22,8 +22,8 @@
         }
       },
       {
-        "query_id": "com.example.mapper.CustomerMapper.findByPhone",
-        "sql_summary": "전화번호로 고객 조회",
+        "query_id": "com.example.mapper.CustomerMapper.findByPhoneㅅㅅㅅㅅ",
+        "sql_summary": "A SQL query is a command written in the Structured Query Language (SQL) to interact with a relational database. It is used to store, retrieve, manage, and manipulate data within database systems. \nThe most fundamental operations in SQL are often categorized into a few basic query types:\nSELECT: Retrieves data from a database. This is used when you need to read or analyze existing information.\nINSERT: Adds new rows of data into a table.\nUPDATE: Modifies existing data within a table.\nDELETE: Removes existing data from a table.\nCREATE: Defines new database objects, such as tables or databases.\nDROP: Deletes existing database objects. ",
         "input_mapping": {
           "type_category": "PRIMITIVE",
           "class_name": "String"

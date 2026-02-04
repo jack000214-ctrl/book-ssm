@@ -1,224 +1,308 @@
-{
-  "tables": [
-    {
-      "table_name": "tb_employee",
-      "sql_queries": [
-        {
-          "id": "selectEmployeeList",
-          "call_stacks": [
-            "com.example.EmployeeController.selectEmployeeList",
-            "com.example.EmployeeService.getEmployeeList"
-          ],
-          "access_files": [
+[
+  {
+    "table_name": "tb_employee",
+    "columns": [
+      {
+        "name": "name_test",
+        "column_type": "name"
+      },
+      {
+        "name": "dob_test",
+        "data_type": "dob"
+      }
+    ],
+    "sql_queries": [
+      {
+        "id": "selectEmployeeList",
+        "source_file_path": "D:\\RES\\workspace\\hcs-adm\\src\\main\\resources\\database\\mappers\\mapper_blocking.xml",
+        "call_stacks": [
+          "com.example.EmployeeController.selectEmployeeList",
+          "com.example.EmployeeService.getEmployeeList"
+        ],
+        "access_files":[
+          [
             "src/main/java/com/example/EmployeeController.java",
             "src/main/java/com/example/EmployeeService.java"
           ],
-          "strategy_specific": {
-            "result_map": "employeeResultMap"
-          }
-        },
-        {
-          "id": "insertEmployee",
-          "call_stacks": [
-            "com.example.EmployeeController.insertEmployee"
-          ],
-          "access_files": [
-            "src/main/java/com/example/EmployeeController.java"
-          ],
-          "strategy_specific": {
-            "result_map": null
-          }
-        },
-        {
-          "id": "com.example.mapper.EmployeeMapper.selectById",
-          "call_stacks": [
-            "com.example.EmployeeController.getEmployee",
-            "com.example.EmployeeService.getEmployee"
-          ],
-          "access_files": [
-            "src/main/java/com/example/EmployeeController.java",
-            "src/main/java/com/example/EmployeeService.java"
-          ],
-          "strategy_specific": {}
-        },
-        {
-          "id": "updateEmployee",
-          "call_stacks": [
-            "com.example.EmployeeController.updateEmployee",
-            "com.example.EmployeeService.updateEmployee"
-          ],
-          "access_files": [
-            "src/main/java/com/example/EmployeeController.java"
-          ],
-          "strategy_specific": {
-            "result_map": "updateResultMap"
-          }
-        },
-        {
-          "id": "deleteEmployee",
-          "call_stacks": [
-            "com.example.EmployeeController.deleteEmployee"
-          ],
-          "access_files": [
-            "src/main/java/com/example/EmployeeController.java"
-          ],
-          "strategy_specific": {
-            "result_map": null
-          }
-        }
+          [
+            "src/main/java/com/example/EmployeeController1.java",
+            "src/main/java/com/example/EmployeeService1.java"
+          ]
       ],
-      "strategy_specific": {
-        "result_map": "defaultResultMap"
+        "strategy_specific": {
+          "result_map": "employeeResultMap"
+        }
+      },
+      {
+        "id": "insertEmployee",
+        "source_file_path": "D:\\RES\\workspace\\hcs-adm\\src\\main\\resources\\database\\mappers\\mapper_Employee.xml",
+        "call_stacks": [
+          "com.example.EmployeeController.insertEmployee"
+        ],
+        "access_files": [
+          "src/main/java/com/example/EmployeeController.java"
+        ],
+        "strategy_specific": {
+          "result_map": null
+        }
+      },
+      {
+        "id": "com.example.mapper.EmployeeMapper.selectById",
+        "call_stacks": [
+          "com.example.EmployeeController.getEmployee",
+          "com.example.EmployeeService.getEmployee"
+        ],
+        "access_files": [
+          "src/main/java/com/example/EmployeeController.java",
+          "src/main/java/com/example/EmployeeService.java"
+        ],
+        "strategy_specific": {}
+      },
+      {
+        "id": "updateEmployee",
+        "call_stacks": [
+          "com.example.EmployeeController.updateEmployee",
+          "com.example.EmployeeService.updateEmployee"
+        ],
+        "access_files": [
+          "src/main/java/com/example/EmployeeController.java"
+        ],
+        "strategy_specific": {
+          "result_map": "updateResultMap"
+        }
+      },
+      {
+        "id": "deleteEmployee",
+        "call_stacks": [
+          "com.example.EmployeeController.deleteEmployee"
+        ],
+        "access_files": [
+          "src/main/java/com/example/EmployeeController.java"
+        ],
+        "strategy_specific": {
+          "result_map": null
+        }
       }
-    },
-    {
-      "table_name": "tb_department",
-      "sql_queries": [
-        {
-          "id": "selectDepartmentList",
-          "call_stacks": [
-            "com.example.DepartmentController.selectDepartmentList"
-          ],
-          "access_files": [
-            "src/main/java/com/example/DepartmentController.java"
-          ],
-          "strategy_specific": {
-            "result_map": "departmentResultMap"
-          }
-        },
-        {
-          "id": "com.example.mapper.DepartmentMapper.findByCompanyId",
-          "call_stacks": [
-            "com.example.DepartmentController.getDepartmentsByCompany",
-            "com.example.DepartmentService.findByCompany"
-          ],
-          "access_files": [
-            "src/main/java/com/example/DepartmentController.java",
-            "src/main/java/com/example/DepartmentService.java"
-          ],
-          "strategy_specific": {}
-        }
-      ],
-      "strategy_specific": {}
-    },
-    {
-      "table_name": "tb_user",
-      "sql_queries": [
-        {
-          "id": "selectUserByEmail",
-          "call_stacks": [
-            "com.example.UserController.findUserByEmail",
-            "com.example.UserService.getUserByEmail"
-          ],
-          "access_files": [
-            "src/main/java/com/example/UserController.java",
-            "src/main/java/com/example/UserService.java"
-          ],
-          "strategy_specific": {
-            "result_map": "userResultMap"
-          }
-        },
-        {
-          "id": "insertUser",
-          "call_stacks": [
-            "com.example.UserController.createUser"
-          ],
-          "access_files": [
-            "src/main/java/com/example/UserController.java"
-          ],
-          "strategy_specific": {
-            "result_map": null
-          }
-        }
-      ],
-      "strategy_specific": {
-        "result_map": "userDefaultMap"
+    ]
+  },
+  {
+    "table_name": "tb_department",
+    "columns": [
+      {
+        "name": "name_test",
+        "column_type": "name"
+      },
+      {
+        "name": "dob_test",
+        "data_type": "dob"
+      },
+      {
+        "name": "ssn_test",
+        "data_type": "dob"
       }
-    },
-    {
-      "table_name": "tb_customer",
-      "sql_queries": [
-        {
-          "id": "selectCustomerList",
-          "call_stacks": [
-            "com.example.CustomerController.selectCustomerList",
-            "com.example.CustomerService.getCustomerList"
-          ],
-          "access_files": [
-            "src/main/java/com/example/CustomerController.java",
-            "src/main/java/com/example/CustomerService.java"
-          ],
-          "strategy_specific": {
-            "result_map": "customerResultMap"
-          }
-        },
-        {
-          "id": "com.example.mapper.CustomerMapper.findByPhone",
-          "call_stacks": [
-            "com.example.CustomerController.findCustomerByPhone",
-            "com.example.CustomerService.findByPhone"
-          ],
-          "access_files": [
-            "src/main/java/com/example/CustomerController.java"
-          ],
-          "strategy_specific": {}
+    ],
+    "sql_queries": [
+      {
+        "id": "selectDepartmentList",
+        "call_stacks": [
+          "com.example.DepartmentController.selectDepartmentList"
+        ],
+        "access_files": [
+          "src/main/java/com/example/DepartmentController.java"
+        ],
+        "strategy_specific": {
+          "result_map": "departmentResultMap"
         }
-      ],
-      "strategy_specific": {
-        "result_map": "customerDefaultMap"
+      },
+      {
+        "id": "com.example.mapper.DepartmentMapper.findByCompanyId",
+        "call_stacks": [
+          "com.example.DepartmentController.getDepartmentsByCompany",
+          "com.example.DepartmentService.findByCompany"
+        ],
+        "access_files": [
+          "src/main/java/com/example/DepartmentController.java",
+          "src/main/java/com/example/DepartmentService.java"
+        ],
+        "strategy_specific": {
+          "result_map": "customerResultMap",
+          "result_field_mappings": [
+            [
+              "dob_notest",
+              "DOB_TEST"
+            ],
+            [
+              "dob",
+              "dob"
+            ],
+            [
+              "cardNumber",
+              "CARD_NUMBER"
+            ]
+          ]
+        }
       }
-    },
-    {
-      "table_name": "tb_order",
-      "sql_queries": [
-        {
-          "id": "selectOrderHistory",
-          "call_stacks": [
-            "com.example.OrderController.getOrderHistory",
-            "com.example.OrderService.getOrderHistory"
-          ],
-          "access_files": [
-            "src/main/java/com/example/OrderController.java",
-            "src/main/java/com/example/OrderService.java"
-          ],
-          "strategy_specific": {
-            "result_map": "orderResultMap"
-          }
-        },
-        {
-          "id": "insertOrder",
-          "call_stacks": [
-            "com.example.OrderController.placeOrder"
-          ],
-          "access_files": [
-            "src/main/java/com/example/OrderController.java"
-          ],
-          "strategy_specific": {
-            "result_map": null
-          }
+    ]
+  },
+  {
+    "table_name": "tb_user",
+    "sql_queries": [
+      {
+        "id": "selectUserByEmail",
+        "call_stacks": [
+          "com.example.UserController.findUserByEmail",
+          "com.example.UserService.getUserByEmail"
+        ],
+        "access_files": [
+          "src/main/java/com/example/UserController.java",
+          "src/main/java/com/example/UserService.java"
+        ],
+        "strategy_specific": {
+          "result_map": "userResultMap"
         }
-      ],
-      "strategy_specific": {}
-    },
-    {
-      "table_name": "tb_product",
-      "sql_queries": [
-        {
-          "id": "selectProductByCategory",
-          "call_stacks": [
-            "com.example.ProductController.getProductsByCategory"
-          ],
-          "access_files": [
-            "src/main/java/com/example/ProductController.java"
-          ],
-          "strategy_specific": {
-            "result_map": "productResultMap"
-          }
+      },
+      {
+        "id": "insertUser",
+        "call_stacks": [
+          "com.example.UserController.createUser"
+        ],
+        "access_files": [
+          "src/main/java/com/example/UserController.java"
+        ],
+        "strategy_specific": {
+          "result_map": null
         }
-      ],
-      "strategy_specific": {
-        "result_map": "productDefaultMap"
       }
-    }
-  ]
-}
+    ]
+  },
+  {
+    "table_name": "tb_customer",
+    "columns": [
+      {
+        "name": "name_test",
+        "column_type": "name"
+      },
+      {
+        "name": "dob_test",
+        "data_type": "dob"
+      },
+      {
+        "name": "ssn_test",
+        "data_type": "dob"
+      }
+    ],
+    "sql_queries": [
+      {
+        "id": "selectCustomerList",
+        "call_stacks": [
+          "com.example.CustomerController.selectCustomerList",
+          "com.example.CustomerService.getCustomerList"
+        ],
+        "access_files": [
+          "src/main/java/com/example/CustomerController.java",
+          "src/main/java/com/example/CustomerService.java"
+        ],
+        "strategy_specific": {
+          "result_map": "customerResultMap",
+          "result_field_mappings": [
+            [
+              "dob_test",
+              "DOB_TEST"
+            ],
+            [
+              "dob",
+              "dob"
+            ],
+            [
+              "cardNumber",
+              "CARD_NUMBER"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "com.example.mapper.CustomerMapper.findByPhone",
+        "call_stacks": [
+          "com.example.CustomerController.findCustomerByPhone",
+          "com.example.CustomerService.findByPhone"
+        ],
+        "access_files": [
+          "src/main/java/com/example/CustomerController.java"
+        ],
+        "strategy_specific": {
+          "result_map": "phoneResultMap_test",
+          "result_field_mappings": [
+            [
+              "mbrType",
+              "MBR_TYPE"
+            ],
+            [
+              "dob_test",
+              "DOB_TEST"
+            ],
+            [
+              "name_test",
+              "NAME_TEST"
+            ],
+            [
+              "dob",
+              "dob"
+            ],
+            [
+              "cardNumber",
+              "CARD_NUMBER"
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "table_name": "tb_order",
+    "sql_queries": [
+      {
+        "id": "selectOrderHistory",
+        "call_stacks": [
+          "com.example.OrderController.getOrderHistory",
+          "com.example.OrderService.getOrderHistory"
+        ],
+        "access_files": [
+          "src/main/java/com/example/OrderController.java",
+          "src/main/java/com/example/OrderService.java"
+        ],
+        "strategy_specific": {
+          "result_map": "orderResultMap"
+        }
+      },
+      {
+        "id": "insertOrder",
+        "call_stacks": [
+          "com.example.OrderController.placeOrder"
+        ],
+        "access_files": [
+          "src/main/java/com/example/OrderController.java"
+        ],
+        "strategy_specific": {
+          "result_map": null
+        }
+      }
+    ]
+  },
+  {
+    "table_name": "tb_product",
+    "sql_queries": [
+      {
+        "id": "selectProductByCategory",
+        "call_stacks": [
+          "com.example.ProductController.getProductsByCategory"
+        ],
+        "access_files": [
+          "src/main/java/com/example/ProductController.java"
+        ],
+        "strategy_specific": {
+          "result_map": "productResultMap"
+        }
+      }
+    ]
+  }
+]
